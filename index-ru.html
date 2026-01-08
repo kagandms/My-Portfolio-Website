@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --- GOOGLE ANALYTICS --- -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2WWHSD6J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SX2WWHSD6J');
+    </script>
+
+    <!-- --- SEO НАСТРОЙКИ --- -->
+    <title>Каган Самет Дурмуш | Эксперт по Финтеху и Анализу Данных - Личное Портфолио</title>
+
+    <meta name="description"
+        content="Каган Самет Дурмуш (kagandms). Студент Университета Топкапы, специальности MIS и Экономика. Разработчик, специализирующийся на Fintech, Фондовом рынке, Анализе данных (Python, SQL). Проекты и контакты.">
+
+    <meta name="keywords"
+        content="Каган Самет Дурмуш, kagandms, kagansmtdms, Аналитик данных, Fintech разработчик, Анализ фондового рынка, MIS, Управление информационными системами, Python, SQL, Университет Топкапы, Двойная специальность Экономика, Telegram Бот">
+
+    <meta name="author" content="Kağan Samet Durmuş">
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <link rel="canonical" href="https://kagandms.github.io/index-ru.html">
+
+    <!-- Социальные сети (Open Graph & Twitter) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Каган Самет Дурмуш | Финтех и Анализ Данных">
+    <meta property="og:description"
+        content="Решения на основе данных в области Финтеха, Фондового рынка и Программного обеспечения. MIS & Экономика.">
+    <meta property="og:image" content="https://kagandms.github.io/myprofile.jpg">
+    <meta property="og:url" content="https://kagandms.github.io/index-ru.html">
+    <meta property="og:site_name" content="Портфолио Каган Самет Дурмуш">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Каган Самет Дурмуш | Финтех и Анализ Данных">
+    <meta name="twitter:description"
+        content="Студент MIS, разрабатывающий проекты в области Финтеха, Фондового рынка и Data Science.">
+    <meta name="twitter:image" content="https://kagandms.github.io/myprofile.jpg">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- JSON-LD: Карточка для Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Kağan Samet Durmuş",
+      "alternateName": ["kagandms", "kagansmtdms", "Каган Самет Дурмуш"],
+      "jobTitle": "Аналитик данных & Студент MIS",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Topkapı Üniversitesi"
+      },
+      "url": "https://kagandms.github.io",
+      "image": "https://kagandms.github.io/myprofile.jpg",
+      "sameAs": [
+        "https://github.com/kagandms",
+        "https://www.linkedin.com/in/kagandms",
+        "https://twitter.com/kagandms",
+        "https://instagram.com/kagandms"
+      ],
+      "knowsAbout": ["Fintech", "Data Analysis", "Python", "SQL", "Economics", "Stock Market"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- НАВИГАЦИЯ -->
+    <header>
+        <div class="logo-container" onclick="window.scrollTo(0,0)">
+            <img src="logo.png" onerror="this.src='https://placehold.co/100x100/112240/64ffda?text=Нет+Лого'"
+                alt="kagandms (Каган Самет Дурмуш) Логотип" class="logo-img">
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Главная</a></li>
+                <li><a href="#about" onclick="toggleMenu()">Обо мне</a></li>
+                <li><a href="#skills" onclick="toggleMenu()">Навыки</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Проекты</a></li>
+                <li><a href="#news" onclick="toggleMenu()">Новости</a></li>
+                <li><a href="#schedule" onclick="toggleMenu()">Расписание</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКА -->
+        <div class="lang-switcher">
+            <a href="index.html" class="lang-btn">TR</a>
+            <a href="index-en.html" class="lang-btn">EN</a>
+            <a href="index-ru.html" class="lang-btn active">RU</a>
+        </div>
+    </header>
+
+    <!-- ГЛАВНАЯ СЕКЦИЯ -->
+    <section id="home">
+        <div class="home-content">
+            <span class="intro">Привет, я</span>
+            <h1>Каган Самет Дурмуш.</h1>
+            <h2 class="subtitle">Финансы и технологии на основе данных.</h2>
+            <p>
+                Я разработчик, объединяющий дисциплины систем управления информацией и экономики; создающий современные
+                решения в области финтеха, биржи и анализа данных, сочетающий финансовое видение с технологической
+                компетентностью.
+            </p>
+
+            <div class="social-icons">
+                <a href="https://github.com/kagandms" target="_blank" aria-label="Github"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kağan-samet-durmuş-37676332b/" target="_blank"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/kagandms/?hl=ru" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://t.me/kagandms" target="_blank" aria-label="Telegram"><i
+                        class="fab fa-telegram"></i></a>
+            </div>
+
+            <a href="#contact" class="btn-primary">Связаться</a>
+        </div>
+
+        <div class="profile-img-wrapper">
+            <div class="profile-img-container">
+                <img src="myprofile.jpg" onerror="this.src='https://placehold.co/400x400/112240/64ffda?text=Нет+Фото'"
+                    alt="kagandms (Каган Самет Дурмуш) Фото профиля">
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ОБО МНЕ -->
+    <section id="about">
+        <div class="about-content">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-text">
+                <p>
+                    Привет! Я Каган Самет Дурмуш. Я учусь на факультете систем управления информацией (MIS) с 100%
+                    английским языком обучения в университете Топкапы, а также получаю вторую специальность по
+                    экономике.
+                </p>
+                <p>
+                    Я страстно увлечен миром <strong>Финтеха</strong> и динамикой фондового рынка, где финансы
+                    встречаются с технологиями. Я верю в силу данных; анализирую финансовые данные с помощью Python и
+                    SQL и работаю над моделями для интерпретации движений рынка.
+                </p>
+                <p>
+                    Стремясь к постоянному развитию, я повышаю свои компетенции в области науки о данных и активно
+                    изучаю русский язык. Моя цель — создавать инновационные финансовые решения, объединяя мои
+                    технические знания с экономическим видением.
+                </p>
+
+                <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
+                    <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i> Изучение
+                        русского</li>
+                    <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i> Финансы
+                        и биржа</li>
+                    <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i> SQL и
+                        базы данных</li>
+                    <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i>
+                        Экономика</li>
+                </ul>
+            </div>
+
+            <div class="iframe-wrapper"
+                style="margin-top: 40px; width: 100%; height: 400px; border-radius: 10px; overflow: hidden; border: 1px solid var(--accent-color); box-shadow: 0 0 20px rgba(32, 201, 151, 0.1);">
+                <iframe src="https://www.topkapi.edu.tr/" width="100%" height="100%" style="border:0;"
+                    allowfullscreen="" loading="lazy" title="Встроенный сайт"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ НАВЫКОВ -->
+    <section id="skills">
+        <h2 class="section-title">Мои навыки</h2>
+
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <h3>Анализ данных и SQL</h3>
+                <p>
+                    Я активно использую продвинутые SQL-запросы и инструменты визуализации данных (Power BI) для
+                    принятия решений на основе данных. Я преобразую сложные наборы данных в значимые идеи и готовлю
+                    стратегические отчеты.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-coins skill-icon"></i>
+                <h3>Финансы и Финтех</h3>
+                <p>
+                    Благодаря второй специальности по экономике и страсти к финансам, я специализируюсь на биржевых и
+                    финтех-технологиях. Я анализирую рыночные данные с помощью разработанного мной <strong>бота для
+                        финансовых прогнозов</strong> на основе машинного обучения.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-language skill-icon"></i>
+                <h3>Многоязычная коммуникация</h3>
+                <p>
+                    Благодаря обучению на английском языке, я владею им на уровне B2+. Кроме того, я продолжаю активно
+                    изучать русский язык (B1+), чтобы укрепить свои навыки глобальной коммуникации.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-laptop-code skill-icon"></i>
+                <h3>MIS и технологии</h3>
+                <p>
+                    Я навожу мосты между бизнесом и технологиями с помощью дисциплины систем управления информацией. Я
+                    владею процессами разработки программного обеспечения и современными IT-решениями.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ПРОЕКТОВ -->
+    <section id="projects">
+        <h2 class="section-title">Избранные <span class="highlight">проекты</span></h2>
+
+        <div class="projects-container">
+            <div class="project-card">
+                <i class="fab fa-telegram project-icon"></i>
+                <h3>Телеграм-бот помощник</h3>
+                <p>
+                    Телеграм-бот на основе Python (@druzhikbot), который взаимодействует с пользователями,
+                    автоматизирует определенные задачи и предоставляет мгновенную информацию. Усилен интеграцией API.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <i class="fas fa-globe project-icon"></i>
+                <h3>Личный сайт-портфолио</h3>
+                <p>
+                    Проект, который вы сейчас просматриваете; современное, SEO-оптимизированное личное портфолио,
+                    разработанное с использованием веб-технологий (HTML5, CSS3).
+                </p>
+            </div>
+
+            <div class="project-card">
+                <i class="fas fa-chart-bar project-icon"></i>
+                <h3>Бот для финансовых прогнозов</h3>
+                <p>
+                    Инструмент финансового анализа с поддержкой ИИ, который анализирует данные фондового рынка с
+                    использованием алгоритмов машинного обучения и делает прогнозы цен на будущее.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ НОВОСТЕЙ -->
+    <section id="news">
+        <h2 class="section-title">Актуальные <span class="highlight">Новости</span></h2>
+
+        <div class="news-container" id="news-container">
+            <div class="news-loading">
+                <i class="fas fa-spinner"></i> Загрузка новостей...
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ЕЖЕНЕДЕЛЬНОГО РАСПИСАНИЯ -->
+    <section id="schedule">
+        <h2 class="section-title">Еженедельное <span class="highlight">расписание</span></h2>
+
+        <div class="table-container" style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: var(--text-color);">
+                <thead>
+                    <tr>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- Понедельник -->
+                        <td>
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 - 12:00</span>
+                                <div class="schedule-course">Organizational Data Management</div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">14:00 - 17:00</span>
+                                <div class="schedule-course">Introduction to Accounting</div>
+                            </div>
+                        </td>
+
+                        <!-- Вторник -->
+                        <td>
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 - 12:00</span>
+                                <div class="schedule-course">Datastructures and Database Management</div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">14:00 - 17:00</span>
+                                <div class="schedule-course">Marketing Management</div>
+                            </div>
+                        </td>
+
+                        <!-- Среда -->
+                        <td>
+                            <div class="schedule-item">
+                                <span class="schedule-time">12:00 - 15:00</span>
+                                <div class="schedule-course">Business Process Analysis</div>
+                            </div>
+                        </td>
+
+                        <!-- Четверг -->
+                        <td>
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 - 12:00</span>
+                                <div class="schedule-course">Web Design and Internet Programming</div>
+                            </div>
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 - 14:00</span>
+                                <div class="schedule-course">Курс русского языка</div>
+                            </div>
+                        </td>
+
+                        <!-- Пятница -->
+                        <td>
+                            <div class="schedule-item">
+                                <span class="schedule-time">09:00 - 14:00</span>
+                                <div class="schedule-course">Курс русского языка</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ КОНТАКТОВ -->
+    <section id="contact">
+        <h2 class="section-title">Свяжитесь со мной</h2>
+        <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
+            Мой почтовый ящик всегда открыт для ваших проектов или просто для приветствия. Я постараюсь ответить вам как
+            можно скорее!
+        </p>
+
+        <form class="contact-form" action="https://formspree.io/f/mjgbrllv" method="POST">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Имя Фамилия" required>
+                <input type="tel" name="phone" id="phone" placeholder="Номер телефона (Необязательно)">
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Адрес электронной почты" required>
+                <input type="text" name="subject" placeholder="Тема" required>
+            </div>
+
+            <!-- HONEYPOT -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+
+            <button type="submit" class="submit-btn">Отправить сообщение</button>
+        </form>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <p>&copy; 2024 Kağan Samet Durmuş (kagandms). Все права защищены.</p>
+    </footer>
+
+    <script>
+        // --- НАБЛЮДАТЕЛЬ АНИМАЦИИ ПРОКРУТКИ ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const elementsToAnimate = document.querySelectorAll(
+                'section, h1, h2, h3, p, .skill-card, .project-card, .profile-img-container, .btn-primary, .social-icons, .schedule-item, .contact-form, .table-container, .iframe-wrapper, .news-card'
+            );
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            elementsToAnimate.forEach(el => {
+                el.classList.add('reveal');
+                observer.observe(el);
+            });
+
+            // Эффект каскада для карточек
+            document.querySelectorAll('.skills-container, .projects-container').forEach(container => {
+                const cards = container.querySelectorAll('.skill-card, .project-card');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 150}ms`;
+                });
+            });
+
+            // Загрузить новости
+            loadNews();
+        });
+
+        // --- НОВОСТНОЙ ДВИЖОК ---
+        async function loadNews() {
+            const container = document.getElementById('news-container');
+
+            // Новости финтеха и экономики - примерные данные
+            const sampleNews = [
+                {
+                    title: "Центральный Банк объявил решение по процентной ставке",
+                    excerpt: "Центральный Банк решил сохранить учетную ставку на последнем заседании. Рынки положительно отреагировали на это решение.",
+                    category: "Экономика",
+                    source: "Bloomberg",
+                    date: "2024-01-08",
+                    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=200&fit=crop",
+                    url: "https://www.bloomberg.com"
+                },
+                {
+                    title: "Последние события на крипторынке",
+                    excerpt: "Биткоин тестирует значительные уровни сопротивления после недавнего восходящего тренда. Инвесторы проявляют осторожность.",
+                    category: "Финтех",
+                    source: "CoinDesk",
+                    date: "2024-01-07",
+                    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=200&fit=crop",
+                    url: "https://www.coindesk.com"
+                },
+                {
+                    title: "ИИ трансформирует финансовый сектор",
+                    excerpt: "Крупные финансовые учреждения начали использовать технологии искусственного интеллекта в управлении рисками и обслуживании клиентов.",
+                    category: "Технологии",
+                    source: "TechCrunch",
+                    date: "2024-01-06",
+                    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
+                    url: "https://techcrunch.com"
+                },
+                {
+                    title: "Рекордный объём на фондовой бирже",
+                    excerpt: "Индекс фондового рынка достиг исторических максимумов на фоне интереса иностранных инвесторов. Аналитики сохраняют бычьи ожидания.",
+                    category: "Биржа",
+                    source: "Reuters",
+                    date: "2024-01-05",
+                    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=200&fit=crop",
+                    url: "https://www.reuters.com"
+                },
+                {
+                    title: "Тренды цифрового банкинга 2024",
+                    excerpt: "Ожидается дальнейшее развитие услуг цифрового банкинга в новом году. Мобильные платежные системы выходят на первый план.",
+                    category: "Финтех",
+                    source: "Finextra",
+                    date: "2024-01-04",
+                    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop",
+                    url: "https://www.finextra.com"
+                },
+                {
+                    title: "Инвестиционные стратегии с применением аналитики данных",
+                    excerpt: "Большие данные и алгоритмы машинного обучения всё чаще используются при принятии инвестиционных решений.",
+                    category: "Data Science",
+                    source: "Analytics Insight",
+                    date: "2024-01-03",
+                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop",
+                    url: "https://www.analyticsinsight.net"
+                }
+            ];
+
+            // Имитация задержки загрузки
+            await new Promise(resolve => setTimeout(resolve, 800));
+
+            // Отрисовка новостей
+            container.innerHTML = sampleNews.map(news => `
+                <article class="news-card" onclick="window.open('${news.url}', '_blank')">
+                    <div class="news-image-wrapper">
+                        <img src="${news.image}" alt="${news.title}" class="news-image" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop'">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">${news.category}</span>
+                        <h3 class="news-title">${news.title}</h3>
+                        <p class="news-excerpt">${news.excerpt}</p>
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fas fa-newspaper"></i> ${news.source}</span>
+                            <span class="news-date"><i class="far fa-calendar"></i> ${formatDate(news.date)}</span>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+
+            // Добавить анимацию к новым карточкам
+            document.querySelectorAll('.news-card').forEach((card, index) => {
+                card.classList.add('reveal');
+                card.style.transitionDelay = `${index * 100}ms`;
+                setTimeout(() => card.classList.add('active'), 100);
+            });
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            const options = { day: 'numeric', month: 'short', year: 'numeric' };
+            return date.toLocaleDateString('ru-RU', options);
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('navbar');
+            if (window.innerWidth <= 768) {
+                if (nav.style.display === "block") {
+                    nav.style.display = "none";
+                } else {
+                    nav.style.display = "block";
+                }
+            }
+        }
+
+        document.getElementById('phone').addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.innerWidth <= 768 && nav.style.display === "block") {
+                nav.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
