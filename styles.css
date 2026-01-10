@@ -945,8 +945,7 @@ body.light-mode .certificate-card {
     width: 100% !important;
     max-width: 504px;
     /* Maintain optimal reading width */
-    height: auto !important;
-    /* Allow height to be determined by the attribute */
+    /* Height is controlled by HTML attribute to prevent collapse */
     border: none;
 }
 
