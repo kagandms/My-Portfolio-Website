@@ -91,8 +91,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    /* Restore original premium padding */
+    padding: 20px 60px;
+    /* Increased padding */
     position: fixed;
     width: 100%;
     top: 0;
@@ -100,8 +100,8 @@ header {
     z-index: 1000;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(32, 201, 151, 0.1);
-    height: 110px;
-    /* Restore original height */
+    height: 130px;
+    /* Increased height for bigger logo */
     transition: background-color 0.3s;
 }
 
@@ -111,12 +111,11 @@ header {
     cursor: pointer;
     height: 100%;
     margin-right: 0;
-    /* Remove the extra margin I added */
 }
 
 .logo-img {
-    height: 80px;
-    /* Restore original logo size */
+    height: 100px;
+    /* Increased logo size */
     width: auto;
     border-radius: 5px;
     border: none;
@@ -138,19 +137,18 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 40px;
-    /* Restore original gap */
+    gap: 60px;
+    /* Increased gap */
     align-items: center;
 }
 
 nav ul li a {
     font-weight: 600;
-    font-size: 1.1rem;
-    /* Restore original font size */
+    font-size: 1.3rem;
+    /* Increased font size */
     color: var(--text-color);
     text-transform: uppercase;
     letter-spacing: 1px;
-    /* Restore original spacing */
 }
 
 nav ul li a:hover {
@@ -162,26 +160,28 @@ nav ul li a:hover {
 .nav-extras {
     display: flex;
     align-items: center;
-    gap: 15px;
-    /* Restore original gap */
+    gap: 25px;
+    /* Increased gap */
     margin-left: 0;
-    /* Remove extra margin */
 }
 
 /* DIL SECICI STILLERI */
 .lang-switcher {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    /* Increased gap */
     align-items: center;
 }
 
 .lang-btn {
     border: 1px solid var(--accent-color);
-    padding: 5px 10px;
+    padding: 8px 15px;
+    /* Increased padding */
     border-radius: 4px;
     color: var(--accent-color);
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    /* Increased font size */
     background: transparent;
     cursor: pointer;
     transition: all 0.3s;
@@ -200,7 +200,8 @@ nav ul li a:hover {
     background: transparent;
     border: none;
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    /* Increased icon size */
     cursor: pointer;
     transition: color 0.3s;
     padding: 5px;
