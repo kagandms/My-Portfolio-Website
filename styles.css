@@ -863,6 +863,95 @@ body.light-mode footer {
     border-top-color: #b2bec3;
 }
 
+/* SERTIFIKALAR (YENI EKLENDI) */
+#certificates {
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+    /* Same as body to keep flow, or secondary for contrast? Let's stick to bg */
+}
+
+.certificates-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.certificate-card {
+    background-color: var(--secondary-color);
+    border: 1px solid rgba(32, 201, 151, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    /* Less padding for iframes */
+    width: 30%;
+    min-width: 320px;
+    /* LinkedIn Embeds are usually around 300-350px min */
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Prevent overflow */
+}
+
+.certificate-image-wrapper {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.certificate-image-wrapper:hover {
+    opacity: 0.9;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    /* Prevent overly tall images */
+    object-fit: cover;
+    /* or contain depending on preference, cover is usually better for cards */
+    display: block;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(32, 201, 151, 0.1);
+}
+
+.linkedin-embed-wrapper {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+/* Light mode overrides */
+body.light-mode .certificate-card {
+    background-color: #ffffff;
+    border-color: #dfe6e9;
+}
+
+/* Make iframes responsive */
+.linkedin-embed-wrapper iframe {
+    width: 100% !important;
+    max-width: 504px;
+    /* Maintain optimal reading width */
+    height: auto !important;
+    /* Allow height to be determined by the attribute */
+    border: none;
+}
+
+
+
 /* RESPONSIVE MOBIL */
 @media (max-width: 992px) {
     header {

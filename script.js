@@ -132,58 +132,58 @@ async function loadNews() {
 
     const sampleNews = [
         {
-            title: lang === 'tr' ? "Merkez Bankası Faiz Kararını Açıkladı" : (lang === 'ru' ? "Центральный Банк объявил решение по процентной ставке" : "Central Bank Announces Interest Rate Decision"),
-            excerpt: lang === 'tr' ? "Türkiye Cumhuriyet Merkez Bankası, son toplantısında politika faizini sabit tutma kararı aldı." : (lang === 'ru' ? "Центральный Банк решил сохранить учетную ставку на последнем заседании." : "The Central Bank decided to keep the policy rate unchanged in its latest meeting."),
-            category: lang === 'tr' ? "Ekonomi" : (lang === 'ru' ? "Экономика" : "Economy"),
-            source: "Bloomberg",
+            title: lang === 'tr' ? "Yenilikçilik Günü Etkinliği" : (lang === 'ru' ? "Мероприятие День Инноваций" : "Innovation Day Event"),
+            excerpt: lang === 'tr' ? "Girişimcilik ve yenilikçilik üzerine harika bir etkinlik deneyimi." : (lang === 'ru' ? "Замечательный опыт мероприятия по предпринимательству и инновациям." : "Great event experience on entrepreneurship and innovation."),
+            category: lang === 'tr' ? "Etkinlik" : (lang === 'ru' ? "Событие" : "Event"),
+            source: "LinkedIn",
+            date: "2024-01-10",
+            image: "innovationday.jpg",
+            url: "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/"
+        },
+        {
+            title: lang === 'tr' ? "Girişimcilik Sertifikası" : (lang === 'ru' ? "Сертификат по Предпринимательству" : "Entrepreneurship Certificate"),
+            excerpt: lang === 'tr' ? "Girişimcilik ekosistemine dair yeni yetkinlikler kazandım." : (lang === 'ru' ? "Приобрел новые навыки в экосистеме предпринимательства." : "Gained new competencies regarding the entrepreneurship ecosystem."),
+            category: lang === 'tr' ? "Sertifika" : (lang === 'ru' ? "Сертификат" : "Certificate"),
+            source: "LinkedIn",
+            date: "2024-01-09",
+            image: "girisimcilik.jpg",
+            url: "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/"
+        },
+        {
+            title: lang === 'tr' ? "Yeni Başarı: Birincilik Ödülü" : (lang === 'ru' ? "Новое Достижение: Первая Награда" : "New Achievement: First Place Award"),
+            excerpt: lang === 'tr' ? "Yarışmada elde ettiğimiz birincilik başarısını kutluyoruz." : (lang === 'ru' ? "Празднуем наш успех, заняв первое место в конкурсе." : "Celebrating our first place success in the competition."),
+            category: lang === 'tr' ? "Başarı" : (lang === 'ru' ? "Достижение" : "Achievement"),
+            source: "LinkedIn",
             date: "2024-01-08",
-            image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=200&fit=crop",
-            url: "https://www.bloomberg.com"
+            image: "1ci.jpg",
+            url: "https://www.linkedin.com/feed/update/urn:li:share:7413902757469937664"
         },
         {
-            title: lang === 'tr' ? "Kripto Para Piyasasında Son Gelişmeler" : (lang === 'ru' ? "Последние события на крипторынке" : "Latest Developments in Crypto Market"),
-            excerpt: lang === 'tr' ? "Bitcoin, son haftalarda yaşanan yükseliş trendinin ardından direnç seviyelerini test ediyor." : (lang === 'ru' ? "Биткоин тестирует значительные уровни сопротивления после недавнего восходящего тренда." : "Bitcoin is testing significant resistance levels following the recent uptrend."),
-            category: "Fintech",
-            source: "CoinDesk",
-            date: "2024-01-07",
-            image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=200&fit=crop",
-            url: "https://www.coindesk.com"
-        },
-        {
-            title: lang === 'tr' ? "Yapay Zeka Finans Sektörünü Dönüştürüyor" : (lang === 'ru' ? "ИИ трансформирует финансовый сектор" : "AI is Transforming the Finance Sector"),
-            excerpt: lang === 'tr' ? "Büyük finans kuruluşları, yapay zeka teknolojilerini risk yönetiminde kullanmaya başladı." : (lang === 'ru' ? "Крупные финансовые учреждения начали использовать технологии ИИ." : "Major financial institutions have started using AI technologies."),
-            category: lang === 'tr' ? "Teknoloji" : (lang === 'ru' ? "Технологии" : "Technology"),
-            source: "TechCrunch",
-            date: "2024-01-06",
-            image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
-            url: "https://techcrunch.com"
-        },
-        {
-            title: lang === 'tr' ? "Borsa İstanbul'da Rekor Hacim" : (lang === 'ru' ? "Рекордный объём на фондовой бирже" : "Record Volume in Stock Exchange"),
-            excerpt: lang === 'tr' ? "BIST 100 endeksi, yabancı yatırımcı ilgisiyle birlikte tarihi zirvelere ulaştı." : (lang === 'ru' ? "Индекс фондового рынка достиг исторических максимумов." : "The stock market index reached historic highs with foreign investor interest."),
-            category: lang === 'tr' ? "Borsa" : (lang === 'ru' ? "Биржа" : "Stock Market"),
-            source: "Reuters",
+            title: lang === 'tr' ? "Fayda Sağlayan Projeler" : (lang === 'ru' ? "Полезные Проекты" : "Beneficial Projects"),
+            excerpt: lang === 'tr' ? "Topluma fayda sağlayan projeler geliştirmeye devam ediyorum." : (lang === 'ru' ? "Продолжаю разрабатывать проекты, приносящие пользу обществу." : "Continuing to develop projects that benefit society."),
+            category: "Proje",
+            source: "LinkedIn",
             date: "2024-01-05",
-            image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=200&fit=crop",
-            url: "https://www.reuters.com"
+            image: "faydasicok.jpg",
+            url: "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/"
         },
         {
-            title: lang === 'tr' ? "Dijital Bankacılık Trends 2024" : (lang === 'ru' ? "Тренды цифрового банкинга 2024" : "Digital Banking Trends 2024"),
-            excerpt: lang === 'tr' ? "Yeni yılda dijital bankacılık hizmetlerinin daha da gelişmesi bekleniyor." : (lang === 'ru' ? "Ожидается дальнейшее развитие услуг цифрового банкинга." : "Digital banking services are expected to develop further in the new year."),
-            category: "Fintech",
-            source: "Finextra",
-            date: "2024-01-04",
-            image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop",
-            url: "https://www.finextra.com"
+            title: lang === 'tr' ? "LinkedIn Ağım Genişliyor" : (lang === 'ru' ? "Моя Сеть LinkedIn Расширяется" : "My LinkedIn Network is Growing"),
+            excerpt: lang === 'tr' ? "Profesyonel ağımı genişletiyor, yeni bağlantılar kuruyorum." : (lang === 'ru' ? "Расширяю свою профессиональную сеть, создаю новые связи." : "Expanding my professional network, making new connections."),
+            category: "LinkedIn",
+            source: "LinkedIn",
+            date: "2024-01-01",
+            image: "linkedn.jpg",
+            url: "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/"
         },
         {
-            title: lang === 'tr' ? "Veri Analizi ile Yatırım Stratejileri" : (lang === 'ru' ? "Инвестиционные стратегии с аналитикой" : "Investment Strategies with Data Analytics"),
-            excerpt: lang === 'tr' ? "Büyük veri ve makine öğrenmesi algoritmaları yatırım kararlarında kullanılıyor." : (lang === 'ru' ? "Большие данные и алгоритмы машинного обучения используются." : "Big data and machine learning algorithms are increasingly being used."),
-            category: "Data Science",
-            source: "Analytics Insight",
-            date: "2024-01-03",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop",
-            url: "https://www.analyticsinsight.net"
+            title: lang === 'tr' ? "Sektörel Analiz Paylaşımı" : (lang === 'ru' ? "Отраслевой Анализ" : "Sectoral Analysis Share"),
+            excerpt: lang === 'tr' ? "Sektördeki son gelişmeleri ve analizlerimi LinkedIn'de paylaştım." : (lang === 'ru' ? "Поделился последними событиями и анализом отрасли на LinkedIn." : "Shared the latest developments and my analysis in the sector on LinkedIn."),
+            category: lang === 'tr' ? "Analiz" : (lang === 'ru' ? "Анализ" : "Analysis"),
+            source: "LinkedIn",
+            date: "2023-12-28",
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
+            url: "https://www.linkedin.com/feed/update/urn:li:share:7345179511442788352"
         }
     ];
 
