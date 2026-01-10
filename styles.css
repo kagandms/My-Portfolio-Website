@@ -953,11 +953,13 @@ body.light-mode .certificate-card {
 }
 
 /* Make iframes responsive */
+/* Make iframes responsive */
 .linkedin-embed-wrapper iframe {
     width: 100% !important;
     max-width: 504px;
     /* Maintain optimal reading width */
-    /* Height is controlled by HTML attribute to prevent collapse */
+    height: 550px !important;
+    /* Force standardized height */
     border: none;
 }
 
