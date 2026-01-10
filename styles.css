@@ -951,6 +951,25 @@ body.light-mode .certificate-card {
 
 
 
+/* Tablet ve Arada Kalan Geniş Ekranlar İçin Düzenleme */
+@media (max-width: 1400px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
 /* RESPONSIVE MOBIL */
 @media (max-width: 992px) {
     header {
