@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- --- GOOGLE ANALYTICS (Istatistik Takibi) --- -->
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2WWHSD6J"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
         gtag('config', 'G-SX2WWHSD6J');
     </script>
 
-    <!-- --- GELISMIS KRITIK SEO AYARLARI --- -->
+    <!-- SEO -->
     <title>Kağan Samet Durmuş | Fintech & Veri Analizi Geliştiricisi - Kişisel Portfolyo</title>
 
     <meta name="description"
@@ -25,14 +25,14 @@
 
     <meta name="author" content="Kağan Samet Durmuş">
 
-    <!-- Arama Motoru Botlarina Direktifler -->
+    <!-- BOTS -->
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
 
-    <!-- Canonical URL -->
+    <!-- CANONICAL -->
     <link rel="canonical" href="https://kagandms.github.io/">
 
-    <!-- Sosyal Medya (Open Graph & Twitter) -->
+    <!-- SOCIAL MEDIA -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Kağan Samet Durmuş | Fintech & Veri Analizi">
     <meta property="og:description"
@@ -46,12 +46,12 @@
     <meta name="twitter:description" content="Fintech, Borsa ve Veri bilimi üzerine projeler geliştiren YBS öğrencisi.">
     <meta name="twitter:image" content="https://kagandms.github.io/myprofile.jpg">
 
-    <!-- SEKME IKONU (FAVICON) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- JSON-LD: Google icin Kimlik Karti -->
+    <!-- JSON LD -->
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -80,10 +80,14 @@
 </head>
 
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
     <!-- NAVBAR -->
     <header>
-        <!-- Logo Alani -->
+        <!-- LOGO -->
         <div class="logo-container" onclick="window.scrollTo(0,0)">
             <img src="logo.png" onerror="this.src='https://placehold.co/100x100/112240/64ffda?text=Logo+Yok'"
                 alt="kagandms (Kağan Samet Durmuş) Logo" class="logo-img">
@@ -105,15 +109,23 @@
             </ul>
         </nav>
 
-        <!-- DIL SECICI -->
-        <div class="lang-switcher">
-            <a href="index.html" class="lang-btn active">TR</a>
-            <a href="index-en.html" class="lang-btn">EN</a>
-            <a href="index-ru.html" class="lang-btn">RU</a>
+        <!-- NAV EXTRAS -->
+        <div class="nav-extras">
+            <!-- LANGUAGES -->
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-btn active">TR</a>
+                <a href="index-en.html" class="lang-btn">EN</a>
+                <a href="index-ru.html" class="lang-btn">RU</a>
+            </div>
+
+            <!-- THEME TOGGLE -->
+            <button id="theme-toggle" aria-label="Temayı Değiştir">
+                <i class="fas fa-sun"></i>
+            </button>
         </div>
     </header>
 
-    <!-- ANASAYFA BOLUMU -->
+    <!-- HOME -->
     <section id="home">
         <div class="home-content">
             <span class="intro">Merhaba, Ben</span>
@@ -147,7 +159,7 @@
         </div>
     </section>
 
-    <!-- HAKKIMDA BOLUMU -->
+    <!-- ABOUT -->
     <section id="about">
         <div class="about-content">
             <h2 class="section-title">Hakkımda</h2>
@@ -188,7 +200,7 @@
         </div>
     </section>
 
-    <!-- YETENEKLER BOLUMU -->
+    <!-- SKILLS -->
     <section id="skills">
         <h2 class="section-title">Yeteneklerim</h2>
 
@@ -233,7 +245,7 @@
         </div>
     </section>
 
-    <!-- PROJELERIM BOLUMU -->
+    <!-- PROJECTS -->
     <section id="projects">
         <h2 class="section-title">Öne Çıkan <span class="highlight">Projelerim</span></h2>
 
@@ -270,7 +282,7 @@
         </div>
     </section>
 
-    <!-- HABERLER / NEWS ENGINE BOLUMU -->
+    <!-- NEWS -->
     <section id="news">
         <h2 class="section-title">Güncel <span class="highlight">Haberler</span></h2>
 
@@ -281,7 +293,7 @@
         </div>
     </section>
 
-    <!-- HAFTALIK DERS PROGRAMI BOLUMU -->
+    <!-- SCHEDULE -->
     <section id="schedule">
         <h2 class="section-title">Haftalık <span class="highlight">Ders Programı</span></h2>
 
@@ -298,7 +310,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <!-- Pazartesi -->
+                        <!-- MONDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -310,7 +322,7 @@
                             </div>
                         </td>
 
-                        <!-- Sali -->
+                        <!-- TUESDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -322,7 +334,7 @@
                             </div>
                         </td>
 
-                        <!-- Carsamba -->
+                        <!-- WEDNESDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">12:00 - 15:00</span>
@@ -330,7 +342,7 @@
                             </div>
                         </td>
 
-                        <!-- Persembe -->
+                        <!-- THURSDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -342,7 +354,7 @@
                             </div>
                         </td>
 
-                        <!-- Cuma -->
+                        <!-- FRIDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 14:00</span>
@@ -355,7 +367,7 @@
         </div>
     </section>
 
-    <!-- ILETISIM BOLUMU -->
+    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title">İletişim Kurun</h2>
         <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
@@ -388,163 +400,13 @@
         <p>&copy; 2024 Kağan Samet Durmuş (kagandms). Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <script>
-        // --- SCROLL ANIMASYON GOZLEMCISI ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const elementsToAnimate = document.querySelectorAll(
-                'section, h1, h2, h3, p, .skill-card, .project-card, .profile-img-container, .btn-primary, .social-icons, .schedule-item, .contact-form, .table-container, .iframe-wrapper, .news-card'
-            );
+    <!-- SCROLL BUTTON -->
+    <button id="scroll-top-btn" title="Yukarı Çık">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            elementsToAnimate.forEach(el => {
-                el.classList.add('reveal');
-                observer.observe(el);
-            });
-
-            // Kartlar icin sirali animasyon (Stagger Effect)
-            document.querySelectorAll('.skills-container, .projects-container').forEach(container => {
-                const cards = container.querySelectorAll('.skill-card, .project-card');
-                cards.forEach((card, index) => {
-                    card.style.transitionDelay = `${index * 150}ms`;
-                });
-            });
-
-            // Haberleri yukle
-            loadNews();
-        });
-
-        // --- NEWS ENGINE ---
-        async function loadNews() {
-            const container = document.getElementById('news-container');
-
-            // Fintech ve ekonomi haberleri - örnek veriler
-            // Gerçek API için: NewsAPI, GNews, veya benzeri servisler kullanılabilir
-            const sampleNews = [
-                {
-                    title: "Merkez Bankası Faiz Kararını Açıkladı",
-                    excerpt: "Türkiye Cumhuriyet Merkez Bankası, son toplantısında politika faizini sabit tutma kararı aldı. Piyasalar bu kararı olumlu karşıladı.",
-                    category: "Ekonomi",
-                    source: "Bloomberg HT",
-                    date: "2024-01-08",
-                    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=200&fit=crop",
-                    url: "https://www.bloomberght.com"
-                },
-                {
-                    title: "Kripto Para Piyasasında Son Gelişmeler",
-                    excerpt: "Bitcoin, son haftalarda yaşanan yükseliş trendinin ardından önemli direnç seviyelerini test ediyor. Yatırımcılar temkinli yaklaşıyor.",
-                    category: "Fintech",
-                    source: "CoinDesk",
-                    date: "2024-01-07",
-                    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=200&fit=crop",
-                    url: "https://www.coindesk.com"
-                },
-                {
-                    title: "Yapay Zeka Finans Sektörünü Dönüştürüyor",
-                    excerpt: "Büyük finans kuruluşları, yapay zeka teknolojilerini risk yönetimi ve müşteri hizmetlerinde kullanmaya başladı.",
-                    category: "Teknoloji",
-                    source: "TechCrunch",
-                    date: "2024-01-06",
-                    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
-                    url: "https://techcrunch.com"
-                },
-                {
-                    title: "Borsa İstanbul'da Rekor Hacim",
-                    excerpt: "BIST 100 endeksi, yabancı yatırımcı ilgisiyle birlikte tarihi zirvelere ulaştı. Analistler yükseliş beklentisini koruyor.",
-                    category: "Borsa",
-                    source: "Dünya",
-                    date: "2024-01-05",
-                    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=200&fit=crop",
-                    url: "https://www.dunya.com"
-                },
-                {
-                    title: "Dijital Bankacılık Trends 2024",
-                    excerpt: "Yeni yılda dijital bankacılık hizmetlerinin daha da gelişmesi bekleniyor. Mobil ödeme sistemleri ön plana çıkıyor.",
-                    category: "Fintech",
-                    source: "Finextra",
-                    date: "2024-01-04",
-                    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop",
-                    url: "https://www.finextra.com"
-                },
-                {
-                    title: "Veri Analizi ile Yatırım Stratejileri",
-                    excerpt: "Büyük veri ve makine öğrenmesi algoritmaları, yatırım kararlarında giderek daha fazla kullanılıyor.",
-                    category: "Veri Bilimi",
-                    source: "Analytics Insight",
-                    date: "2024-01-03",
-                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop",
-                    url: "https://www.analyticsinsight.net"
-                }
-            ];
-
-            // Kısa bir gecikme ile yükleme simülasyonu
-            await new Promise(resolve => setTimeout(resolve, 800));
-
-            // Haberleri render et
-            container.innerHTML = sampleNews.map(news => `
-                <article class="news-card" onclick="window.open('${news.url}', '_blank')">
-                    <div class="news-image-wrapper">
-                        <img src="${news.image}" alt="${news.title}" class="news-image" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop'">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-category">${news.category}</span>
-                        <h3 class="news-title">${news.title}</h3>
-                        <p class="news-excerpt">${news.excerpt}</p>
-                        <div class="news-meta">
-                            <span class="news-source"><i class="fas fa-newspaper"></i> ${news.source}</span>
-                            <span class="news-date"><i class="far fa-calendar"></i> ${formatDate(news.date)}</span>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
-
-            // Yeni eklenen kartlara animasyon ekle
-            document.querySelectorAll('.news-card').forEach((card, index) => {
-                card.classList.add('reveal');
-                card.style.transitionDelay = `${index * 100}ms`;
-                setTimeout(() => card.classList.add('active'), 100);
-            });
-        }
-
-        function formatDate(dateStr) {
-            const date = new Date(dateStr);
-            const options = { day: 'numeric', month: 'short', year: 'numeric' };
-            return date.toLocaleDateString('tr-TR', options);
-        }
-
-        function toggleMenu() {
-            const nav = document.getElementById('navbar');
-            if (window.innerWidth <= 768) {
-                if (nav.style.display === "block") {
-                    nav.style.display = "none";
-                } else {
-                    nav.style.display = "block";
-                }
-            }
-        }
-
-        document.getElementById('phone').addEventListener('input', function (e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.innerWidth <= 768 && nav.style.display === "block") {
-                nav.style.display = "none";
-            }
-        });
-    </script>
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
 </body>
 
 </html>

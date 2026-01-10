@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- --- GOOGLE ANALYTICS --- -->
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX2WWHSD6J"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,7 @@
         gtag('config', 'G-SX2WWHSD6J');
     </script>
 
-    <!-- --- SEO SETTINGS --- -->
+    <!-- SEO -->
     <title>Kağan Samet Durmuş | Fintech & Data Analysis Developer - Personal Portfolio</title>
 
     <meta name="description"
@@ -25,12 +25,14 @@
 
     <meta name="author" content="Kağan Samet Durmuş">
 
+    <!-- BOTS -->
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
 
+    <!-- CANONICAL -->
     <link rel="canonical" href="https://kagandms.github.io/index-en.html">
 
-    <!-- Social Media (Open Graph & Twitter) -->
+    <!-- SOCIAL MEDIA -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Kağan Samet Durmuş | Fintech & Data Analysis">
     <meta property="og:description"
@@ -50,7 +52,7 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
 
-    <!-- JSON-LD: Google Identity Card -->
+    <!-- JSON LD -->
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -79,6 +81,10 @@
 </head>
 
 <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
     <!-- NAVBAR -->
     <header>
@@ -103,15 +109,23 @@
             </ul>
         </nav>
 
-        <!-- LANGUAGE SWITCHER -->
-        <div class="lang-switcher">
-            <a href="index.html" class="lang-btn">TR</a>
-            <a href="index-en.html" class="lang-btn active">EN</a>
-            <a href="index-ru.html" class="lang-btn">RU</a>
+        <!-- NAV EXTRAS -->
+        <div class="nav-extras">
+            <!-- LANGUAGE SWITCHER -->
+            <div class="lang-switcher">
+                <a href="index.html" class="lang-btn">TR</a>
+                <a href="index-en.html" class="lang-btn active">EN</a>
+                <a href="index-ru.html" class="lang-btn">RU</a>
+            </div>
+
+            <!-- THEME TOGGLE -->
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
         </div>
     </header>
 
-    <!-- HOME SECTION -->
+    <!-- HOME -->
     <section id="home">
         <div class="home-content">
             <span class="intro">Hello, I am</span>
@@ -145,7 +159,7 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT -->
     <section id="about">
         <div class="about-content">
             <h2 class="section-title">About Me</h2>
@@ -185,7 +199,7 @@
         </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SKILLS -->
     <section id="skills">
         <h2 class="section-title">My Skills</h2>
 
@@ -229,7 +243,7 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS -->
     <section id="projects">
         <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
 
@@ -266,7 +280,7 @@
         </div>
     </section>
 
-    <!-- NEWS ENGINE SECTION -->
+    <!-- NEWS -->
     <section id="news">
         <h2 class="section-title">Latest <span class="highlight">News</span></h2>
 
@@ -277,7 +291,7 @@
         </div>
     </section>
 
-    <!-- WEEKLY SCHEDULE SECTION -->
+    <!-- SCHEDULE -->
     <section id="schedule">
         <h2 class="section-title">Weekly <span class="highlight">Schedule</span></h2>
 
@@ -294,7 +308,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <!-- Monday -->
+                        <!-- MONDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -306,7 +320,7 @@
                             </div>
                         </td>
 
-                        <!-- Tuesday -->
+                        <!-- TUESDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -318,7 +332,7 @@
                             </div>
                         </td>
 
-                        <!-- Wednesday -->
+                        <!-- WEDNESDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">12:00 - 15:00</span>
@@ -326,7 +340,7 @@
                             </div>
                         </td>
 
-                        <!-- Thursday -->
+                        <!-- THURSDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
@@ -338,7 +352,7 @@
                             </div>
                         </td>
 
-                        <!-- Friday -->
+                        <!-- FRIDAY -->
                         <td>
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 14:00</span>
@@ -351,7 +365,7 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title">Contact Me</h2>
         <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
@@ -384,162 +398,13 @@
         <p>&copy; 2024 Kağan Samet Durmuş (kagandms). All Rights Reserved.</p>
     </footer>
 
-    <script>
-        // --- SCROLL ANIMATION OBSERVER ---
-        document.addEventListener('DOMContentLoaded', () => {
-            const elementsToAnimate = document.querySelectorAll(
-                'section, h1, h2, h3, p, .skill-card, .project-card, .profile-img-container, .btn-primary, .social-icons, .schedule-item, .contact-form, .table-container, .iframe-wrapper, .news-card'
-            );
+    <!-- SCROLL BUTTON -->
+    <button id="scroll-top-btn" title="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, observerOptions);
-
-            elementsToAnimate.forEach(el => {
-                el.classList.add('reveal');
-                observer.observe(el);
-            });
-
-            // Stagger Effect for cards
-            document.querySelectorAll('.skills-container, .projects-container').forEach(container => {
-                const cards = container.querySelectorAll('.skill-card, .project-card');
-                cards.forEach((card, index) => {
-                    card.style.transitionDelay = `${index * 150}ms`;
-                });
-            });
-
-            // Load news
-            loadNews();
-        });
-
-        // --- NEWS ENGINE ---
-        async function loadNews() {
-            const container = document.getElementById('news-container');
-
-            // Fintech and economics news - sample data
-            const sampleNews = [
-                {
-                    title: "Central Bank Announces Interest Rate Decision",
-                    excerpt: "The Central Bank decided to keep the policy rate unchanged in its latest meeting. Markets reacted positively to this decision.",
-                    category: "Economy",
-                    source: "Bloomberg",
-                    date: "2024-01-08",
-                    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=200&fit=crop",
-                    url: "https://www.bloomberg.com"
-                },
-                {
-                    title: "Latest Developments in Crypto Market",
-                    excerpt: "Bitcoin is testing significant resistance levels following the recent uptrend. Investors are taking a cautious approach.",
-                    category: "Fintech",
-                    source: "CoinDesk",
-                    date: "2024-01-07",
-                    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=200&fit=crop",
-                    url: "https://www.coindesk.com"
-                },
-                {
-                    title: "AI is Transforming the Finance Sector",
-                    excerpt: "Major financial institutions have started using artificial intelligence technologies in risk management and customer services.",
-                    category: "Technology",
-                    source: "TechCrunch",
-                    date: "2024-01-06",
-                    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop",
-                    url: "https://techcrunch.com"
-                },
-                {
-                    title: "Record Volume in Stock Exchange",
-                    excerpt: "The stock market index reached historic highs with foreign investor interest. Analysts maintain bullish expectations.",
-                    category: "Stock Market",
-                    source: "Reuters",
-                    date: "2024-01-05",
-                    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=200&fit=crop",
-                    url: "https://www.reuters.com"
-                },
-                {
-                    title: "Digital Banking Trends 2024",
-                    excerpt: "Digital banking services are expected to develop further in the new year. Mobile payment systems are coming to the forefront.",
-                    category: "Fintech",
-                    source: "Finextra",
-                    date: "2024-01-04",
-                    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop",
-                    url: "https://www.finextra.com"
-                },
-                {
-                    title: "Investment Strategies with Data Analytics",
-                    excerpt: "Big data and machine learning algorithms are increasingly being used in investment decisions.",
-                    category: "Data Science",
-                    source: "Analytics Insight",
-                    date: "2024-01-03",
-                    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop",
-                    url: "https://www.analyticsinsight.net"
-                }
-            ];
-
-            // Simulate loading delay
-            await new Promise(resolve => setTimeout(resolve, 800));
-
-            // Render news
-            container.innerHTML = sampleNews.map(news => `
-                <article class="news-card" onclick="window.open('${news.url}', '_blank')">
-                    <div class="news-image-wrapper">
-                        <img src="${news.image}" alt="${news.title}" class="news-image" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop'">
-                    </div>
-                    <div class="news-content">
-                        <span class="news-category">${news.category}</span>
-                        <h3 class="news-title">${news.title}</h3>
-                        <p class="news-excerpt">${news.excerpt}</p>
-                        <div class="news-meta">
-                            <span class="news-source"><i class="fas fa-newspaper"></i> ${news.source}</span>
-                            <span class="news-date"><i class="far fa-calendar"></i> ${formatDate(news.date)}</span>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
-
-            // Add animation to new cards
-            document.querySelectorAll('.news-card').forEach((card, index) => {
-                card.classList.add('reveal');
-                card.style.transitionDelay = `${index * 100}ms`;
-                setTimeout(() => card.classList.add('active'), 100);
-            });
-        }
-
-        function formatDate(dateStr) {
-            const date = new Date(dateStr);
-            const options = { day: 'numeric', month: 'short', year: 'numeric' };
-            return date.toLocaleDateString('en-US', options);
-        }
-
-        function toggleMenu() {
-            const nav = document.getElementById('navbar');
-            if (window.innerWidth <= 768) {
-                if (nav.style.display === "block") {
-                    nav.style.display = "none";
-                } else {
-                    nav.style.display = "block";
-                }
-            }
-        }
-
-        document.getElementById('phone').addEventListener('input', function (e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        });
-
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.innerWidth <= 768 && nav.style.display === "block") {
-                nav.style.display = "none";
-            }
-        });
-    </script>
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
 </body>
 
 </html>
