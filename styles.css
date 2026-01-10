@@ -91,8 +91,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    /* Reduced from 15px 50px */
+    padding: 15px 50px;
+    /* Restore original premium padding */
     position: fixed;
     width: 100%;
     top: 0;
@@ -100,8 +100,8 @@ header {
     z-index: 1000;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(32, 201, 151, 0.1);
-    height: 90px;
-    /* Reduced from 110px */
+    height: 110px;
+    /* Restore original height */
     transition: background-color 0.3s;
 }
 
@@ -110,13 +110,13 @@ header {
     align-items: center;
     cursor: pointer;
     height: 100%;
-    margin-right: 20px;
-    /* Added spacing from Home */
+    margin-right: 0;
+    /* Remove the extra margin I added */
 }
 
 .logo-img {
-    height: 60px;
-    /* Reduced from 80px */
+    height: 80px;
+    /* Restore original logo size */
     width: auto;
     border-radius: 5px;
     border: none;
@@ -138,19 +138,19 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 15px;
-    /* Reduced from 40px */
+    gap: 40px;
+    /* Restore original gap */
     align-items: center;
 }
 
 nav ul li a {
     font-weight: 600;
-    font-size: 0.95rem;
-    /* Reduced from 1.1rem */
+    font-size: 1.1rem;
+    /* Restore original font size */
     color: var(--text-color);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    /* Reduced from 1px */
+    letter-spacing: 1px;
+    /* Restore original spacing */
 }
 
 nav ul li a:hover {
@@ -162,10 +162,10 @@ nav ul li a:hover {
 .nav-extras {
     display: flex;
     align-items: center;
-    gap: 10px;
-    /* Reduced to fit better */
-    margin-left: 20px;
-    /* Separate from nav */
+    gap: 15px;
+    /* Restore original gap */
+    margin-left: 0;
+    /* Remove extra margin */
 }
 
 /* DIL SECICI STILLERI */
