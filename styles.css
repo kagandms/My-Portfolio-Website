@@ -963,23 +963,50 @@ body.light-mode .certificate-card {
 
 
 
-/* Tablet ve Arada Kalan Geniş Ekranlar İçin Düzenleme */
-@media (max-width: 1400px) {
-    header {
-        padding: 15px 20px;
+/* Tablet ve Geniş Ekran Düzenlemesi (1350px altı mobil menüye geçsin) */
+@media (max-width: 1450px) {
+
+    /* 1450px altında mobile menüyü zorla çünkü TR/RU içerik sığmıyor */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        /* JS ile açılacak */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: var(--nav-bg);
+        justify-content: center;
+        padding: 30px 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
-        gap: 20px;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0;
     }
 
     nav ul li a {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
     }
 
-    .section-title {
-        font-size: 2rem;
+    /* Nav extras (dil/tema) menü içine alınabilir ama şimdilik headerda kalsın, sadece padding ayarı */
+    .nav-extras {
+        margin-left: auto;
+        /* Sağa yasla */
+        margin-right: 50px;
+        /* Toggle ile çakışmasın */
     }
+}
+
+body.light-mode nav {
+    background-color: var(--bg-color);
+    border-top-color: rgba(0, 0, 0, 0.1);
 }
 
 /* RESPONSIVE MOBIL */

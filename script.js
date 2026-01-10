@@ -113,9 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function toggleMenu() {
     const nav = document.getElementById('navbar');
-    if (window.innerWidth <= 768) {
-        nav.classList.toggle('active');
-    }
+    // Toggle class regardless of screen width, CSS handles visibility of the button
+    nav.classList.toggle('active');
 }
 
 async function loadNews() {
