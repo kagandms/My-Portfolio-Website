@@ -176,15 +176,7 @@ async function loadNews() {
             image: "linkedn.jpg",
             url: "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/"
         },
-        {
-            title: lang === 'tr' ? "Sektörel Analiz Paylaşımı" : (lang === 'ru' ? "Отраслевой Анализ" : "Sectoral Analysis Share"),
-            excerpt: lang === 'tr' ? "Sektördeki son gelişmeleri ve analizlerimi LinkedIn'de paylaştım." : (lang === 'ru' ? "Поделился последними событиями и анализом отрасли на LinkedIn." : "Shared the latest developments and my analysis in the sector on LinkedIn."),
-            category: lang === 'tr' ? "Analiz" : (lang === 'ru' ? "Анализ" : "Analysis"),
-            source: "LinkedIn",
-            date: "2023-12-28",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop",
-            url: "https://www.linkedin.com/feed/update/urn:li:share:7345179511442788352"
-        }
+
     ];
 
     // Yükleme simülasyonu
