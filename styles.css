@@ -96,7 +96,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 5%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -135,11 +135,15 @@ nav {
     display: flex;
     align-items: center;
     height: 100%;
+    flex: 1;
+    margin: 0 40px;
 }
 
 nav ul {
     display: flex;
-    gap: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 15px;
     align-items: center;
 }
 
@@ -965,8 +969,8 @@ body.light-mode .certificate-card {
 
 
 
-/* Tablet ve Geniş Ekran Düzenlemesi (1700px altı mobil menüye geçsin) */
-@media (max-width: 1700px) {
+/* Tablet ve Geniş Ekran Düzenlemesi (1200px altı mobil menüye geçsin) */
+@media (max-width: 1200px) {
 
     /* 1450px altında mobile menüyü zorla çünkü TR/RU içerik sığmıyor */
     .menu-toggle {
