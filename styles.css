@@ -965,8 +965,8 @@ body.light-mode .certificate-card {
 
 
 
-/* Tablet ve Geniş Ekran Düzenlemesi (1350px altı mobil menüye geçsin) */
-@media (max-width: 1450px) {
+/* Tablet ve Geniş Ekran Düzenlemesi (1700px altı mobil menüye geçsin) */
+@media (max-width: 1700px) {
 
     /* 1450px altında mobile menüyü zorla çünkü TR/RU içerik sığmıyor */
     .menu-toggle {
