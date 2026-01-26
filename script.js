@@ -120,18 +120,36 @@ document.addEventListener('DOMContentLoaded', () => {
             const subject = this.querySelector('input[name="subject"]').value;
             const message = this.querySelector('textarea[name="message"]').value;
 
+            // New Fields
+            const birthdate = this.querySelector('input[name="birthdate"]').value;
+
+            const genderInput = this.querySelector('input[name="gender"]:checked');
+            const gender = genderInput ? genderInput.value : 'Belirtilmedi';
+
+            const professionInput = this.querySelector('select[name="profession"]');
+            const profession = professionInput ? professionInput.value : 'Belirtilmedi';
+
+            // Get all checked hobbies
+            const hobbyInputs = this.querySelectorAll('input[name="hobbies"]:checked');
+            const hobbies = Array.from(hobbyInputs).map(cb => cb.value).join(', ');
+
             // Construct email body
             const body = `Ad Soyad: ${name}%0D%0A`
-                + `Telefon: ${phone}%0D%0A`
                 + `E-posta: ${email}%0D%0A`
-                + `Mesaj: ${message}`;
+                + `Telefon: ${phone}%0D%0A`
+                + `Doğum Tarihi: ${birthdate}%0D%0A`
+                + `Cinsiyet: ${gender}%0D%0A`
+                + `Meslek/Bölüm: ${profession}%0D%0A`
+                + `Hobiler: ${hobbies}%0D%0A`
+                + `---------------------------%0D%0A`
+                + `Mesaj:%0D%0A${message}`;
 
             // Open mail client
             window.location.href = `mailto:kagan.durmus@topkapi.edu.tr?subject=${encodeURIComponent(subject)}&body=${body}`;
 
             // Optional: Show success message or clear form
             alert('Mail uygulamanız açılıyor...');
-            this.reset();
+            // this.reset(); // Optional: keep data if mail doesn't open
         });
     }
 });

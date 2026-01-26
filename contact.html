@@ -134,17 +134,82 @@
         </p>
 
         <form class="contact-form" id="contact-form">
-            <div class="input-group">
-                <input type="text" name="name" placeholder="Name Surname" required>
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number (Optional)">
+            <!-- 1. PERSONAL INFORMATION -->
+            <div class="form-section">
+                <h3 class="form-section-title">Personal Information</h3>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Full Name:</label>
+                        <input type="text" name="name" placeholder="Ex: John Doe" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Email Address:</label>
+                        <input type="email" name="email" placeholder="contact@example.com" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Phone Number:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="+1 234 567 8900">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Date of Birth:</label>
+                        <input type="date" name="birthdate">
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Gender:</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Other"> Other</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-group">
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="text" name="subject" placeholder="Subject" required>
+            <!-- 2. INTERESTS & SKILLS -->
+            <div class="form-section">
+                <h3 class="form-section-title">Interests & Skills</h3>
+
+                <div class="input-wrapper">
+                    <label>Profession / Department:</label>
+                    <select name="profession">
+                        <option value="" disabled selected>Select</option>
+                        <option value="Student">Student</option>
+                        <option value="Engineer">Engineer</option>
+                        <option value="Developer">Developer</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>What do you like?</label>
+                    <div class="checkbox-group">
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Coding"> Coding</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Music"> Music</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Travel"> Travel</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Reading">
+                            Reading</label>
+                    </div>
+                </div>
             </div>
 
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            <!-- 3. BIO -->
+            <div class="form-section">
+                <h3 class="form-section-title">About Yourself</h3>
+                <div class="input-wrapper">
+                    <input type="text" name="subject" placeholder="Subject" required style="margin-bottom: 15px;">
+                    <textarea name="message" placeholder="You can write here..." required></textarea>
+                </div>
+            </div>
 
             <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Send Message</button>
         </form>
