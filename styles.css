@@ -1088,15 +1088,17 @@ body.light-mode nav {
         gap: 50px;
     }
 
-    .input-group {
+    /* .input-group {
         flex-direction: column;
         gap: 15px;
-    }
+    } 
+       Moved to max-width: 768px for better laptop form layout */
 
     .input-group input {
         width: 100%;
     }
 }
+
 /* FIX MOBILE HEADER LAYOUT */
 @media (max-width: 768px) {
     header {
@@ -1188,20 +1190,42 @@ textarea {
     transition: all 0.3s;
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     border-color: var(--accent-color);
     box-shadow: 0 0 10px rgba(32, 201, 151, 0.15);
 }
 
 /* Radio & Checkbox Groups */
-.radio-group, .checkbox-group {
+.radio-group,
+.checkbox-group {
     display: flex;
+    flex-direction: row;
+    /* Force row */
     gap: 20px;
     flex-wrap: wrap;
     padding-top: 5px;
+    width: 100%;
 }
 
-.radio-label, .check-label {
+/* Ensure input-group behaves correctly */
+.input-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Override 1200px breakpoint for form only if needed, OR fix the general rule */
+@media (max-width: 768px) {
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.radio-label,
+.check-label {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1211,12 +1235,14 @@ input:focus, select:focus, textarea:focus {
     transition: color 0.2s;
 }
 
-.radio-label:hover, .check-label:hover {
+.radio-label:hover,
+.check-label:hover {
     color: var(--accent-color);
 }
 
 /* Custom Accent Styling for Radio/Checkbox */
-input[type="radio"], input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
     accent-color: var(--accent-color);
     width: 18px;
     height: 18px;
@@ -1230,16 +1256,16 @@ body.light-mode .form-section {
     border-color: #dfe6e9;
 }
 
-body.light-mode input, 
-body.light-mode select, 
+body.light-mode input,
+body.light-mode select,
 body.light-mode textarea {
     background-color: #f9f9f9;
     border-color: #dfe6e9;
     color: #2d3436;
 }
 
-body.light-mode input:focus, 
-body.light-mode select:focus, 
+body.light-mode input:focus,
+body.light-mode select:focus,
 body.light-mode textarea:focus {
     background-color: #fff;
 }
@@ -1248,7 +1274,8 @@ body.light-mode textarea:focus {
 #education {
     flex-direction: column;
     justify-content: center;
-    background-color: var(--bg-color); /* Maintain flow */
+    background-color: var(--bg-color);
+    /* Maintain flow */
 }
 
 .education-container {
@@ -1314,7 +1341,7 @@ body.light-mode textarea:focus {
 /* Light Mode for Education */
 body.light-mode .education-card {
     background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -1324,8 +1351,9 @@ body.light-mode .education-card {
         text-align: center;
         padding: 20px;
     }
-    
+
     .education-card:hover {
-        transform: translateY(-5px); /* Vertical hover on mobile */
+        transform: translateY(-5px);
+        /* Vertical hover on mobile */
     }
 }
