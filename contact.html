@@ -126,41 +126,32 @@
         </div>
     </header>
 
-    <!-- HOME -->
-    <section id="home">
-        <div class="home-content">
-            <span class="intro">Hello, I am</span>
-            <h1>Kağan Samet Durmuş.</h1>
-            <h2 class="subtitle">Data-Driven Finance & Technology.</h2>
-            <p>
-                I am a developer combining Management Information Systems and Economics disciplines; creating modern
-                solutions in Fintech, stock market, and data analysis fields, blending financial vision with
-                technological competence.
-            </p>
+    <section id="contact" style="padding-top: 120px;">
+        <h2 class="section-title">Contact Me</h2>
+        <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
+            My inbox is always open for your projects or just to say hello. I'll try to get back to you as soon as
+            possible!
+        </p>
 
-            <div class="social-icons">
-                <a href="https://github.com/kagandms" target="_blank" rel="noopener noreferrer" aria-label="Github"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kağan-samet-durmuş-37676332b/" target="_blank"
-                    rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/kagandms/?hl=ru" target="_blank" rel="noopener noreferrer"
-                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://t.me/kagandms" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i
-                        class="fab fa-telegram"></i></a>
+        <form class="contact-form" action="https://formspree.io/f/mjgbrllv" method="POST">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Name Surname" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number (Optional)">
             </div>
 
-            <a href="#contact" class="btn-primary">Get in Touch</a>
-        </div>
-
-        <div class="profile-img-wrapper">
-            <div class="profile-img-container">
-                <img src="myprofile.jpg" onerror="this.src='https://placehold.co/400x400/112240/64ffda?text=No+Photo'"
-                    alt="kagandms (Kağan Samet Durmuş) Profile Photo">
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="subject" placeholder="Subject" required>
             </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
+            <!-- HONEYPOT -->
+            <input type="text" name="_gotcha" style="display:none">
+
+            <textarea name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section><!-- FOOTER -->
     <footer>
         <p>&copy; 2024 Kağan Samet Durmuş (kagandms). All Rights Reserved.</p>
     </footer>
