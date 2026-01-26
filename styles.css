@@ -1113,28 +1113,63 @@ body.light-mode nav {
     /* Flex Reordering */
     .logo-container {
         order: 1;
+        flex: 1;
+        /* Allow logo to take space if needed, or just be natural */
     }
 
     .nav-extras {
         order: 2;
-        margin-left: auto;
+        margin-left: 0;
         margin-right: 15px;
-        gap: 10px;
+        gap: 0;
+        /* Reset gap */
+    }
+
+    /* Hide Header Language Switcher on Mobile */
+    .nav-extras .lang-switcher {
+        display: none;
     }
 
     .menu-toggle {
         order: 3;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Base style for mobile-only items - hidden on desktop */
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .mobile-only {
+        display: block;
+        /* Show in mobile menu */
+        border-top: 1px solid rgba(32, 201, 151, 0.1);
+        padding-top: 15px;
+        margin-top: 10px;
     }
 
-    /* Adjust Language Buttons size */
-    .lang-btn {
-        padding: 5px 8px;
-        font-size: 0.9rem;
+    .mobile-lang-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
-    .lang-switcher {
-        gap: 5px;
+    .mobile-lang-btn {
+        color: var(--card-text);
+        font-weight: bold;
+        padding: 5px 10px;
+        border: 1px solid var(--card-text);
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+
+    .mobile-lang-btn.active,
+    .mobile-lang-btn:hover {
+        color: var(--bg-color);
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
     }
 }
 
