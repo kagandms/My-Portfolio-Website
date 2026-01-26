@@ -1138,7 +1138,7 @@ body.light-mode nav {
 
 /* Base style for mobile-only items - hidden on desktop */
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 1200px) {
