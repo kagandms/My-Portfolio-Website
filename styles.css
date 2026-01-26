@@ -1243,3 +1243,89 @@ body.light-mode select:focus,
 body.light-mode textarea:focus {
     background-color: #fff;
 }
+
+/* --- EGITIM (EDUCATION) BOLUMU --- */
+#education {
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color); /* Maintain flow */
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background-color: var(--secondary-color);
+    border-left: 5px solid var(--accent-color);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.education-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 20px rgba(32, 201, 151, 0.1);
+}
+
+.edu-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    background: rgba(32, 201, 151, 0.1);
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+}
+
+.edu-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.edu-dept {
+    font-size: 1rem;
+    color: var(--card-text);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.edu-date {
+    font-size: 0.9rem;
+    color: #8892b0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Light Mode for Education */
+body.light-mode .education-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+    .education-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .education-card:hover {
+        transform: translateY(-5px); /* Vertical hover on mobile */
+    }
+}
