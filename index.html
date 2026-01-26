@@ -513,19 +513,85 @@
         </p>
 
         <form class="contact-form" id="contact-form">
-            <div class="input-group">
-                <input type="text" name="name" placeholder="Ad Soyad" required>
-                <input type="tel" name="phone" id="phone" placeholder="Telefon Numarası (Opsiyonel)">
+            <!-- 1. KIŞISEL BILGILER -->
+            <div class="form-section">
+                <h3 class="form-section-title">Kişisel Bilgiler</h3>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Adın Soyadın:</label>
+                        <input type="text" name="name" placeholder="Örn: Ayşe Yılmaz" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>E-posta Adresi:</label>
+                        <input type="email" name="email" placeholder="mail@example.com" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Telefon Numarası:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="0555 555 55 55">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Doğum Tarihi:</label>
+                        <input type="date" name="birthdate">
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Cinsiyet:</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Kadın"> Kadın</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Erkek"> Erkek</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Diğer"> Diğer</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-group">
-                <input type="email" name="email" placeholder="E-posta Adresi" required>
-                <input type="text" name="subject" placeholder="Konu" required>
+            <!-- 2. ILGI ALANLARI & YETENEKLER -->
+            <div class="form-section">
+                <h3 class="form-section-title">İlgi Alanları & Yetenekler</h3>
+
+                <div class="input-wrapper">
+                    <label>Mesleğin / Bölümün:</label>
+                    <select name="profession">
+                        <option value="" disabled selected>Seçiniz</option>
+                        <option value="student">Öğrenci</option>
+                        <option value="engineer">Mühendis</option>
+                        <option value="developer">Yazılımcı</option>
+                        <option value="teacher">Öğretmen</option>
+                        <option value="other">Diğer</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Nelerden Hoşlanırsın?</label>
+                    <div class="checkbox-group">
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Kodlama">
+                            Kodlama</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Spor"> Spor</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Müzik"> Müzik</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Seyahat">
+                            Seyahat</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Kitap"> Kitap</label>
+                    </div>
+                </div>
             </div>
 
-            <textarea name="message" placeholder="Mesajınız" required></textarea>
+            <!-- 3. KENDINDEN BAHSET -->
+            <div class="form-section">
+                <h3 class="form-section-title">Kendinden Bahset</h3>
+                <div class="input-wrapper">
+                    <input type="text" name="subject" placeholder="Konu" required style="margin-bottom: 15px;">
+                    <textarea name="message" placeholder="Buraya yazabilirsin..." required></textarea>
+                </div>
+            </div>
 
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesajı Gönder</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesaj Gönder</button>
         </form>
     </section>
 

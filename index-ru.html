@@ -503,26 +503,89 @@
     <section id="contact">
         <h2 class="section-title">Свяжитесь со мной</h2>
         <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
-            Мой почтовый ящик всегда открыт для ваших проектов или просто для приветствия. Я постараюсь ответить вам
-            как
+            Мой почтовый ящик всегда открыт для ваших проектов или просто для приветствия. Я постараюсь ответить вам как
             можно скорее!
         </p>
 
         <form class="contact-form" id="contact-form">
-            <div class="input-group">
-                <input type="text" name="name" placeholder="Имя Фамилия" required>
-                <input type="tel" name="phone" id="phone" placeholder="Номер телефона (Необязательно)">
+            <!-- 1. PERSONAL INFORMATION -->
+            <div class="form-section">
+                <h3 class="form-section-title">Личная Информация</h3>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Имя Фамилия:</label>
+                        <input type="text" name="name" placeholder="Прим: Иван Иванов" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Эл. почта:</label>
+                        <input type="email" name="email" placeholder="mail@example.com" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Номер телефона:</label>
+                        <input type="tel" name="phone" id="phone" placeholder="+7 999 999 99 99">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label>Дата рождения:</label>
+                        <input type="date" name="birthdate">
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Пол:</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="gender" value="Женский"> Женский</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Мужской"> Мужской</label>
+                        <label class="radio-label"><input type="radio" name="gender" value="Другой"> Другой</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-group">
-                <input type="email" name="email" placeholder="Адрес электронной почты" required>
-                <input type="text" name="subject" placeholder="Тема" required>
+            <!-- 2. INTERESTS & SKILLS -->
+            <div class="form-section">
+                <h3 class="form-section-title">Интересы и Навыки</h3>
+
+                <div class="input-wrapper">
+                    <label>Профессия / Отдел:</label>
+                    <select name="profession">
+                        <option value="" disabled selected>Выберите</option>
+                        <option value="Студент">Студент</option>
+                        <option value="Инженер">Инженер</option>
+                        <option value="Разработчик">Разработчик</option>
+                        <option value="Учитель">Учитель</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </div>
+
+                <div class="input-wrapper">
+                    <label>Ваши хобби:</label>
+                    <div class="checkbox-group">
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Кодинг"> Кодинг</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Спорт"> Спорт</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Музыка"> Музыка</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Путешествия">
+                            Путешествия</label>
+                        <label class="check-label"><input type="checkbox" name="hobbies" value="Чтение"> Чтение</label>
+                    </div>
+                </div>
             </div>
 
-            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <!-- 3. BIO -->
+            <div class="form-section">
+                <h3 class="form-section-title">О себе</h3>
+                <div class="input-wrapper">
+                    <input type="text" name="subject" placeholder="Тема" required style="margin-bottom: 15px;">
+                    <textarea name="message" placeholder="Напишите здесь..." required></textarea>
+                </div>
+            </div>
 
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить
-                сообщение</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить</button>
         </form>
     </section>
 
