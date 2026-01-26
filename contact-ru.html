@@ -133,7 +133,7 @@
             можно скорее!
         </p>
 
-        <form class="contact-form" action="https://formspree.io/f/mjgbrllv" method="POST">
+        <form class="contact-form" id="contact-form">
             <div class="input-group">
                 <input type="text" name="name" placeholder="Имя Фамилия" required>
                 <input type="tel" name="phone" id="phone" placeholder="Номер телефона (Необязательно)">
@@ -144,12 +144,9 @@
                 <input type="text" name="subject" placeholder="Тема" required>
             </div>
 
-            <!-- HONEYPOT -->
-            <input type="text" name="_gotcha" style="display:none">
-
             <textarea name="message" placeholder="Ваше сообщение" required></textarea>
 
-            <button type="submit" class="submit-btn">Отправить сообщение</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить сообщение</button>
         </form>
     </section><!-- FOOTER -->
     <footer>

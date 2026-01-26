@@ -133,7 +133,7 @@
             çalışacağım!
         </p>
 
-        <form class="contact-form" action="https://formspree.io/f/mjgbrllv" method="POST">
+        <form class="contact-form" id="contact-form">
             <div class="input-group">
                 <input type="text" name="name" placeholder="Ad Soyad" required>
                 <input type="tel" name="phone" id="phone" placeholder="Telefon Numarası (Opsiyonel)">
@@ -144,12 +144,9 @@
                 <input type="text" name="subject" placeholder="Konu" required>
             </div>
 
-            <!-- HONEYPOT -->
-            <input type="text" name="_gotcha" style="display:none">
-
             <textarea name="message" placeholder="Mesajınız" required></textarea>
 
-            <button type="submit" class="submit-btn">Mesajı Gönder</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesajı Gönder</button>
         </form>
     </section><!-- FOOTER -->
     <footer>

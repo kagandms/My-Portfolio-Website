@@ -133,7 +133,7 @@
             possible!
         </p>
 
-        <form class="contact-form" action="https://formspree.io/f/mjgbrllv" method="POST">
+        <form class="contact-form" id="contact-form">
             <div class="input-group">
                 <input type="text" name="name" placeholder="Name Surname" required>
                 <input type="tel" name="phone" id="phone" placeholder="Phone Number (Optional)">
@@ -144,12 +144,9 @@
                 <input type="text" name="subject" placeholder="Subject" required>
             </div>
 
-            <!-- HONEYPOT -->
-            <input type="text" name="_gotcha" style="display:none">
-
             <textarea name="message" placeholder="Your Message" required></textarea>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Send Message</button>
         </form>
     </section><!-- FOOTER -->
     <footer>

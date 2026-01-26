@@ -107,6 +107,33 @@ document.addEventListener('DOMContentLoaded', () => {
             this.value = this.value.replace(/[^0-9]/g, '');
         });
     }
+
+    // 7. CONTACT FORM MAILTO HANDLING
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = this.querySelector('input[name="name"]').value;
+            const phone = this.querySelector('input[name="phone"]').value;
+            const email = this.querySelector('input[name="email"]').value;
+            const subject = this.querySelector('input[name="subject"]').value;
+            const message = this.querySelector('textarea[name="message"]').value;
+
+            // Construct email body
+            const body = `Ad Soyad: ${name}%0D%0A`
+                + `Telefon: ${phone}%0D%0A`
+                + `E-posta: ${email}%0D%0A`
+                + `Mesaj: ${message}`;
+
+            // Open mail client
+            window.location.href = `mailto:kagan.durmus@topkapi.edu.tr?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+            // Optional: Show success message or clear form
+            alert('Mail uygulamanız açılıyor...');
+            this.reset();
+        });
+    }
 });
 
 // --- HELPER FUNCTIONS ---
