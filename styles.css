@@ -1188,6 +1188,8 @@ textarea {
     font-size: 1rem;
     outline: none;
     transition: all 0.3s;
+    color-scheme: dark;
+    /* Fix date picker in dark mode */
 }
 
 input:focus,
