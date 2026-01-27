@@ -1145,7 +1145,7 @@ body.light-mode nav {
 
 @media (max-width: 1200px) {
     .mobile-only {
-        display: block;
+        display: block !important;
         /* Show in mobile menu */
         border-top: 1px solid rgba(32, 201, 151, 0.1);
         padding-top: 15px;
