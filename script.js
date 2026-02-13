@@ -108,48 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Contact Form Handling (Formspree AJAX)
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalBtnText = submitBtn.innerText;
-            submitBtn.innerText = 'Gönderiliyor...';
-            submitBtn.disabled = true;
-
-            const formData = new FormData(this);
-
-            try {
-                const response = await fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    alert('Mesajınız başarıyla gönderildi! Teşekkürler.');
-                    this.reset();
-                } else {
-                    const data = await response.json();
-                    if (Object.hasOwnProperty.call(data, 'errors')) {
-                        alert(data.errors.map(error => error.message).join(", "));
-                    } else {
-                        alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.');
-                    }
-                }
-            } catch (error) {
-                alert('Bir hata oluştu. Lütfen bağlantınızı kontrol ediniz.');
-                console.error('Form hatası:', error);
-            } finally {
-                submitBtn.innerText = originalBtnText;
-                submitBtn.disabled = false;
-            }
-        });
-    }
+    // Contact Form Handling (Native Submission for Reliability)
+    // AJAX handling removed to ensure Formspree CAPTCHA/Spam protection works correctly.
+    // The form will now redirect to Formspree's success page.
 });
 
 // Helper Functions
