@@ -1,7 +1,7 @@
-/* --- GLOBAL JAVASCRIPT --- */
+/* Global Javascript */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. PRELOADER
+    // Preloader
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', () => {
@@ -10,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     preloader.style.display = 'none';
                 }, 500);
-            }, 500); // Küçük bir gecikme
+            }, 500); // Kucuk bir gecikme
         });
     }
 
-    // 2. SCROLL ANIMATION OBSERVER
+    // Scroll Animation Observer
     const elementsToAnimate = document.querySelectorAll(
         'section, h1, h2, h3, p, .skill-card, .project-card, .profile-img-container, .btn-primary, .social-icons, .schedule-item, .contact-form, .table-container, .iframe-wrapper, .news-card'
     );
@@ -45,10 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. NEWS ENGINE
+    // News Engine
     loadNews();
 
-    // 4. THEME TOGGLE (DARK/LIGHT MODE)
+    // Theme Toggle
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. SCROLL TO TOP BUTTON
+    // Scroll To Top Button
     const scrollTopBtn = document.getElementById('scroll-top-btn');
 
     window.addEventListener('scroll', () => {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. PHONE INPUT VALIDATION
+    // Phone Input Validation
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', function (e) {
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 7. CONTACT FORM MAILTO HANDLING
+    // Contact Form Mailto Handling
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
@@ -147,18 +147,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Open mail client
             window.location.href = `mailto:kagan.durmus@topkapi.edu.tr?subject=${encodeURIComponent(subject)}&body=${body}`;
 
-            // Optional: Show success message or clear form
+            // Optional Show success message or clear form
             alert('Mail uygulamanız açılıyor...');
-            // this.reset(); // Optional: keep data if mail doesn't open
+            // this reset Optional keep data if mail does not open
         });
     }
 });
 
-// --- HELPER FUNCTIONS ---
+// Helper Functions
 
 function toggleMenu() {
     const nav = document.getElementById('navbar');
-    // Toggle class regardless of screen width, CSS handles visibility of the button
+    // Toggle class regardless of screen width CSS handles visibility of the button
     nav.classList.toggle('active');
 }
 
@@ -166,13 +166,13 @@ async function loadNews() {
     const container = document.getElementById('news-container');
     if (!container) return;
 
-    // Dil tespiti (sayfanın lang attribute'undan)
+    // Dil tespiti
     const lang = document.documentElement.lang || 'tr';
 
     let newsData = [];
 
-    // Gerçek API olmadığı için örnek verileri dile göre seçebiliriz veya genel İngilizce/Türkçe karışık tutabiliriz.
-    // Şimdilik mevcut yapıyı koruyalım ama dile göre başlıkları çevirebiliriz.
+    // Gercek API olmadigi icin ornek verileri dile gore secebiliriz veya genel İngilizce Turkce karisik tutabiliriz
+    // Simdilik mevcut yapiyi koruyalim ama dile gore basliklari cevirebiliriz
 
     const sampleNews = [
         {
@@ -223,7 +223,7 @@ async function loadNews() {
 
     ];
 
-    // Yükleme simülasyonu
+    // Yukleme simulasyonu
     await new Promise(resolve => setTimeout(resolve, 800));
 
     container.innerHTML = sampleNews.map(news => `

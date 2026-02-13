@@ -1,6 +1,6 @@
-/* KAGAN SAMET DURMUS PORTFOLYO STILLERI */
+/* Kagan Samet Durmus Portfolyo Stilleri */
 
-/* GENEL AYARLAR */
+/* Genel Ayarlar */
 :root {
     --bg-color: #0b1210;
     --text-color: #d1d9d6;
@@ -16,7 +16,7 @@ html {
     scroll-padding-top: 100px;
 }
 
-/* LIGHT MODE DEGISKENLERI */
+/* Light Mode Degiskenleri */
 body.light-mode {
     --bg-color: #f0f4f8;
     --text-color: #2d3436;
@@ -54,7 +54,7 @@ ul {
     list-style: none;
 }
 
-/* PRELOADER */
+/* Preloader */
 #preloader {
     position: fixed;
     top: 0;
@@ -78,7 +78,7 @@ ul {
     animation: spin 1s ease-in-out infinite;
 }
 
-/* SCROLL ANIMASYONLARI */
+/* Scroll Animasyonlari */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -91,7 +91,7 @@ ul {
     transform: translateY(0);
 }
 
-/* HEADER NAVBAR */
+/* Header Navbar */
 header {
     display: flex;
     justify-content: space-between;
@@ -160,7 +160,7 @@ nav ul li a:hover {
     text-shadow: 0 0 10px rgba(32, 201, 151, 0.3);
 }
 
-/* ICONS CONTAINER THEME VE LANG */
+/* Icons Container Theme Ve Lang */
 .nav-extras {
     display: flex;
     align-items: center;
@@ -169,7 +169,7 @@ nav ul li a:hover {
     margin-left: 0;
 }
 
-/* DIL SECICI STILLERI */
+/* Dil Secici Stilleri */
 .lang-switcher {
     display: flex;
     gap: 15px;
@@ -199,7 +199,7 @@ nav ul li a:hover {
     color: var(--bg-color);
 }
 
-/* TEMA DEGISTIRME BUTONU */
+/* Tema Degistirme Butonu */
 #theme-toggle {
     background: transparent;
     border: none;
@@ -222,7 +222,7 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-/* ORTAK BOLUM STILLERI */
+/* Ortak Bolum Stilleri */
 section {
     padding: 100px 10%;
     min-height: 100vh;
@@ -270,7 +270,7 @@ body.light-mode footer {
     border-radius: 2px;
 }
 
-/* ANASAYFA HERO */
+/* Anasayfa Hero */
 #home {
     justify-content: space-between;
     padding-top: 130px;
@@ -295,7 +295,7 @@ body.light-mode footer {
     margin-bottom: 15px;
     font-weight: 800;
     color: #e6f1ff;
-    /* Only valid in dark mode, overridden above for light */
+    /* Only valid in dark mode overridden above for light */
     transition: color 0.3s;
 }
 
@@ -392,7 +392,7 @@ body.light-mode footer {
     right: 10px;
 }
 
-/* HAKKIMDA */
+/* Hakkimda */
 #about {
     flex-direction: column;
     justify-content: center;
@@ -427,7 +427,7 @@ body.light-mode footer {
     max-width: 600px;
 }
 
-/* YETENEKLER */
+/* Yetenekler */
 #skills {
     flex-direction: column;
     justify-content: center;
@@ -483,7 +483,7 @@ body.light-mode footer {
     color: var(--card-text);
 }
 
-/* PROJELERIM */
+/* Projelerim */
 #projects {
     flex-direction: column;
     justify-content: center;
@@ -535,7 +535,7 @@ body.light-mode footer {
     line-height: 1.6;
 }
 
-/* HABERLER */
+/* Haberler */
 #news {
     flex-direction: column;
     justify-content: flex-start;
@@ -689,7 +689,7 @@ body.light-mode .news-card {
     }
 }
 
-/* HAFTALIK DERS PROGRAMI */
+/* Haftalik Ders Programi */
 #schedule {
     flex-direction: column;
     justify-content: center;
@@ -752,7 +752,7 @@ tbody tr:hover {
     transition: color 0.3s;
 }
 
-/* ILETISIM */
+/* Iletisim */
 #contact {
     flex-direction: column;
     justify-content: center;
@@ -881,12 +881,12 @@ body.light-mode footer {
     border-top-color: #b2bec3;
 }
 
-/* SERTIFIKALAR (YENI EKLENDI) */
+/* Sertifikalar Yeni Eklendi */
 #certificates {
     flex-direction: column;
     justify-content: center;
     background-color: var(--bg-color);
-    /* Same as body to keep flow, or secondary for contrast? Let's stick to bg */
+    /* Same as body to keep flow or secondary for contrast Lets stick to bg */
 }
 
 .certificates-container {
@@ -905,7 +905,7 @@ body.light-mode footer {
     /* Less padding for iframes */
     width: 30%;
     min-width: 320px;
-    /* LinkedIn Embeds are usually around 300-350px min */
+    /* Linkedin Embeds minimum size */
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: transform 0.3s, border-color 0.3s;
     display: flex;
@@ -934,7 +934,7 @@ body.light-mode footer {
     max-height: 500px;
     /* Prevent overly tall images */
     object-fit: cover;
-    /* or contain depending on preference, cover is usually better for cards */
+    /* or contain depending on preference cover is usually better for cards */
     display: block;
 }
 
@@ -971,10 +971,10 @@ body.light-mode .certificate-card {
 
 
 
-/* Tablet ve Geniş Ekran Düzenlemesi (1200px altı mobil menüye geçsin) */
+/* Tablet ve Genis Ekran Duzenlemesi */
 @media (max-width: 1200px) {
 
-    /* 1450px altında mobile menüyü zorla çünkü TR/RU içerik sığmıyor */
+    /* mobile menuyu zorla cunku TR RU icerik sigmiyor */
     .menu-toggle {
         display: block;
     }
@@ -1003,7 +1003,7 @@ body.light-mode .certificate-card {
         font-size: 1.2rem;
     }
 
-    /* Nav extras (dil/tema) menü içine alınabilir ama şimdilik headerda kalsın, sadece padding ayarı */
+    /* Nav extras menu icine alinabilir ama simdilik headerda kalsin sadece padding ayari */
     .nav-extras {
         margin-left: auto;
         /* Sağa yasla */
@@ -1090,11 +1090,7 @@ body.light-mode nav {
         gap: 50px;
     }
 
-    /* .input-group {
-        flex-direction: column;
-        gap: 15px;
-    } 
-       Moved to max-width: 768px for better laptop form layout */
+    /* Moved to max width for better laptop form layout */
 
     .input-group input {
         width: 100%;
@@ -1116,12 +1112,14 @@ body.light-mode nav {
     .logo-container {
         order: 1;
         flex: 1;
-        /* Allow logo to take space if needed, or just be natural */
+        /* Allow logo to take space if needed or just be natural */
     }
 
     .nav-extras {
         order: 2;
         margin-left: 0;
+        margin-top: 0;
+        /* Reset margin inherited from tablet query to fix alignment */
         margin-right: 15px;
         gap: 0;
         /* Reset gap */
@@ -1138,7 +1136,7 @@ body.light-mode nav {
     }
 }
 
-/* Base style for mobile-only items - hidden on desktop */
+/* Base style for mobile only items hidden on desktop */
 .mobile-only {
     display: none !important;
 }
@@ -1175,7 +1173,7 @@ body.light-mode nav {
     }
 }
 
-/* --- YENI FORM TASARIMI (DARK GREEN STYLE) --- */
+/* Yeni Form Tasarimi Dark Green Style */
 
 .form-section {
     background-color: var(--secondary-color);
@@ -1236,7 +1234,7 @@ textarea:focus {
     box-shadow: 0 0 10px rgba(32, 201, 151, 0.15);
 }
 
-/* Radio & Checkbox Groups */
+/* Radio and Checkbox Groups */
 .radio-group,
 .checkbox-group {
     display: flex;
@@ -1248,14 +1246,14 @@ textarea:focus {
     width: 100%;
 }
 
-/* Ensure input-group behaves correctly */
+/* Ensure input group behaves correctly */
 .input-group {
     display: flex;
     gap: 20px;
     width: 100%;
 }
 
-/* Override 1200px breakpoint for form only if needed, OR fix the general rule */
+/* Override breakpoint for form only if needed OR fix the general rule */
 @media (max-width: 768px) {
     .input-group {
         flex-direction: column;
@@ -1279,7 +1277,7 @@ textarea:focus {
     color: var(--accent-color);
 }
 
-/* Custom Accent Styling for Radio/Checkbox */
+/* Custom Accent Styling for Radio Checkbox */
 input[type="radio"],
 input[type="checkbox"] {
     accent-color: var(--accent-color);
@@ -1309,7 +1307,7 @@ body.light-mode textarea:focus {
     background-color: #fff;
 }
 
-/* --- EGITIM (EDUCATION) BOLUMU --- */
+/* Egitim Education Bolumu */
 #education {
     flex-direction: column;
     justify-content: center;
