@@ -108,48 +108,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Contact Form Mailto Handling
-    const contactForm = document.querySelector('.contact-form');
+    // Contact Form Handling (Formspree AJAX)
+    const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const name = this.querySelector('input[name="name"]').value;
-            const phone = this.querySelector('input[name="phone"]').value;
-            const email = this.querySelector('input[name="email"]').value;
-            const subject = this.querySelector('input[name="subject"]').value;
-            const message = this.querySelector('textarea[name="message"]').value;
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = 'Gönderiliyor...';
+            submitBtn.disabled = true;
 
-            // New Fields
-            const birthdate = this.querySelector('input[name="birthdate"]').value;
+            const formData = new FormData(this);
 
-            const genderInput = this.querySelector('input[name="gender"]:checked');
-            const gender = genderInput ? genderInput.value : 'Belirtilmedi';
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-            const professionInput = this.querySelector('select[name="profession"]');
-            const profession = professionInput ? professionInput.value : 'Belirtilmedi';
-
-            // Get all checked hobbies
-            const hobbyInputs = this.querySelectorAll('input[name="hobbies"]:checked');
-            const hobbies = Array.from(hobbyInputs).map(cb => cb.value).join(', ');
-
-            // Construct email body
-            const body = `Ad Soyad: ${name}%0D%0A`
-                + `E-posta: ${email}%0D%0A`
-                + `Telefon: ${phone}%0D%0A`
-                + `Doğum Tarihi: ${birthdate}%0D%0A`
-                + `Cinsiyet: ${gender}%0D%0A`
-                + `Meslek/Bölüm: ${profession}%0D%0A`
-                + `Hobiler: ${hobbies}%0D%0A`
-                + `---------------------------%0D%0A`
-                + `Mesaj:%0D%0A${message}`;
-
-            // Open mail client
-            window.location.href = `mailto:kagan.durmus@topkapi.edu.tr?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-            // Optional Show success message or clear form
-            alert('Mail uygulamanız açılıyor...');
-            // this reset Optional keep data if mail does not open
+                if (response.ok) {
+                    alert('Mesajınız başarıyla gönderildi! Teşekkürler.');
+                    this.reset();
+                } else {
+                    const data = await response.json();
+                    if (Object.hasOwnProperty.call(data, 'errors')) {
+                        alert(data.errors.map(error => error.message).join(", "));
+                    } else {
+                        alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.');
+                    }
+                }
+            } catch (error) {
+                alert('Bir hata oluştu. Lütfen bağlantınızı kontrol ediniz.');
+                console.error('Form hatası:', error);
+            } finally {
+                submitBtn.innerText = originalBtnText;
+                submitBtn.disabled = false;
+            }
         });
     }
 });
