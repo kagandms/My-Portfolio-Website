@@ -38,6 +38,8 @@
     <meta property="og:description"
         content="Veri odaklı Fintech, Borsa ve Yazılım çözümleri. Yönetim Bilişim Sistemleri & Ekonomi.">
     <meta property="og:image" content="https://kagandms.github.io/myprofile.jpg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="1067">
     <meta property="og:url" content="https://kagandms.github.io/">
     <meta property="og:site_name" content="Kağan Samet Durmuş Portfolyo">
 
@@ -88,25 +90,25 @@
     <!-- Navbar -->
     <header>
         <!-- Logo -->
-        <div class="logo-container" onclick="window.scrollTo(0,0)">
+        <div class="logo-container">
             <img src="logo.webp" onerror="this.src='https://placehold.co/100x100/112240/64ffda?text=Logo+Yok'"
                 alt="kagandms (Kağan Samet Durmuş) Logo" class="logo-img">
         </div>
 
-        <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
 
         <nav id="navbar">
             <ul>
-                <li><a href="index.html" onclick="toggleMenu()" target="_blank">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html" onclick="toggleMenu()" target="_blank">Hakkında</a></li>
-                <li><a href="yetenekler.html" onclick="toggleMenu()" target="_blank">Yetenekler</a></li>
-                <li><a href="sertifikalar.html" onclick="toggleMenu()" target="_blank">Sertifikalar</a></li>
-                <li><a href="projeler.html" onclick="toggleMenu()" target="_blank">Projeler</a></li>
-                <li><a href="haberler.html" onclick="toggleMenu()" target="_blank">Haberler</a></li>
-                <li><a href="program.html" onclick="toggleMenu()" target="_blank">Program</a></li>
-                <li><a href="iletisim.html" onclick="toggleMenu()" target="_blank">İletişim</a></li>
+                <li><a href="index.html" target="_blank" rel="noopener noreferrer">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html" target="_blank" rel="noopener noreferrer">Hakkında</a></li>
+                <li><a href="yetenekler.html" target="_blank" rel="noopener noreferrer">Yetenekler</a></li>
+                <li><a href="sertifikalar.html" target="_blank" rel="noopener noreferrer">Sertifikalar</a></li>
+                <li><a href="projeler.html" target="_blank" rel="noopener noreferrer">Projeler</a></li>
+                <li><a href="haberler.html" target="_blank" rel="noopener noreferrer">Haberler</a></li>
+                <li><a href="program.html" target="_blank" rel="noopener noreferrer">Program</a></li>
+                <li><a href="iletisim.html" target="_blank" rel="noopener noreferrer">İletişim</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
@@ -171,8 +173,7 @@
 
     <!-- Cv Wrapper -->
     <div id="cv">
-        <h1 class="cv-main-title"
-            style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 2.5rem; color: var(--text-color);">
+        <h1 class="cv-main-title">
             Özgeçmiş (CV)</h1>
         <!-- About -->
         <section id="about">
@@ -197,26 +198,25 @@
                         yenilikçi finansal çözümler üretmek.
                     </p>
 
-                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px;">
-                        <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i>
+                    <ul class="about-list">
+                        <li><i class="fas fa-caret-right highlight"></i>
                             Rusça
                             Öğrenimi</li>
-                        <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i>
+                        <li><i class="fas fa-caret-right highlight"></i>
                             Finans &
                             Borsa</li>
-                        <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i> SQL
+                        <li><i class="fas fa-caret-right highlight"></i> SQL
                             &
                             Veritabanı</li>
-                        <li style="color: #b0c4de; font-size: 0.9rem;"><i class="fas fa-caret-right highlight"></i>
+                        <li><i class="fas fa-caret-right highlight"></i>
                             Ekonomi
                         </li>
                     </ul>
                 </div>
 
-                <div class="iframe-wrapper"
-                    style="margin-top: 40px; width: 100%; height: 400px; border-radius: 10px; overflow: hidden; border: 1px solid var(--accent-color); box-shadow: 0 0 20px rgba(32, 201, 151, 0.1);">
-                    <iframe src="https://www.topkapi.edu.tr/" width="100%" height="100%" style="border:0;"
-                        allowfullscreen="" loading="lazy" title="Gömülü Site"></iframe>
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.topkapi.edu.tr/" width="100%" height="100%" allowfullscreen=""
+                        loading="lazy" title="Gömülü Site"></iframe>
                 </div>
             </div>
         </section>
@@ -311,7 +311,7 @@
                         tabanlı bir Telegram botu (@AskViraBot). API entegrasyonları ile güçlendirilmiştir.
                         <br><br>
                         <a href="https://t.me/AskViraBot" target="_blank" rel="noopener noreferrer"
-                            style="color: var(--accent-color);">https://t.me/AskViraBot</a>
+                            class="project-link">https://t.me/AskViraBot</a>
                     </p>
                 </div>
 
@@ -335,7 +335,7 @@
                         sözlüğü.
                         <br><br>
                         <a href="https://fintechterms.vercel.app" target="_blank" rel="noopener noreferrer"
-                            style="color: var(--accent-color);">fintechterms.vercel.app</a>
+                            class="project-link">fintechterms.vercel.app</a>
                     </p>
                 </div>
             </div>
@@ -347,7 +347,7 @@
     <section id="certificates">
         <h2 class="section-title">Sertifikalarım & <span class="highlight">Başarılarım</span></h2>
 
-        <p style="text-align: center; color: #b0c4de; max-width: 700px; margin: -40px auto 40px auto;">
+        <p class="section-description">
             LinkedIn profilimdeki sertifika ve proje paylaşımlarımdan bazıları.
         </p>
 
@@ -443,8 +443,8 @@
     <section id="schedule">
         <h2 class="section-title">Haftalık <span class="highlight">Ders Programı</span></h2>
 
-        <div class="table-container" style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: var(--text-color);">
+        <div class="table-container">
+            <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Pazartesi</th>
@@ -516,7 +516,7 @@
     <!-- Contact -->
     <section id="contact">
         <h2 class="section-title">İletişim Kurun</h2>
-        <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
+        <p class="section-description contact-desc">
             Projeleriniz için veya sadece merhaba demek için kutum her zaman açık. Size en kısa sürede dönüş yapmaya
             çalışacağım!
         </p>
@@ -557,12 +557,12 @@
 
                 <div class="input-wrapper">
                     <label>Mesajınız:</label>
-                    <input type="text" name="subject" placeholder="Konu" required style="margin-bottom: 15px;">
+                    <input type="text" name="subject" placeholder="Konu" required class="input-subject">
                     <textarea name="message" placeholder="Buraya yazabilirsin..." required></textarea>
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesaj Gönder</button>
+            <button type="submit" class="submit-btn submit-btn-full">Mesaj Gönder</button>
         </form>
     </section>
 
