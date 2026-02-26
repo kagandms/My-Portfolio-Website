@@ -245,29 +245,91 @@ async function loadNews() {
     // Simulation delay
     await new Promise(resolve => setTimeout(resolve, 800));
 
-    container.innerHTML = NEWS_DATA.map(news => {
+    container.innerHTML = ''; // Temizle
+
+    NEWS_DATA.forEach((news, index) => {
         // Resolve localized strings
         const title = typeof news.title === 'object' ? (news.title[lang] || news.title['en']) : news.title;
         const excerpt = typeof news.excerpt === 'object' ? (news.excerpt[lang] || news.excerpt['en']) : news.excerpt;
         const category = typeof news.category === 'object' ? (news.category[lang] || news.category['en']) : news.category;
 
-        return `
-        <article class="news-card" data-url="${news.url}">
-            <div class="news-image-wrapper">
-                <img src="${news.image}" alt="${title}" class="news-image" onerror="this.src='https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop'">
-            </div>
-            <div class="news-content">
-                <span class="news-category">${category}</span>
-                <h3 class="news-title">${title}</h3>
-                <p class="news-excerpt">${excerpt}</p>
-                <div class="news-meta">
-                    <span class="news-source"><i class="fas fa-newspaper"></i> ${news.source}</span>
-                    <span class="news-date"><i class="far fa-calendar"></i> ${formatDate(news.date, lang)}</span>
-                </div>
-            </div>
-        </article>
-        `;
-    }).join('');
+        // Elementleri guvenli bir sekilde olustur
+        const article = document.createElement('article');
+        article.className = 'news-card reveal';
+        article.style.transitionDelay = `${index * 100}ms`;
+        article.setAttribute('data-url', news.url);
+
+        // Resim Container
+        const imgWrapper = document.createElement('div');
+        imgWrapper.className = 'news-image-wrapper';
+        const img = document.createElement('img');
+        img.src = news.image;
+        img.alt = title;
+        img.className = 'news-image';
+        img.onerror = function () {
+            this.src = 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=200&fit=crop';
+        };
+        imgWrapper.appendChild(img);
+
+        // Icerik Container
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'news-content';
+
+        const catSpan = document.createElement('span');
+        catSpan.className = 'news-category';
+        catSpan.textContent = category;
+
+        const h3 = document.createElement('h3');
+        h3.className = 'news-title';
+        h3.textContent = title;
+
+        const pExcerpt = document.createElement('p');
+        pExcerpt.className = 'news-excerpt';
+        pExcerpt.textContent = excerpt;
+
+        const metaDiv = document.createElement('div');
+        metaDiv.className = 'news-meta';
+
+        const sourceSpan = document.createElement('span');
+        sourceSpan.className = 'news-source';
+        sourceSpan.innerHTML = '<i class="fas fa-newspaper"></i> ' + escapeHTML(news.source);
+
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'news-date';
+        dateSpan.innerHTML = '<i class="far fa-calendar"></i> ' + escapeHTML(formatDate(news.date, lang));
+
+        metaDiv.appendChild(sourceSpan);
+        metaDiv.appendChild(dateSpan);
+
+        contentDiv.appendChild(catSpan);
+        contentDiv.appendChild(h3);
+        contentDiv.appendChild(pExcerpt);
+        contentDiv.appendChild(metaDiv);
+
+        article.appendChild(imgWrapper);
+        article.appendChild(contentDiv);
+
+        // Guvenli Event Listener
+        article.addEventListener('click', () => {
+            const url = article.getAttribute('data-url');
+            if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        });
+
+        container.appendChild(article);
+
+        // Animasyon
+        setTimeout(() => article.classList.add('active'), 100);
+    });
+}
+
+function escapeHTML(str) {
+    if (!str) return '';
+    return str.toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
     // Add Animations and Event Listeners
     document.querySelectorAll('.news-card').forEach((card, index) => {
