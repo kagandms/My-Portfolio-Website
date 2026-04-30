@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Multi-language SEO Architecture -->
+    <link rel="alternate" href="https://kagansametdurmus.com.tr/bist100-teknik-analiz-tradingview-indikatoru.html" hreflang="tr" />
+    <link rel="alternate" href="https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html" hreflang="en" />
+    <link rel="alternate" href="https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator-ru.html" hreflang="ru" />
+    <link rel="alternate" href="https://kagansametdurmus.com.tr/bist100-teknik-analiz-tradingview-indikatoru.html" hreflang="x-default" />
+
+    <title>BIST100 Technical Analysis and TradingView Indicator</title>
+    <meta name="description" content="Case study for a BIST100 technical analysis and TradingView indicator built with Pine Script as a decision-support frame.">
+    <meta name="author" content="Kağan Samet Durmuş">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="BIST100 Technical Analysis and TradingView Indicator">
+    <meta property="og:description" content="Case study for a BIST100 technical analysis and TradingView indicator built with Pine Script as a decision-support frame.">
+    <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/bist100-technical-analysis-tradingview-indicator.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BIST100 Technical Analysis and TradingView Indicator">
+    <meta property="og:url" content="https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html">
+    <meta property="og:site_name" content="Kağan Samet Durmuş Portfolio">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BIST100 Technical Analysis and TradingView Indicator">
+    <meta name="twitter:description" content="Case study for a BIST100 technical analysis and TradingView indicator built with Pine Script as a decision-support frame.">
+    <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/bist100-technical-analysis-tradingview-indicator.webp">
+    <meta name="twitter:image:width" content="1200">
+    <meta name="twitter:image:height" content="630">
+    <meta name="twitter:image:alt" content="BIST100 Technical Analysis and TradingView Indicator">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kagansametdurmus.com.tr/#website",
+      "url": "https://kagansametdurmus.com.tr/",
+      "name": "Kağan Samet Durmuş Portfolio",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://kagansametdurmus.com.tr/#person",
+      "name": "Kağan Samet Durmuş",
+      "jobTitle": "Fintech, Data Analysis and Python Developer",
+      "url": "https://kagansametdurmus.com.tr/",
+      "image": "https://kagansametdurmus.com.tr/myprofile.jpg",
+      "sameAs": [
+        "https://github.com/kagandms",
+        "https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/",
+        "https://twitter.com/kagandms",
+        "https://instagram.com/kagandms",
+        "https://t.me/kagandms"
+      ],
+      "knowsAbout": [
+        "Fintech",
+        "Data Analysis",
+        "Python",
+        "SQL",
+        "Automation",
+        "Economics"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html#webpage",
+      "url": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html",
+      "name": "BIST100 Technical Analysis and TradingView Indicator",
+      "description": "Case study for a BIST100 technical analysis and TradingView indicator built with Pine Script as a decision-support frame.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://kagansametdurmus.com.tr/#website"
+      },
+      "mainEntity": {
+        "@id": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html#project"
+      },
+      "about": {
+        "@id": "https://kagansametdurmus.com.tr/#person"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html#project",
+      "name": "BIST100 Technical Analysis & TradingView Indicator",
+      "description": "Case study for a BIST100 technical analysis and TradingView indicator built with Pine Script as a decision-support frame.",
+      "url": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html",
+      "image": "https://kagansametdurmus.com.tr/assets/og/bist100-technical-analysis-tradingview-indicator.webp",
+      "inLanguage": "en",
+      "genre": "Case Study",
+      "keywords": "BIST100 technical analysis, TradingView indicator, Pine Script, decision-support framework",
+      "dateModified": "2026-04-30",
+      "author": {
+        "@id": "https://kagansametdurmus.com.tr/#person"
+      },
+      "creator": {
+        "@id": "https://kagansametdurmus.com.tr/#person"
+      },
+      "isPartOf": {
+        "@id": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator.html#webpage"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kagansametdurmus.com.tr/index-en.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://kagansametdurmus.com.tr/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BIST100 Technical Analysis & TradingView Indicator"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+    <header>
+        <button class="logo-container logo-wordmark" type="button" aria-label="kagandms">kagandms</button>
+
+        <button class="menu-toggle" type="button" aria-label="Menu" aria-controls="navbar" aria-expanded="false">
+            <span class="icon icon-menu" aria-hidden="true"></span>
+        </button>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="index-en.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="about.html" onclick="toggleMenu()">About</a></li>
+                <li><a href="skills.html" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="certificates.html" onclick="toggleMenu()">Proof</a></li>
+                <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                <li class="mobile-only">
+                    <div class="mobile-lang-wrapper">
+                        <a href="bist100-teknik-analiz-tradingview-indikatoru.html" class="mobile-lang-btn">TR</a><a href="bist100-technical-analysis-tradingview-indicator.html" class="mobile-lang-btn active">EN</a><a href="bist100-technical-analysis-tradingview-indicator-ru.html" class="mobile-lang-btn">RU</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="nav-extras">
+            <div class="lang-switcher">
+                <a href="bist100-teknik-analiz-tradingview-indikatoru.html" class="lang-btn">TR</a><a href="bist100-technical-analysis-tradingview-indicator.html" class="lang-btn active">EN</a><a href="bist100-technical-analysis-tradingview-indicator-ru.html" class="lang-btn">RU</a>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle Theme">
+                <span class="icon icon-sun" aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section id="case-study" class="hub-section case-study-page" style="padding-top: 120px;">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index-en.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="projects.html">Projects</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">BIST100 Technical Analysis &amp; TradingView Indicator</span>
+            </nav>
+            <span class="page-kicker">Case Study</span>
+            <h1 class="section-title">BIST100 Technical Analysis &amp; TradingView Indicator</h1>
+            <p class="section-intro">Technical research tool that combines separate signal components inside one decision-support frame for more disciplined market reading.</p>
+            <div class="content-callout content-callout--center">
+                <p>Technical analysis indicator and strategy research tool for reading market structure more consistently.</p>
+                <div class="callout-actions"><a href="projects.html" class="text-link">Back to projects</a></div>
+            </div>
+            <div class="case-study-grid">
+                <article class="project-card case-study-panel">
+                    <h2>Problem</h2>
+                    <p>Technical analysis often relies on reading indicators in isolation. That makes it harder to build a disciplined decision framework and increases interpretation variance.</p>
+                </article>
+                <article class="project-card case-study-panel">
+                    <h2>What was built</h2>
+                    <p>Using Pine Script, I combined MACD, RSI, ADX, and support/resistance logic in one indicator structure. The goal was not a single magic signal, but a cleaner frame for reading conditions before a decision.</p>
+                </article>
+                <article class="project-card case-study-panel">
+                    <h2>Technology stack</h2>
+                    <ul><li>Pine Script for indicator development</li><li>TradingView for visualization</li><li>Shared frame for trend, momentum, and strength signals</li><li>BIST-focused strategy research approach</li></ul>
+                </article>
+                <article class="project-card case-study-panel">
+                    <h2>Data / workflow</h2>
+                    <ul><li>Evaluate multiple technical signals together</li><li>Read overlaps between trend and momentum</li><li>Filter decision context with support/resistance levels</li><li>Create a more repeatable basis for strategy experiments</li></ul>
+                </article>
+                <article class="project-card case-study-panel">
+                    <h2>Outcome and impact</h2>
+                    <p>The tool turns fragmented indicator usage into a more systematic pre-decision structure. That improves research discipline and makes interpretation more repeatable.</p>
+                </article>
+                <article class="project-card case-study-panel">
+                    <h2>Why it matters</h2>
+                    <p>It shows how I connect market research with technical tool building rather than keeping finance interest at theory level only.</p>
+                </article>
+            </div>
+            <div class="content-callout content-callout--center evidence-callout">
+                <h2 class="section-title section-title--compact">Evidence snapshot</h2>
+                <p>The case focuses on research discipline rather than trading promises: Pine Script is used to organize technical signals into one decision-support frame, while the page avoids guaranteed-return language.</p>
+            </div>
+            <div class="content-callout content-callout--center">
+                <h2 class="section-title section-title--compact">Decision frame</h2>
+                <p>The indicator is not meant to output automatic buy-sell calls. Its purpose is to create a pre-decision frame that reduces false positives and makes interpretation more disciplined. That is why momentum, trend, and level reading are treated as reinforcing layers rather than one isolated signal.</p>
+            </div>
+            <div class="content-callout content-callout--center">
+                <p>Related pages</p>
+                <div class="callout-actions"><a href="projects.html" class="card-link">Projects hub</a><a href="skills.html" class="card-link">Fintech skill cluster</a><a href="bist-moex-sector-comparison-analysis.html" class="card-link">BIST vs MOEX analysis</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kağan Samet Durmuş (kagandms). All Rights Reserved.</p>
+    </footer>
+
+    <button id="scroll-top-btn" title="Top">
+        <span class="icon icon-arrow-up" aria-hidden="true"></span>
+    </button>
+
+    <script src="script.js?v=9"></script>
+</body>
+</html>

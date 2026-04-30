@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kagansametdurmus.com.tr/sitemap.xml
