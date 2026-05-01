@@ -67,6 +67,14 @@ ul {
     transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Header Navbar */
 header {
     display: flex;
@@ -396,6 +404,19 @@ body.light-mode footer {
 .content-callout p {
     margin: 0 0 16px;
     color: var(--text-color);
+}
+
+.page-updated {
+    color: var(--card-text);
+    font-size: 0.95rem;
+    margin: -24px auto 28px;
+    max-width: 720px;
+    text-align: center;
+}
+
+.source-methodology-callout,
+.privacy-note {
+    border-color: rgba(100, 255, 218, 0.28);
 }
 
 .text-link,

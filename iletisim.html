@@ -14,20 +14,23 @@
 
     <!-- SEO -->
     <title>İletişim | Kağan Samet Durmuş</title>
-    <meta name="description" content="İş birliği, proje görüşmeleri ve akademik iletişim için hazırlanmış yardımcı iletişim sayfası.">
+    <meta name="description" content="Kağan Samet Durmuş ile fintech, veri analizi, otomasyon, çok dilli ürün çalışmaları, akademik iş birliği veya proje görüşmesi için iletişim kurun.">
     <meta name="author" content="Kağan Samet Durmuş">
 
     <!-- Bots -->
-    <meta name="robots" content="noindex, follow">
-    <meta name="googlebot" content="noindex, follow">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kagansametdurmus.com.tr/iletisim.html">
 
     <!-- Social Media -->
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
     <meta property="og:title" content="İletişim | Kağan Samet Durmuş">
-    <meta property="og:description" content="İş birliği, proje görüşmeleri ve akademik iletişim için hazırlanmış yardımcı iletişim sayfası.">
+    <meta property="og:description" content="Proje, akademik iş birliği veya ürün fikri için doğrudan iletişim kanalı.">
     <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/iletisim.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -36,7 +39,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="İletişim | Kağan Samet Durmuş">
-    <meta name="twitter:description" content="İş birliği, proje görüşmeleri ve akademik iletişim için hazırlanmış yardımcı iletişim sayfası.">
+    <meta name="twitter:description" content="Proje, akademik iş birliği veya ürün fikri için doğrudan iletişim kanalı.">
     <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/iletisim.webp">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="630">
@@ -72,7 +75,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
@@ -93,15 +96,14 @@
                 <li><a href="yetenekler.html" onclick="toggleMenu()">Yetenekler</a></li>
                 <li><a href="sertifikalar.html" onclick="toggleMenu()">Kanıtlar</a></li>
                 <li><a href="projeler.html" onclick="toggleMenu()">Projeler</a></li>
-                <li><a href="program.html" onclick="toggleMenu()">Program</a></li>
-                <li><a href="iletisim.html" onclick="toggleMenu()">İletişim</a></li>
+                                <li><a href="iletisim.html" onclick="toggleMenu()">İletişim</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
-                        <a href="/" class="mobile-lang-btn active">TR</a>
-                        <a href="index-en.html" class="mobile-lang-btn">EN</a>
-                        <a href="index-ru.html" class="mobile-lang-btn">RU</a>
+                        <a href="iletisim.html" class="mobile-lang-btn active">TR</a>
+                        <a href="contact.html" class="mobile-lang-btn">EN</a>
+                        <a href="contact-ru.html" class="mobile-lang-btn">RU</a>
                     </div>
                 </li>
             </ul>
@@ -111,9 +113,9 @@
         <div class="nav-extras">
             <!-- Languages -->
             <div class="lang-switcher">
-                <a href="/" class="lang-btn active">TR</a>
-                <a href="index-en.html" class="lang-btn">EN</a>
-                <a href="index-ru.html" class="lang-btn">RU</a>
+                <a href="iletisim.html" class="lang-btn active">TR</a>
+                <a href="contact.html" class="lang-btn">EN</a>
+                <a href="contact-ru.html" class="lang-btn">RU</a>
             </div>
 
             <!-- Theme Toggle -->
@@ -132,86 +134,40 @@
             çalışacağım!
         </p>
 
-        <form class="contact-form" id="contact-form">
-            <!-- Kişisel Bilgiler -->
-            <div class="form-section">
-                <h2 class="form-section-title">Kişisel Bilgiler</h2>
+        <div class="content-callout content-callout--center privacy-note">
+            <h2 class="section-title section-title--compact">KVKK ve veri gizliliği</h2>
+            <p>Bu form yalnızca dönüş yapabilmek için gerekli bilgileri ister: ad soyad, e-posta, isteğe bağlı telefon, konu ve mesaj. Gönderimler Formspree üzerinden iletilir ve yalnızca proje, iş birliği veya akademik iletişim amacıyla kullanılır.</p>
+        </div>
 
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+            <div class="form-section">
+                <h2 class="form-section-title">Mesaj Bilgileri</h2>
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Adın Soyadın:</label>
-                        <input type="text" name="name" placeholder="Örn: Ayşe Yılmaz" required>
+                        <label>Ad Soyad:</label>
+                        <input type="text" name="name" placeholder="Örn: Kağan Samet Durmuş" required>
                     </div>
-                </div>
-
-                <div class="input-group">
                     <div class="input-wrapper">
                         <label>E-posta Adresi:</label>
-                        <input type="email" name="email" placeholder="iletisim@ornek.com" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label>Telefon Numarası:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="05XX XXX XX XX">
+                        <input type="email" name="email" placeholder="iletisim@example.com" required>
                     </div>
                 </div>
-
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Doğum Tarihin:</label>
-                        <input type="date" name="birthdate">
+                        <label>Telefon (isteğe bağlı):</label>
+                        <input type="tel" name="phone" id="phone" placeholder="05XX XXX XX XX">
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Konu:</label>
+                        <input type="text" name="subject" placeholder="Proje, iş birliği veya akademik konu" required>
                     </div>
                 </div>
-
                 <div class="input-wrapper">
-                    <label>Cinsiyet:</label>
-                    <div class="radio-group">
-                        <label class="radio-label"><input type="radio" name="gender" value="Kadın"> Kadın</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Erkek"> Erkek</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Diğer"> Diğer</label>
-                    </div>
+                    <label>Mesaj:</label>
+                    <textarea name="message" placeholder="Bağlamı, beklenen çıktıyı ve dönüş için en uygun yolu yazabilirsiniz." required></textarea>
                 </div>
             </div>
-
-            <!-- İlgi Ve Yetenekler -->
-            <div class="form-section">
-                <h2 class="form-section-title">İlgi ve Yetenekler</h2>
-
-                <div class="input-wrapper">
-                    <label>Mesleğin / Bölümün:</label>
-                    <select name="profession">
-                        <option value="" disabled selected>Seçiniz</option>
-                        <option value="Öğrenci">Öğrenci</option>
-                        <option value="Mühendis">Mühendis</option>
-                        <option value="Yazılımcı">Yazılımcı</option>
-                        <option value="Öğretmen">Öğretmen</option>
-                        <option value="Diğer">Diğer</option>
-                    </select>
-                </div>
-
-                <div class="input-wrapper">
-                    <label>Hobilerin Neler?</label>
-                    <div class="checkbox-group">
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Kodlama">
-                            Kodlama</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Spor"> Spor</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Müzik"> Müzik</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Seyahat">
-                            Seyahat</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Kitap"> Kitap</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kendinden Kısaca Bahset -->
-            <div class="form-section">
-                <h2 class="form-section-title">Kendinden Kısaca Bahset</h2>
-                <div class="input-wrapper">
-                    <input type="text" name="subject" placeholder="Konu Başlığı" required style="margin-bottom: 15px;">
-                    <textarea name="message" placeholder="Buraya yazabilirsin..." required></textarea>
-                </div>
-            </div>
-
-            <button type="submit" class="submit-btn">Gönder</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesaj Gönder</button>
         </form>
     </section><!-- Footer -->
         </main>
@@ -226,7 +182,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 
 </html>

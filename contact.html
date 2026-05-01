@@ -14,20 +14,23 @@
 
     <!-- SEO -->
     <title>Contact | Kağan Samet Durmuş</title>
-    <meta name="description" content="Utility contact page for collaborations, project outreach, and academic communication with Kağan Samet Durmuş.">
+    <meta name="description" content="Contact Kağan Samet Durmuş for fintech, data analytics, automation, multilingual product work, academic collaboration, or project outreach.">
     <meta name="author" content="Kağan Samet Durmuş">
 
     <!-- Bots -->
-    <meta name="robots" content="noindex, follow">
-    <meta name="googlebot" content="noindex, follow">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kagansametdurmus.com.tr/contact.html">
 
     <!-- Social Media -->
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="ru_RU">
     <meta property="og:title" content="Contact | Kağan Samet Durmuş">
-    <meta property="og:description" content="Utility contact page for collaborations, project outreach, and academic communication with Kağan Samet Durmuş.">
+    <meta property="og:description" content="A direct contact page for project outreach, academic collaboration, and product-focused conversations.">
     <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/contact.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -36,7 +39,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact | Kağan Samet Durmuş">
-    <meta name="twitter:description" content="Utility contact page for collaborations, project outreach, and academic communication with Kağan Samet Durmuş.">
+    <meta name="twitter:description" content="A direct contact page for project outreach, academic collaboration, and product-focused conversations.">
     <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/contact.webp">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="630">
@@ -72,7 +75,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
@@ -92,15 +95,14 @@
                 <li><a href="skills.html" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="certificates.html" onclick="toggleMenu()">Proof</a></li>
                 <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
-                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+                                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
-                        <a href="/" class="mobile-lang-btn">TR</a>
-                        <a href="index-en.html" class="mobile-lang-btn active">EN</a>
-                        <a href="index-ru.html" class="mobile-lang-btn">RU</a>
+                        <a href="iletisim.html" class="mobile-lang-btn">TR</a>
+                        <a href="contact.html" class="mobile-lang-btn active">EN</a>
+                        <a href="contact-ru.html" class="mobile-lang-btn">RU</a>
                     </div>
                 </li>
             </ul>
@@ -110,9 +112,9 @@
         <div class="nav-extras">
             <!-- Language Switcher -->
             <div class="lang-switcher">
-                <a href="/" class="lang-btn">TR</a>
-                <a href="index-en.html" class="lang-btn active">EN</a>
-                <a href="index-ru.html" class="lang-btn">RU</a>
+                <a href="iletisim.html" class="lang-btn">TR</a>
+                <a href="contact.html" class="lang-btn active">EN</a>
+                <a href="contact-ru.html" class="lang-btn">RU</a>
             </div>
 
             <!-- Theme Toggle -->
@@ -131,84 +133,39 @@
             possible!
         </p>
 
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
-            <!-- Personal Information -->
-            <div class="form-section">
-                <h2 class="form-section-title">Personal Information</h2>
+        <div class="content-callout content-callout--center privacy-note">
+            <h2 class="section-title section-title--compact">Data privacy</h2>
+            <p>This form only asks for the contact details needed to reply: name, email, optional phone, subject, and message. Submissions are handled through Formspree and used only for project, collaboration, or academic communication.</p>
+        </div>
 
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+            <div class="form-section">
+                <h2 class="form-section-title">Message Details</h2>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <label>Full Name:</label>
                         <input type="text" name="name" placeholder="Ex: John Doe" required>
                     </div>
-                </div>
-
-                <div class="input-group">
                     <div class="input-wrapper">
                         <label>Email Address:</label>
                         <input type="email" name="email" placeholder="contact@example.com" required>
                     </div>
-                    <div class="input-wrapper">
-                        <label>Phone Number:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="+1 234 567 8900">
-                    </div>
                 </div>
-
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Date of Birth:</label>
-                        <input type="date" name="birthdate">
+                        <label>Phone Number (optional):</label>
+                        <input type="tel" name="phone" id="phone" placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Subject:</label>
+                        <input type="text" name="subject" placeholder="Project, collaboration, or academic topic" required>
                     </div>
                 </div>
-
                 <div class="input-wrapper">
-                    <label>Gender:</label>
-                    <div class="radio-group">
-                        <label class="radio-label"><input type="radio" name="gender" value="Female"> Female</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Male"> Male</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Other"> Other</label>
-                    </div>
+                    <label>Message:</label>
+                    <textarea name="message" placeholder="Write the context, expected output, and best way to reply." required></textarea>
                 </div>
             </div>
-
-            <!-- Interests Skills -->
-            <div class="form-section">
-                <h2 class="form-section-title">Interests & Skills</h2>
-
-                <div class="input-wrapper">
-                    <label>Profession / Department:</label>
-                    <select name="profession">
-                        <option value="" disabled selected>Select</option>
-                        <option value="Student">Student</option>
-                        <option value="Engineer">Engineer</option>
-                        <option value="Developer">Developer</option>
-                        <option value="Teacher">Teacher</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="input-wrapper">
-                    <label>What do you like?</label>
-                    <div class="checkbox-group">
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Coding"> Coding</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Music"> Music</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Travel"> Travel</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Reading">
-                            Reading</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bio -->
-            <div class="form-section">
-                <h2 class="form-section-title">About Yourself</h2>
-                <div class="input-wrapper">
-                    <input type="text" name="subject" placeholder="Subject" required style="margin-bottom: 15px;">
-                    <textarea name="message" placeholder="You can write here..." required></textarea>
-                </div>
-            </div>
-
             <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Send Message</button>
         </form>
     </section><!-- Footer -->
@@ -224,7 +181,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 
 </html>

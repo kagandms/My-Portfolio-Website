@@ -10,15 +10,18 @@
     <link rel="alternate" href="https://kagansametdurmus.com.tr/bist100-teknik-analiz-tradingview-indikatoru.html" hreflang="x-default" />
 
     <title>BIST100: теханализ и индикатор TradingView</title>
-    <meta name="description" content="Кейс индикатора технического анализа BIST100 на Pine Script, построенного как decision-support framework.">
+    <meta name="description" content="Кейс индикатора BIST100 на Pine Script: MACD, RSI, ADX и support/resistance логика в одном decision-support framework для анализа рынка.">
     <meta name="author" content="Kağan Samet Durmuş">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="https://kagansametdurmus.com.tr/bist100-technical-analysis-tradingview-indicator-ru.html">
 
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="BIST100: теханализ и индикатор TradingView">
-    <meta property="og:description" content="Кейс индикатора технического анализа BIST100 на Pine Script, построенного как decision-support framework.">
+    <meta property="og:description" content="Кейс индикатора BIST100, объединяющего MACD, RSI, ADX и support/resistance логику.">
     <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/bist100-technical-analysis-tradingview-indicator-ru.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -28,7 +31,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="BIST100: теханализ и индикатор TradingView">
-    <meta name="twitter:description" content="Кейс индикатора технического анализа BIST100 на Pine Script, построенного как decision-support framework.">
+    <meta name="twitter:description" content="Кейс индикатора BIST100, объединяющего MACD, RSI, ADX и support/resistance логику.">
     <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/bist100-technical-analysis-tradingview-indicator-ru.webp">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="630">
@@ -138,7 +141,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
     <header>
@@ -155,8 +158,7 @@
                 <li><a href="skills-ru.html" onclick="toggleMenu()">Навыки</a></li>
                 <li><a href="certificates-ru.html" onclick="toggleMenu()">Подтверждения</a></li>
                 <li><a href="projects-ru.html" onclick="toggleMenu()">Проекты</a></li>
-                <li><a href="schedule-ru.html" onclick="toggleMenu()">Расписание</a></li>
-                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
+                                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
                         <a href="bist100-teknik-analiz-tradingview-indikatoru.html" class="mobile-lang-btn">TR</a><a href="bist100-technical-analysis-tradingview-indicator.html" class="mobile-lang-btn">EN</a><a href="bist100-technical-analysis-tradingview-indicator-ru.html" class="mobile-lang-btn active">RU</a>
@@ -187,6 +189,7 @@
             <span class="page-kicker">Кейс</span>
             <h1 class="section-title">Технический анализ BIST100 и индикатор TradingView</h1>
             <p class="section-intro">Технический исследовательский инструмент, который объединяет отдельные сигнальные компоненты в одной decision-support рамке для более дисциплинированного чтения рынка.</p>
+            <p class="page-updated">Обновлено: 30 апреля 2026</p>
             <div class="content-callout content-callout--center">
                 <p>Индикатор технического анализа и инструмент стратегического исследования для более последовательного чтения рыночной структуры.</p>
                 <div class="callout-actions"><a href="projects-ru.html" class="text-link">Назад к проектам</a></div>
@@ -225,6 +228,10 @@
                 <h2 class="section-title section-title--compact">Рамка принятия решений</h2>
                 <p>Индикатор не предназначен для выдачи автоматических buy-sell сигналов. Его задача — создать предварительную рамку решения, которая снижает ложные срабатывания и делает интерпретацию более дисциплинированной. Поэтому momentum, trend и уровневое чтение работают как взаимно подтверждающие слои, а не как один отдельный сигнал.</p>
             </div>
+            <div class="content-callout content-callout--center source-methodology-callout">
+                <h2 class="section-title section-title--compact">Источники и методология</h2>
+                <p>Страница не является инвестиционной рекомендацией; она документирует research frame для организации technical analysis signals. Логика Pine Script должна быть согласована с <a href="https://www.tradingview.com/pine-script-docs/" target="_blank" rel="noopener noreferrer" class="project-link">документацией TradingView Pine Script</a>, а рыночные данные BIST и результаты сигналов нужно заново проверять для каждого тестового периода.</p>
+            </div>
             <div class="content-callout content-callout--center">
                 <p>Связанные страницы</p>
                 <div class="callout-actions"><a href="projects-ru.html" class="card-link">Hub проектов</a><a href="skills-ru.html" class="card-link">Финтех skill-кластер</a><a href="bist-moex-sector-comparison-analysis-ru.html" class="card-link">Анализ BIST vs MOEX</a></div>
@@ -240,6 +247,6 @@
         <span class="icon icon-arrow-up" aria-hidden="true"></span>
     </button>
 
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 </html>

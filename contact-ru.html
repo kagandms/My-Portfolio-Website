@@ -14,20 +14,23 @@
 
     <!-- SEO -->
     <title>Контакты | Каган Самет Дурмуш</title>
-    <meta name="description" content="Вспомогательная страница для связи по проектам, сотрудничеству и академическим вопросам с Каганом Саметом Дурмушем.">
+    <meta name="description" content="Связаться с Каганом Саметом Дурмушем по fintech, data analytics, automation, multilingual product work, academic collaboration и проектам.">
     <meta name="author" content="Kağan Samet Durmuş">
 
     <!-- Bots -->
-    <meta name="robots" content="noindex, follow">
-    <meta name="googlebot" content="noindex, follow">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kagansametdurmus.com.tr/contact-ru.html">
 
     <!-- Social Media -->
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:title" content="Контакты | Каган Самет Дурмуш">
-    <meta property="og:description" content="Вспомогательная страница для связи по проектам, сотрудничеству и академическим вопросам с Каганом Саметом Дурмушем.">
+    <meta property="og:description" content="Прямая страница контакта для проектов, академического сотрудничества и product-focused communication.">
     <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/contact-ru.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -36,7 +39,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Контакты | Каган Самет Дурмуш">
-    <meta name="twitter:description" content="Вспомогательная страница для связи по проектам, сотрудничеству и академическим вопросам с Каганом Саметом Дурмушем.">
+    <meta name="twitter:description" content="Прямая страница контакта для проектов, академического сотрудничества и product-focused communication.">
     <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/contact-ru.webp">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="630">
@@ -72,7 +75,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
@@ -92,15 +95,14 @@
                 <li><a href="skills-ru.html" onclick="toggleMenu()">Навыки</a></li>
                 <li><a href="certificates-ru.html" onclick="toggleMenu()">Подтверждения</a></li>
                 <li><a href="projects-ru.html" onclick="toggleMenu()">Проекты</a></li>
-                <li><a href="schedule-ru.html" onclick="toggleMenu()">Расписание</a></li>
-                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
+                                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
-                        <a href="/" class="mobile-lang-btn">TR</a>
-                        <a href="index-en.html" class="mobile-lang-btn">EN</a>
-                        <a href="index-ru.html" class="mobile-lang-btn active">RU</a>
+                        <a href="iletisim.html" class="mobile-lang-btn">TR</a>
+                        <a href="contact.html" class="mobile-lang-btn">EN</a>
+                        <a href="contact-ru.html" class="mobile-lang-btn active">RU</a>
                     </div>
                 </li>
             </ul>
@@ -110,9 +112,9 @@
         <div class="nav-extras">
             <!-- Language Switcher -->
             <div class="lang-switcher">
-                <a href="/" class="lang-btn">TR</a>
-                <a href="index-en.html" class="lang-btn">EN</a>
-                <a href="index-ru.html" class="lang-btn active">RU</a>
+                <a href="iletisim.html" class="lang-btn">TR</a>
+                <a href="contact.html" class="lang-btn">EN</a>
+                <a href="contact-ru.html" class="lang-btn active">RU</a>
             </div>
 
             <!-- Theme Toggle -->
@@ -131,85 +133,40 @@
             можно скорее!
         </p>
 
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
-            <!-- Personal Information -->
-            <div class="form-section">
-                <h2 class="form-section-title">Личная Информация</h2>
+        <div class="content-callout content-callout--center privacy-note">
+            <h2 class="section-title section-title--compact">Конфиденциальность данных</h2>
+            <p>Форма запрашивает только данные, необходимые для ответа: имя, e-mail, необязательный телефон, тему и сообщение. Отправка проходит через Formspree и используется только для проектов, сотрудничества или академической коммуникации.</p>
+        </div>
 
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+            <div class="form-section">
+                <h2 class="form-section-title">Детали сообщения</h2>
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Имя Фамилия:</label>
-                        <input type="text" name="name" placeholder="Прим: Иван Иванов" required>
+                        <label>Полное имя:</label>
+                        <input type="text" name="name" placeholder="Например: Каган Самет Дурмуш" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>E-mail:</label>
+                        <input type="email" name="email" placeholder="contact@example.com" required>
                     </div>
                 </div>
-
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Эл. почта:</label>
-                        <input type="email" name="email" placeholder="mail@example.com" required>
-                    </div>
-                    <div class="input-wrapper">
-                        <label>Номер телефона:</label>
+                        <label>Телефон (необязательно):</label>
                         <input type="tel" name="phone" id="phone" placeholder="+7 999 999 99 99">
                     </div>
-                </div>
-
-                <div class="input-group">
                     <div class="input-wrapper">
-                        <label>Дата рождения:</label>
-                        <input type="date" name="birthdate">
+                        <label>Тема:</label>
+                        <input type="text" name="subject" placeholder="Проект, сотрудничество или академический вопрос" required>
                     </div>
                 </div>
-
                 <div class="input-wrapper">
-                    <label>Пол:</label>
-                    <div class="radio-group">
-                        <label class="radio-label"><input type="radio" name="gender" value="Женский"> Женский</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Мужской"> Мужской</label>
-                        <label class="radio-label"><input type="radio" name="gender" value="Другой"> Другой</label>
-                    </div>
+                    <label>Сообщение:</label>
+                    <textarea name="message" placeholder="Опишите контекст, ожидаемый результат и удобный способ ответа." required></textarea>
                 </div>
             </div>
-
-            <!-- Interests Skills -->
-            <div class="form-section">
-                <h2 class="form-section-title">Интересы и Навыки</h2>
-
-                <div class="input-wrapper">
-                    <label>Профессия / Отдел:</label>
-                    <select name="profession">
-                        <option value="" disabled selected>Выберите</option>
-                        <option value="Студент">Студент</option>
-                        <option value="Инженер">Инженер</option>
-                        <option value="Разработчик">Разработчик</option>
-                        <option value="Учитель">Учитель</option>
-                        <option value="Другое">Другое</option>
-                    </select>
-                </div>
-
-                <div class="input-wrapper">
-                    <label>Ваши хобби:</label>
-                    <div class="checkbox-group">
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Кодинг"> Кодинг</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Спорт"> Спорт</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Музыка"> Музыка</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Путешествия">
-                            Путешествия</label>
-                        <label class="check-label"><input type="checkbox" name="hobbies" value="Чтение"> Чтение</label>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bio -->
-            <div class="form-section">
-                <h2 class="form-section-title">О себе</h2>
-                <div class="input-wrapper">
-                    <input type="text" name="subject" placeholder="Тема" required style="margin-bottom: 15px;">
-                    <textarea name="message" placeholder="Напишите здесь..." required></textarea>
-                </div>
-            </div>
-
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить</button>
+            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить сообщение</button>
         </form>
     </section><!-- Footer -->
         </main>
@@ -224,7 +181,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 
 </html>

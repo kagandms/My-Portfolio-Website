@@ -7,11 +7,6 @@
 
     <!-- Google Analytics -->
     <!-- Multi-language SEO Architecture -->
-    <link rel="alternate" href="https://kagansametdurmus.com.tr/program.html" hreflang="tr" />
-    <link rel="alternate" href="https://kagansametdurmus.com.tr/schedule.html" hreflang="en" />
-    <link rel="alternate" href="https://kagansametdurmus.com.tr/schedule-ru.html" hreflang="ru" />
-    <link rel="alternate" href="https://kagansametdurmus.com.tr/program.html" hreflang="x-default" />
-
     <!-- SEO -->
     <title>Weekly Schedule | Kağan Samet Durmuş</title>
     <meta name="description" content="Utility page showing Kağan Samet Durmuş’s weekly academic schedule and study blocks.">
@@ -26,8 +21,11 @@
 
     <!-- Social Media -->
     <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="ru_RU">
     <meta property="og:title" content="Weekly Schedule | Kağan Samet Durmuş">
-    <meta property="og:description" content="Utility page showing Kağan Samet Durmuş’s weekly academic schedule and study blocks.">
+    <meta property="og:description" content="Utility page for weekly academic schedule and study blocks.">
     <meta property="og:image" content="https://kagansametdurmus.com.tr/assets/og/schedule.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -36,7 +34,7 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Weekly Schedule | Kağan Samet Durmuş">
-    <meta name="twitter:description" content="Utility page showing Kağan Samet Durmuş’s weekly academic schedule and study blocks.">
+    <meta name="twitter:description" content="Utility page for weekly academic schedule and study blocks.">
     <meta name="twitter:image" content="https://kagansametdurmus.com.tr/assets/og/schedule.webp">
     <meta name="twitter:image:width" content="1200">
     <meta name="twitter:image:height" content="630">
@@ -72,7 +70,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 
 <body>
@@ -94,16 +92,15 @@
                 </li>
                 <li><a href="certificates.html" onclick="toggleMenu()">Proof</a></li>
                 <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="schedule.html" onclick="toggleMenu()">Schedule</a></li>
-                <li><a href="contact.html" onclick="toggleMenu()">Contact</a>
+                                <li><a href="contact.html" onclick="toggleMenu()">Contact</a>
                 </li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
-                        <a href="/" class="mobile-lang-btn">TR</a>
-                        <a href="index-en.html" class="mobile-lang-btn active">EN</a>
-                        <a href="index-ru.html" class="mobile-lang-btn">RU</a>
+                        <a href="program.html" class="mobile-lang-btn">TR</a>
+                        <a href="schedule.html" class="mobile-lang-btn active">EN</a>
+                        <a href="schedule-ru.html" class="mobile-lang-btn">RU</a>
                     </div>
                 </li>
             </ul>
@@ -113,9 +110,9 @@
         <div class="nav-extras">
             <!-- Language Switcher -->
             <div class="lang-switcher">
-                <a href="/" class="lang-btn">TR</a>
-                <a href="index-en.html" class="lang-btn active">EN</a>
-                <a href="index-ru.html" class="lang-btn">RU</a>
+                <a href="program.html" class="lang-btn">TR</a>
+                <a href="schedule.html" class="lang-btn active">EN</a>
+                <a href="schedule-ru.html" class="lang-btn">RU</a>
             </div>
 
             <!-- Theme Toggle -->
@@ -225,7 +222,7 @@
     </button>
 
     <!-- Scripts -->
-    <script src="script.js?v=9"></script>
+    <script src="script.js?v=10"></script>
 </body>
 
 </html>

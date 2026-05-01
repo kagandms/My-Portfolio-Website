@@ -37,11 +37,19 @@ function bindRevealAnimations() {
         return;
     }
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        elements.forEach((element) => {
+            element.classList.add('active');
+        });
+        return;
+    }
+
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
                 }
             });
         },
@@ -53,6 +61,11 @@ function bindRevealAnimations() {
 
     elements.forEach((element) => {
         element.classList.add('reveal');
+        if (element.getBoundingClientRect().top < window.innerHeight * 0.9) {
+            element.classList.add('active');
+            return;
+        }
+
         observer.observe(element);
     });
 
