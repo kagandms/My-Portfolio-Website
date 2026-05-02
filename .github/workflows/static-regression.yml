@@ -1,0 +1,41 @@
+name: Static Regression
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "**"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
+
+      - name: Install Node metadata
+        run: npm ci
+
+      - name: Install Python helper dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Run static verification
+        run: npm run verify

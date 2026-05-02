@@ -1,4 +1,10 @@
 *_backup.png
+.github
+package-lock.json
+package.json
+requirements.txt
+SECURITY.md
+tools
 kapakfoto.png
 kapakfoto.webp
 logo.png

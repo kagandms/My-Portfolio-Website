@@ -32,6 +32,8 @@ This portfolio is a static Vercel site. The only user-submitted data path is the
 
 ## Routine Verification
 
+- Run `npm run verify` before committing static-site changes.
+- Run `npm run verify:release` before public announcements or production redeploys.
 - Run `jq empty vercel.json` after editing deploy configuration.
 - Run `python3 -m py_compile optimize_images.py` after editing Python helpers.
 - Run a passive browser check after CSP changes and confirm there are no CSP violations.

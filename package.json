@@ -1,0 +1,13 @@
+{
+  "name": "kagansametdurmus-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tools/verify-static-site.mjs",
+    "verify:syntax": "node --check script.js && python3 -m py_compile optimize_images.py patch_security.py && python3 patch_security.py --check && jq empty vercel.json",
+    "verify:live": "node tools/verify-live-site.mjs",
+    "verify": "npm run test && npm run verify:syntax",
+    "verify:release": "npm run verify && npm run verify:live"
+  }
+}

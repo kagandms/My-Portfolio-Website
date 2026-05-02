@@ -1,4 +1,9 @@
 const GOOGLE_ANALYTICS_ID = 'G-SX2WWHSD6J';
+const STORAGE_THEME_KEY = 'theme';
+const LIGHT_THEME_VALUE = 'light';
+const DARK_THEME_VALUE = 'dark';
+const PHONE_UNSUPPORTED_CHARACTER_PATTERN = /[^0-9+\s().-]/g;
+const recoverableClientErrors = [];
 
 document.addEventListener('DOMContentLoaded', () => {
     bindMenuToggle();
@@ -85,7 +90,7 @@ function bindThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle ? themeToggle.querySelector('.icon') : null;
 
-    if (localStorage.getItem('theme') === 'light') {
+    if (readStorageValue(STORAGE_THEME_KEY) === LIGHT_THEME_VALUE) {
         document.body.classList.add('light-mode');
         if (themeIcon) {
             themeIcon.className = 'icon icon-moon';
@@ -100,14 +105,14 @@ function bindThemeToggle() {
         document.body.classList.toggle('light-mode');
 
         if (document.body.classList.contains('light-mode')) {
-            localStorage.setItem('theme', 'light');
+            writeStorageValue(STORAGE_THEME_KEY, LIGHT_THEME_VALUE);
             if (themeIcon) {
                 themeIcon.className = 'icon icon-moon';
             }
             return;
         }
 
-        localStorage.setItem('theme', 'dark');
+        writeStorageValue(STORAGE_THEME_KEY, DARK_THEME_VALUE);
         if (themeIcon) {
             themeIcon.className = 'icon icon-sun';
         }
@@ -143,7 +148,7 @@ function bindPhoneInput() {
     }
 
     phoneInput.addEventListener('input', function handlePhoneInput() {
-        this.value = this.value.replace(/[^0-9]/g, '');
+        this.value = sanitizePhoneValue(this.value);
     });
 }
 
@@ -200,6 +205,7 @@ function loadAnalytics() {
     };
     window.gtag('js', new Date());
     window.gtag('config', GOOGLE_ANALYTICS_ID);
+    publishRecoverableClientErrors();
 
     const analyticsScript = document.createElement('script');
     analyticsScript.async = true;
@@ -215,6 +221,62 @@ function toggleMenu() {
         if (menuToggle) {
             menuToggle.setAttribute('aria-expanded', String(nav.classList.contains('active')));
         }
+    }
+}
+
+function readStorageValue(key) {
+    try {
+        return window.localStorage.getItem(key);
+    } catch (error) {
+        reportRecoverableClientError(`localStorage.getItem:${key}`, error);
+        return null;
+    }
+}
+
+function writeStorageValue(key, value) {
+    try {
+        window.localStorage.setItem(key, value);
+        return true;
+    } catch (error) {
+        reportRecoverableClientError(`localStorage.setItem:${key}`, error);
+        return false;
+    }
+}
+
+function sanitizePhoneValue(value) {
+    const supportedValue = value.replace(PHONE_UNSUPPORTED_CHARACTER_PATTERN, '');
+    const firstVisibleIndex = supportedValue.search(/\S/);
+
+    if (firstVisibleIndex === -1) {
+        return supportedValue;
+    }
+
+    const prefix = supportedValue.slice(0, firstVisibleIndex);
+    const visibleValue = supportedValue.slice(firstVisibleIndex);
+    if (!visibleValue.startsWith('+')) {
+        return supportedValue.replace(/\+/g, '');
+    }
+
+    return `${prefix}+${visibleValue.slice(1).replace(/\+/g, '')}`;
+}
+
+function reportRecoverableClientError(source, error) {
+    const errorName = error instanceof Error ? error.name : 'UnknownError';
+    recoverableClientErrors.push({ source, errorName });
+}
+
+function publishRecoverableClientErrors() {
+    if (typeof window.gtag !== 'function') {
+        return;
+    }
+
+    while (recoverableClientErrors.length > 0) {
+        const errorEvent = recoverableClientErrors.shift();
+        window.gtag('event', 'client_recoverable_error', {
+            event_category: 'site_reliability',
+            event_label: errorEvent.source,
+            error_name: errorEvent.errorName,
+        });
     }
 }
 
