@@ -85,15 +85,15 @@
 
         <nav id="navbar">
             <ul>
-                <li><a href="index-ru.html" onclick="toggleMenu()">Главная</a>
+                <li><a href="index-ru.html">Главная</a>
                 </li>
-                <li><a href="about-ru.html" onclick="toggleMenu()">Обо мне</a>
+                <li><a href="about-ru.html">Обо мне</a>
                 </li>
-                <li><a href="skills-ru.html" onclick="toggleMenu()">Навыки</a>
+                <li><a href="skills-ru.html">Навыки</a>
                 </li>
-                <li><a href="certificates-ru.html" onclick="toggleMenu()">Подтверждения</a></li>
-                <li><a href="projects-ru.html" onclick="toggleMenu()">Проекты</a></li>
-                                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
+                <li><a href="certificates-ru.html">Подтверждения</a></li>
+                <li><a href="projects-ru.html">Проекты</a></li>
+                                <li><a href="contact-ru.html">Контакты</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
@@ -124,11 +124,11 @@
 
     <main class="page-main">
 
-    <section id="schedule" style="padding-top: 120px;">
+    <section id="schedule" class="section-offset">
         <h1 class="section-title">Еженедельное <span class="highlight">расписание</span></h1>
 
-        <div class="table-container" style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: var(--text-color);">
+        <div class="table-container">
+            <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Понедельник</th>
@@ -145,14 +145,12 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">10:00 - 13:00</span>
                                 <div class="schedule-course">Введение в экономику II</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">ECN106</span>
+                                <span class="schedule-time schedule-code">ECN106</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">13:00 - 16:00</span>
                                 <div class="schedule-course">Математика для экономистов</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">ECN108</span>
+                                <span class="schedule-time schedule-code">ECN108</span>
                             </div>
                         </td>
 
@@ -161,20 +159,17 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
                                 <div class="schedule-course">Системный анализ и проектирование</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS208</span>
+                                <span class="schedule-time schedule-code">IMS208</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">12:00 - 15:00</span>
                                 <div class="schedule-course">Управление цепочками поставок</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS262</span>
+                                <span class="schedule-time schedule-code">IMS262</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">15:00 - 18:00</span>
                                 <div class="schedule-course">Цифровой маркетинг</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS266</span>
+                                <span class="schedule-time schedule-code">IMS266</span>
                             </div>
                         </td>
 
@@ -183,14 +178,12 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
                                 <div class="schedule-course">Объектно-ориентированное программирование</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS206</span>
+                                <span class="schedule-time schedule-code">IMS206</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">15:00 - 17:00</span>
                                 <div class="schedule-course">Бухгалтерский учет и финансы (Дистанционно)</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS204</span>
+                                <span class="schedule-time schedule-code">IMS204</span>
                             </div>
                         </td>
 
@@ -204,7 +197,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: var(--text-muted);">
+            <p class="schedule-note">
                 <em>* Курс Принципы Ататюрка и история революции II (URE210) проводится асинхронно в форме
                     дистанционного обучения.</em>
             </p>

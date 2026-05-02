@@ -86,13 +86,13 @@
 
         <nav id="navbar">
             <ul>
-                <li><a href="/" onclick="toggleMenu()">Ana Sayfa</a>
+                <li><a href="/">Ana Sayfa</a>
                 </li>
-                <li><a href="hakkinda.html" onclick="toggleMenu()">Hakkında</a></li>
-                <li><a href="yetenekler.html" onclick="toggleMenu()">Yetenekler</a></li>
-                <li><a href="sertifikalar.html" onclick="toggleMenu()">Kanıtlar</a></li>
-                <li><a href="projeler.html" onclick="toggleMenu()">Projeler</a></li>
-                                <li><a href="iletisim.html" onclick="toggleMenu()">İletişim</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="yetenekler.html">Yetenekler</a></li>
+                <li><a href="sertifikalar.html">Kanıtlar</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                                <li><a href="iletisim.html">İletişim</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
@@ -123,11 +123,11 @@
 
     <main class="page-main">
 
-    <section id="schedule" style="padding-top: 120px;">
+    <section id="schedule" class="section-offset">
         <h1 class="section-title">Haftalık <span class="highlight">Ders Programı</span></h1>
 
-        <div class="table-container" style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: var(--text-color);">
+        <div class="table-container">
+            <table class="schedule-table">
                 <thead>
                     <tr>
                         <th>Pazartesi</th>
@@ -144,14 +144,12 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">10:00 - 13:00</span>
                                 <div class="schedule-course">Introduction to Economics II</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">ECN106</span>
+                                <span class="schedule-time schedule-code">ECN106</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">13:00 - 16:00</span>
                                 <div class="schedule-course">Mathematics for Economists</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">ECN108</span>
+                                <span class="schedule-time schedule-code">ECN108</span>
                             </div>
                         </td>
 
@@ -160,20 +158,17 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
                                 <div class="schedule-course">System Analysis and Design</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS208</span>
+                                <span class="schedule-time schedule-code">IMS208</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">12:00 - 15:00</span>
                                 <div class="schedule-course">Supply Chain Management</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS262</span>
+                                <span class="schedule-time schedule-code">IMS262</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">15:00 - 18:00</span>
                                 <div class="schedule-course">Digital Marketing</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS266</span>
+                                <span class="schedule-time schedule-code">IMS266</span>
                             </div>
                         </td>
 
@@ -182,14 +177,12 @@
                             <div class="schedule-item">
                                 <span class="schedule-time">09:00 - 12:00</span>
                                 <div class="schedule-course">Object-Oriented Programming</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS206</span>
+                                <span class="schedule-time schedule-code">IMS206</span>
                             </div>
                             <div class="schedule-item">
                                 <span class="schedule-time">15:00 - 17:00</span>
                                 <div class="schedule-course">Accounting and Finance (Uzaktan)</div>
-                                <span class="schedule-time"
-                                    style="font-size: 0.8em; color: var(--text-muted);">IMS204</span>
+                                <span class="schedule-time schedule-code">IMS204</span>
                             </div>
                         </td>
 
@@ -203,7 +196,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p style="text-align: center; margin-top: 15px; font-size: 0.9em; color: var(--text-muted);">
+            <p class="schedule-note">
                 <em>* Atatürk's Principles and History of Revolution II (URE210) dersi asenkron/uzaktan eğitim olarak
                     yürütülmektedir.</em>
             </p>

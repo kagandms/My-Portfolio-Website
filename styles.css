@@ -7,6 +7,7 @@
     --accent-color: #20c997;
     --secondary-color: #16221f;
     --card-text: #aebdb8;
+    --text-muted: #8fa39c;
     --nav-bg: rgba(11, 18, 16, 0.95);
     --shadow-color: rgba(0, 0, 0, 0.2);
     scroll-padding-top: 100px;
@@ -24,6 +25,7 @@ body.light-mode {
     /* Biraz daha koyu bir yesil */
     --secondary-color: #ffffff;
     --card-text: #636e72;
+    --text-muted: #5d6f68;
     --nav-bg: rgba(255, 255, 255, 0.95);
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -221,6 +223,10 @@ section {
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.section-offset {
+    padding-top: 120px;
 }
 
 .page-main {
@@ -784,12 +790,24 @@ tbody tr:hover {
     font-size: 0.85rem;
 }
 
+.schedule-code {
+    color: var(--text-muted);
+    font-size: 0.8em;
+}
+
 .schedule-course {
     font-weight: 500;
     color: #e6f1ff;
     /* Dark mode default */
     line-height: 1.4;
     transition: color 0.3s;
+}
+
+.schedule-note {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    margin-top: 15px;
+    text-align: center;
 }
 
 /* Iletisim */
@@ -807,6 +825,15 @@ tbody tr:hover {
     gap: 20px;
     background: transparent;
     padding: 0;
+}
+
+.form-field-honeypot {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
 }
 
 .input-group {

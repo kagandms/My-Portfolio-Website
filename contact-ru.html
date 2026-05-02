@@ -90,12 +90,12 @@
 
         <nav id="navbar">
             <ul>
-                <li><a href="index-ru.html" onclick="toggleMenu()">Главная</a></li>
-                <li><a href="about-ru.html" onclick="toggleMenu()">Обо мне</a></li>
-                <li><a href="skills-ru.html" onclick="toggleMenu()">Навыки</a></li>
-                <li><a href="certificates-ru.html" onclick="toggleMenu()">Подтверждения</a></li>
-                <li><a href="projects-ru.html" onclick="toggleMenu()">Проекты</a></li>
-                                <li><a href="contact-ru.html" onclick="toggleMenu()">Контакты</a></li>
+                <li><a href="index-ru.html">Главная</a></li>
+                <li><a href="about-ru.html">Обо мне</a></li>
+                <li><a href="skills-ru.html">Навыки</a></li>
+                <li><a href="certificates-ru.html">Подтверждения</a></li>
+                <li><a href="projects-ru.html">Проекты</a></li>
+                                <li><a href="contact-ru.html">Контакты</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
@@ -126,9 +126,9 @@
 
     <main class="page-main">
 
-    <section id="contact" style="padding-top: 120px;">
+    <section id="contact" class="section-offset">
         <h1 class="section-title">Свяжитесь со мной</h1>
-        <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
+        <p class="section-description contact-desc">
             Мой почтовый ящик всегда открыт для ваших проектов или просто для приветствия. Я постараюсь ответить вам как
             можно скорее!
         </p>
@@ -139,34 +139,38 @@
         </div>
 
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+            <div class="form-field-honeypot" aria-hidden="true">
+                <label for="contact-company">Company website</label>
+                <input type="text" id="contact-company" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-section">
                 <h2 class="form-section-title">Детали сообщения</h2>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <label>Полное имя:</label>
-                        <input type="text" name="name" placeholder="Например: Каган Самет Дурмуш" required>
+                        <input type="text" name="name" placeholder="Например: Каган Самет Дурмуш" maxlength="80" autocomplete="name" required>
                     </div>
                     <div class="input-wrapper">
                         <label>E-mail:</label>
-                        <input type="email" name="email" placeholder="contact@example.com" required>
+                        <input type="email" name="email" placeholder="contact@example.com" maxlength="254" autocomplete="email" required>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <label>Телефон (необязательно):</label>
-                        <input type="tel" name="phone" id="phone" placeholder="+7 999 999 99 99">
+                        <input type="tel" name="phone" id="phone" placeholder="+7 999 999 99 99" maxlength="20" autocomplete="tel" inputmode="tel">
                     </div>
                     <div class="input-wrapper">
                         <label>Тема:</label>
-                        <input type="text" name="subject" placeholder="Проект, сотрудничество или академический вопрос" required>
+                        <input type="text" name="subject" placeholder="Проект, сотрудничество или академический вопрос" maxlength="120" required>
                     </div>
                 </div>
                 <div class="input-wrapper">
                     <label>Сообщение:</label>
-                    <textarea name="message" placeholder="Опишите контекст, ожидаемый результат и удобный способ ответа." required></textarea>
+                    <textarea name="message" placeholder="Опишите контекст, ожидаемый результат и удобный способ ответа." maxlength="3000" rows="6" required></textarea>
                 </div>
             </div>
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Отправить сообщение</button>
+            <button type="submit" class="submit-btn submit-btn-full">Отправить сообщение</button>
         </form>
     </section><!-- Footer -->
         </main>

@@ -7,19 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
     bindThemeToggle();
     bindScrollTopButton();
     bindPhoneInput();
+    bindImageFallbacks();
     scheduleAnalytics();
 });
 
 function bindMenuToggle() {
     const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('navbar');
     if (menuToggle) {
         menuToggle.addEventListener('click', toggleMenu);
     }
+
+    if (!nav) {
+        return;
+    }
+
+    nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', closeMenu);
+    });
 }
 
 function bindLogoScroll() {
     const logoContainer = document.querySelector('.logo-container');
-    if (!logoContainer || logoContainer.hasAttribute('onclick')) {
+    if (!logoContainer) {
         return;
     }
 
@@ -69,14 +79,6 @@ function bindRevealAnimations() {
         observer.observe(element);
     });
 
-    document
-        .querySelectorAll('.skills-container, .projects-container, .certificates-container, .case-study-grid')
-        .forEach((container) => {
-            const cards = container.querySelectorAll('.skill-card, .project-card, .certificate-card, .case-study-panel');
-            cards.forEach((card, index) => {
-                card.style.transitionDelay = `${index * 120}ms`;
-            });
-        });
 }
 
 function bindThemeToggle() {
@@ -145,6 +147,24 @@ function bindPhoneInput() {
     });
 }
 
+function bindImageFallbacks() {
+    document.querySelectorAll('img[data-fallback-src]').forEach((image) => {
+        image.addEventListener(
+            'error',
+            () => {
+                const fallbackSource = image.dataset.fallbackSrc;
+                if (!fallbackSource) {
+                    return;
+                }
+
+                image.removeAttribute('data-fallback-src');
+                image.src = fallbackSource;
+            },
+            { once: true }
+        );
+    });
+}
+
 function scheduleAnalytics() {
     const ignoredHosts = new Set(['localhost', '127.0.0.1', '::1']);
     if (ignoredHosts.has(window.location.hostname)) {
@@ -195,5 +215,18 @@ function toggleMenu() {
         if (menuToggle) {
             menuToggle.setAttribute('aria-expanded', String(nav.classList.contains('active')));
         }
+    }
+}
+
+function closeMenu() {
+    const nav = document.getElementById('navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (!nav || !nav.classList.contains('active')) {
+        return;
+    }
+
+    nav.classList.remove('active');
+    if (menuToggle) {
+        menuToggle.setAttribute('aria-expanded', 'false');
     }
 }

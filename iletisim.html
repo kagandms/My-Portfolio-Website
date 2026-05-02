@@ -91,12 +91,12 @@
 
         <nav id="navbar">
             <ul>
-                <li><a href="/" onclick="toggleMenu()">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html" onclick="toggleMenu()">Hakkında</a></li>
-                <li><a href="yetenekler.html" onclick="toggleMenu()">Yetenekler</a></li>
-                <li><a href="sertifikalar.html" onclick="toggleMenu()">Kanıtlar</a></li>
-                <li><a href="projeler.html" onclick="toggleMenu()">Projeler</a></li>
-                                <li><a href="iletisim.html" onclick="toggleMenu()">İletişim</a></li>
+                <li><a href="/">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="yetenekler.html">Yetenekler</a></li>
+                <li><a href="sertifikalar.html">Kanıtlar</a></li>
+                <li><a href="projeler.html">Projeler</a></li>
+                                <li><a href="iletisim.html">İletişim</a></li>
 
                 <!-- Mobile Menu Language Switcher -->
                 <li class="mobile-only">
@@ -127,9 +127,9 @@
 
     <main class="page-main">
 
-    <section id="contact" style="padding-top: 120px;">
+    <section id="contact" class="section-offset">
         <h1 class="section-title">İletişim Kurun</h1>
-        <p style="text-align: center; color: #b0c4de; max-width: 600px; margin: -40px auto 40px auto;">
+        <p class="section-description contact-desc">
             Projeleriniz için veya sadece merhaba demek için kutum her zaman açık. Size en kısa sürede dönüş yapmaya
             çalışacağım!
         </p>
@@ -140,34 +140,38 @@
         </div>
 
         <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+            <div class="form-field-honeypot" aria-hidden="true">
+                <label for="contact-company">Company website</label>
+                <input type="text" id="contact-company" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
             <div class="form-section">
                 <h2 class="form-section-title">Mesaj Bilgileri</h2>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <label>Ad Soyad:</label>
-                        <input type="text" name="name" placeholder="Örn: Kağan Samet Durmuş" required>
+                        <input type="text" name="name" placeholder="Örn: Kağan Samet Durmuş" maxlength="80" autocomplete="name" required>
                     </div>
                     <div class="input-wrapper">
                         <label>E-posta Adresi:</label>
-                        <input type="email" name="email" placeholder="iletisim@example.com" required>
+                        <input type="email" name="email" placeholder="iletisim@example.com" maxlength="254" autocomplete="email" required>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <label>Telefon (isteğe bağlı):</label>
-                        <input type="tel" name="phone" id="phone" placeholder="05XX XXX XX XX">
+                        <input type="tel" name="phone" id="phone" placeholder="05XX XXX XX XX" maxlength="20" autocomplete="tel" inputmode="tel">
                     </div>
                     <div class="input-wrapper">
                         <label>Konu:</label>
-                        <input type="text" name="subject" placeholder="Proje, iş birliği veya akademik konu" required>
+                        <input type="text" name="subject" placeholder="Proje, iş birliği veya akademik konu" maxlength="120" required>
                     </div>
                 </div>
                 <div class="input-wrapper">
                     <label>Mesaj:</label>
-                    <textarea name="message" placeholder="Bağlamı, beklenen çıktıyı ve dönüş için en uygun yolu yazabilirsiniz." required></textarea>
+                    <textarea name="message" placeholder="Bağlamı, beklenen çıktıyı ve dönüş için en uygun yolu yazabilirsiniz." maxlength="3000" rows="6" required></textarea>
                 </div>
             </div>
-            <button type="submit" class="submit-btn" style="width: 100%; margin-top: 20px;">Mesaj Gönder</button>
+            <button type="submit" class="submit-btn submit-btn-full">Mesaj Gönder</button>
         </form>
     </section><!-- Footer -->
         </main>
