@@ -7,7 +7,7 @@ const BASE_URL = 'https://kagansametdurmus.com.tr';
 const EXPECTED_HREFLANGS = ['en', 'ru', 'tr', 'x-default'];
 const NOINDEX_HELPER_PAGES = new Set(['program.html', 'schedule.html', 'schedule-ru.html']);
 const CONTACT_PAGES = ['contact.html', 'iletisim.html', 'contact-ru.html'];
-const VERSIONED_ASSETS = ['styles.css', 'script.js'];
+const VERSIONED_ASSETS = ['critical.css', 'styles.css', 'script.js'];
 const FORM_ACTION = 'https://formspree.io/f/xgolarwd';
 const failures = [];
 
@@ -166,7 +166,7 @@ function verifyNoindexHelpers() {
     const vercelConfig = JSON.parse(readText('vercel.json'));
     for (const fileName of NOINDEX_HELPER_PAGES) {
         const htmlContent = readText(fileName);
-        assertCondition(/<meta name="robots" content="noindex, follow">/.test(htmlContent), `${fileName}: missing noindex meta`);
+        assertCondition(/<meta name="robots" content="noindex, nofollow, noarchive">/.test(htmlContent), `${fileName}: missing noindex meta`);
         verifyNoindexVercelHeaders(vercelConfig, fileName);
     }
 }

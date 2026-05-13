@@ -1182,6 +1182,11 @@ body.light-mode nav {
     .menu-toggle {
         order: 3;
         font-size: 1.5rem;
+        min-width: 48px;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1208,9 +1213,14 @@ body.light-mode nav {
     .mobile-lang-btn {
         color: var(--card-text);
         font-weight: bold;
-        padding: 5px 10px;
+        min-width: 48px;
+        min-height: 48px;
+        padding: 0 12px;
         border: 1px solid var(--card-text);
         border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         transition: 0.3s;
     }
 

@@ -6,6 +6,7 @@ const PHONE_UNSUPPORTED_CHARACTER_PATTERN = /[^0-9+\s().-]/g;
 const recoverableClientErrors = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    loadDeferredStyles();
     bindMenuToggle();
     bindLogoScroll();
     bindRevealAnimations();
@@ -15,6 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     bindImageFallbacks();
     scheduleAnalytics();
 });
+
+function loadDeferredStyles() {
+    document.querySelectorAll('link[rel="preload"][as="style"][data-deferred-style]').forEach((styleLink) => {
+        styleLink.rel = 'stylesheet';
+        styleLink.removeAttribute('data-deferred-style');
+    });
+}
 
 function bindMenuToggle() {
     const menuToggle = document.querySelector('.menu-toggle');
