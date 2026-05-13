@@ -54,9 +54,32 @@ header {
     cursor: pointer;
 }
 
-.logo-wordmark {
-    font-weight: 700;
-    font-size: 1.1rem;
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 104px;
+    height: 60px;
+    padding: 0;
+}
+
+.site-logo {
+    display: block;
+    width: auto;
+    max-width: 112px;
+    max-height: 54px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.logo-container:focus {
+    outline: none;
+}
+
+.logo-container:focus-visible {
+    border-radius: 6px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
 }
 
 #navbar ul {
@@ -72,6 +95,7 @@ header {
 .lang-btn {
     color: var(--card-text);
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .nav-extras,
@@ -117,6 +141,15 @@ h1 {
     max-width: 900px;
     font-size: clamp(2.1rem, 7vw, 4.5rem);
     line-height: 1.08;
+}
+
+.home-content h1 .hero-name,
+.home-content h1 .hero-role {
+    display: block;
+}
+
+.home-content h1 .hero-role {
+    font-size: 0.82em;
 }
 
 .hero-actions,
