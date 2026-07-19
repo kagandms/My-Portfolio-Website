@@ -26,7 +26,7 @@ body.light-mode {
     --secondary-color: #ffffff;
     --card-text: #636e72;
     --text-muted: #5d6f68;
-    --nav-bg: #ffffff;
+    --nav-bg: rgba(255, 255, 255, 0.95);
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1068,7 +1068,9 @@ body.light-mode .certificate-card {
         left: 0;
         width: 100vw;
         height: calc(100vh - 90px);
-        background-color: var(--bg-color);
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         justify-content: center;
         padding: 30px 0;
         margin: 0;
@@ -1097,7 +1099,7 @@ body.light-mode .certificate-card {
 }
 
 body.light-mode nav {
-    background-color: var(--bg-color);
+    background-color: var(--nav-bg);
     border-top-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1133,7 +1135,9 @@ body.light-mode nav {
         left: 0;
         width: 100vw;
         height: calc(100vh - 90px);
-        background-color: var(--bg-color);
+        background-color: var(--nav-bg);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         padding: 20px;
         margin: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1145,7 +1149,7 @@ body.light-mode nav {
     }
 
     body.light-mode nav {
-        background-color: var(--bg-color);
+        background-color: var(--nav-bg);
         border-top-color: rgba(0, 0, 0, 0.1);
     }
 
