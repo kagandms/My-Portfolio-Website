@@ -1065,12 +1065,13 @@ body.light-mode .certificate-card {
         /* JS ile açılacak */
         position: fixed;
         top: 90px;
-        left: -30px;
+        left: 0;
         width: 100vw;
         height: calc(100vh - 90px);
         background-color: var(--bg-color);
         justify-content: center;
         padding: 30px 0;
+        margin: 0;
         overflow-y: auto;
         z-index: 999;
         border-radius: 0;
@@ -1129,11 +1130,12 @@ body.light-mode nav {
     nav {
         position: fixed;
         top: 90px;
-        left: -30px;
+        left: 0;
         width: 100vw;
         height: calc(100vh - 90px);
         background-color: var(--bg-color);
         padding: 20px;
+        margin: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         display: none;
         text-align: center;
@@ -1188,7 +1190,7 @@ body.light-mode nav {
 
     nav {
         top: 70px;
-        left: -20px;
+        left: 0;
         height: calc(100vh - 70px);
     }
 
