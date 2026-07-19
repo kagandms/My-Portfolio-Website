@@ -38,6 +38,12 @@ function bindMenuToggle() {
     nav.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', closeMenu);
     });
+
+    nav.addEventListener('click', (event) => {
+        if (event.target === nav) {
+            closeMenu();
+        }
+    });
 }
 
 function bindLogoScroll() {
