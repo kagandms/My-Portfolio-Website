@@ -52,7 +52,6 @@
       "@type": "Person",
       "@id": "https://kagansametdurmus.com.tr/#person",
       "name": "Kağan Samet Durmuş",
-      "jobTitle": "Fintech, Veri Analizi ve Python Geliştiricisi",
       "url": "https://kagansametdurmus.com.tr/",
       "image": "https://kagansametdurmus.com.tr/myprofile.jpg",
       "sameAs": [
@@ -110,12 +109,12 @@
 
         <nav id="navbar">
             <ul>
-                <li><a href="/">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html">Hakkında</a></li>
-                <li><a href="yetenekler.html">Yetenekler</a></li>
-                <li><a href="sertifikalar.html">Sertifikalar</a></li>
-                <li><a href="projeler.html">Projeler</a></li>
-                                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#certificates">Sertifikalar</a></li>
+                <li><a href="#projects">Projeler</a></li>
+                <li><a href="#skills">Yetenekler</a></li>
+                <li><a href="#contact">İletişim</a></li>
                 <li class="mobile-only">
                     <div class="mobile-lang-wrapper">
                         <a href="/" class="mobile-lang-btn active">TR</a><a href="index-en.html" class="mobile-lang-btn">EN</a><a href="index-ru.html" class="mobile-lang-btn">RU</a>
@@ -135,10 +134,11 @@
     </header>
 
     <main class="page-main">
+        <!-- ===== HERO ===== -->
         <section id="home">
             <div class="home-content">
                 <span class="intro">Merhaba, ben</span>
-                <h1><span class="hero-name">Kağan Samet Durmuş</span><span class="hero-role">Fintech, Veri Analizi ve Python Geliştiricisi</span></h1>
+                <h1><span class="hero-name">Kağan Samet Durmuş</span></h1>
                 <p class="subtitle">Veri odaklı finans araştırması, otomasyon ve çok dilli dijital ürünler.</p>
                 <p>Yönetim Bilişim Sistemleri ve Ekonomi ekseninde; fintech araştırması, veri analizi, Python tabanlı otomasyon ve çok dilli ürün geliştirme arasında köprü kuran ölçeklenebilir projeler tasarlıyorum.</p>
                 <div class="social-icons">
@@ -148,8 +148,8 @@
                     <a href="https://t.me/kagandms" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><span class="icon icon-telegram" aria-hidden="true"></span></a>
                 </div>
                 <div class="hero-actions">
-                    <a href="iletisim.html" class="btn-primary">İletişime geç</a>
-                    <a href="projeler.html" class="text-link">Projeler</a>
+                    <a href="#contact" class="btn-primary">İletişime geç</a>
+                    <a href="#projects" class="text-link">Projeler</a>
                 </div>
             </div>
             <div class="profile-img-wrapper">
@@ -159,117 +159,350 @@
             </div>
         </section>
 
-        <section class="hub-section" id="home-focus">
-            <h2 class="section-title">Odak Alanları</h2>
-            <p class="section-intro">Bu site artık tek sayfalık uzun bir CV değil; belirli arama niyetlerine hizmet eden, birbirini besleyen konu kümelerinden oluşan bir portfolyo yapısı.</p>
-            <div class="skills-container">
-            <article class="skill-card">
-                <span class="icon icon-chart-line skill-icon" aria-hidden="true"></span>
-                <h3>Veri analizi ve veri hattı tasarımı</h3>
-                <p>Parçalı veri kaynaklarını karar destek akışına dönüştüren sistemler kuruyorum. <a href="dis-ticaret-veri-analitigi-web-scraping-projesi.html" class="project-link">Veri hattı örneği</a></p>
-            </article>            <article class="skill-card">
-                <span class="icon icon-coins skill-icon" aria-hidden="true"></span>
-                <h3>Fintech araştırması</h3>
-                <p>Piyasa okuma, teknik analiz ve karşılaştırmalı finans araştırmalarını ürün mantığıyla birleştiriyorum. <a href="bist-moex-sektorel-karsilastirma-analizi.html" class="project-link">Araştırma örneği</a></p>
-            </article>            <article class="skill-card">
-                <span class="icon icon-robot skill-icon" aria-hidden="true"></span>
-                <h3>Otomasyon ve bot akışları</h3>
-                <p>Günlük ihtiyaçları düşük sürtünmeli sohbet ve araç akışlarına taşıyorum. <a href="askvirabot-telegram-botu.html" class="project-link">Bot örneği</a></p>
-            </article>            <article class="skill-card">
-                <span class="icon icon-language skill-icon" aria-hidden="true"></span>
-                <h3>Çok dilli ürün mimarisi</h3>
-                <p>Dil, bilgi mimarisi ve SEO’yu aynı ürün sisteminde topluyorum. <a href="fintechterms-projesi.html" class="project-link">Ürün örneği</a></p>
-            </article>
+        <!-- ===== HAKKINDA ===== -->
+        <section id="about" class="hub-section">
+            <h2 class="section-title">Kağan Samet Durmuş Hakkında</h2>
+            <p class="section-intro">Yönetim Bilişim Sistemleri, ekonomi ve fintech odağımı aynı ürün çizgisinde birleştiren akademik ve teknik arka plan.</p>
+            <div class="about-content">
+                <h3 class="section-title section-title--compact">Akademik ve ürün temeli</h3>
+                <div class="about-text">
+                    <p>Topkapı Üniversitesi'nde %100 İngilizce Yönetim Bilişim Sistemleri okuyor, aynı zamanda Ekonomi bölümünde çift anadal yapıyorum. Bu kombinasyon, teknoloji kararlarını yalnızca implementasyon değil iş mantığı ve veri tarafıyla da değerlendirmemi sağlıyor.</p>
+                    <p>Fintech, veri analizi, Python ve SQL etrafındaki çalışmalarım teorik ilgi düzeyinde kalmıyor; <a href="dis-ticaret-veri-analitigi-web-scraping-projesi.html" class="project-link">dış ticaret veri analitiği</a> ve <a href="bist-moex-sektorel-karsilastirma-analizi.html" class="project-link">BIST-MOEX karşılaştırma analizi</a> gibi araştırma yoğun projelere dönüşüyor.</p>
+                    <p>Çok dilli ürün üretimini de ayrı bir uzmanlık alanı olarak görüyorum. <a href="fintechterms-projesi.html" class="project-link">FinTechTerms</a> bunun en net örneği: dil, bilgi mimarisi ve ürün deneyimi aynı sistem içinde birleşiyor.</p>
+                    <h3 class="section-title section-title--compact">Odak alanları</h3>
+                    <ul class="about-list"><li><span class="icon icon-caret highlight" aria-hidden="true"></span> Rusça öğrenimi ve çok dilli içerik üretimi</li><li><span class="icon icon-caret highlight" aria-hidden="true"></span> Fintech ve piyasa araştırması</li><li><span class="icon icon-caret highlight" aria-hidden="true"></span> Python, SQL ve veri analizi</li><li><span class="icon icon-caret highlight" aria-hidden="true"></span> Ürün odaklı bilgi mimarisi</li></ul>
+                </div>
+                <h3 class="section-title section-title--compact">Akademik durum</h3>
+                <div class="projects-container projects-container--wide">
+                    <article class="project-card">
+                        <h4>Yönetim Bilişim Sistemleri</h4>
+                        <div class="project-copy">
+                            <p><strong>Üniversite:</strong> İstanbul Topkapı Üniversitesi, İngilizce lisans programı.</p>
+                            <p><strong>Durum:</strong> 2023 - 2028 beklenen mezuniyet, 2. sınıf, %100 burslu, GNO 3.26.</p>
+                            <p><strong>Akademik görev:</strong> İngilizce program 2. sınıf temsilcisi.</p>
+                            <p><strong>Odak:</strong> Veri analizi, veritabanı yönetim sistemleri, ERP sistemleri ve dijital dönüşüm.</p>
+                            <p><strong>Ders zemini:</strong> Veri yapıları, veritabanı yönetim sistemleri, web tasarımı ve internet programlama, programlama, istatistik ve ayrık matematik.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h4>Ekonomi çift anadal</h4>
+                        <div class="project-copy">
+                            <p><strong>Üniversite:</strong> İstanbul Topkapı Üniversitesi Ekonomi Lisans Programı.</p>
+                            <p><strong>Durum:</strong> 2025 - 2029 beklenen mezuniyet, 1. sınıf, GNO 3.88.</p>
+                            <p><strong>Odak:</strong> Fintek, makroekonomi ve Borsa İstanbul araştırmaları.</p>
+                            <p><strong>Ders zemini:</strong> İktisada giriş ve muhasebeye giriş, finans ve veri projelerine ekonomik bağlam sağlıyor.</p>
+                        </div>
+                    </article>
+                </div>
+                <h3 class="section-title section-title--compact">Profesyonel deneyim</h3>
+                <div class="projects-container projects-container--wide">
+                    <article class="project-card">
+                        <h4>DozaTech</h4>
+                        <div class="project-copy">
+                            <p><strong>Rol:</strong> Teknik Destek ve Operasyon Koordinatörü, Mart 2024 - 2025.</p>
+                            <p><strong>Operasyon:</strong> Teknik destek talepleri, randevu planlamaları ve müşteri kayıtlarının düzenli ilerlemesini koordine ettim.</p>
+                            <p><strong>Veri takibi:</strong> Excel üzerinden müşteri kayıtları ve iş süreçleri için raporlama düzeni kurdum.</p>
+                            <p><strong>Ekip çalışması:</strong> Teknik ekiplerle koordinasyon kurarak yanıt sürelerini azaltmaya ve hizmet kalitesini artırmaya odaklandım.</p>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h4>DeFacto</h4>
+                        <div class="project-copy">
+                            <p><strong>Rol:</strong> Satış Destek ve Stok Yönetimi Uzmanı, Mayıs 2025 - Haziran 2025.</p>
+                            <p><strong>Operasyon:</strong> Yoğun müşteri trafiğine sahip perakende ortamında günlük satış hedeflerini destekledim.</p>
+                            <p><strong>Stok akışı:</strong> Yoğun dönemlerde stok yönetimi ve satış alanı düzenleme süreçlerine katkı verdim.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <section class="hub-section" id="home-projects">
-            <h2 class="section-title">Öne Çıkan Projeler</h2>
-            <p class="section-intro">Keşif odaklı en güçlü proje sayfalarım; veri hattı tasarımı, çok dilli ürün mimarisi, finans araştırması ve Telegram otomasyonu eksenindeki çekirdek işleri gösteriyor.</p>
-            <div class="projects-container">
-            <article class="project-card">
+        <!-- ===== SERTİFİKALAR ===== -->
+        <section id="certificates" class="hub-section">
+            <h2 class="section-title">Sertifikalar ve Başarılar</h2>
+            <p class="section-intro">Bu bölüm yalnızca sertifika galerisi değil; projelerin ve yetkinlik kümelerinin dış dünyadaki görünürlüğünü destekleyen bir güven katmanı.</p>
+            <h3 class="section-title section-title--compact">Dış doğrulayıcı sinyaller</h3>
+            <div class="certificates-container">
+            <article class="certificate-card" id="certificate-1">
+                <div class="certificate-image-wrapper">
+                    <img src="career-summit-certificate.jpg" alt="1CI Career Summit sertifika görseli" class="certificate-image" loading="lazy" decoding="async" width="877" height="1280">
+                </div>
+                <h4>1CI Career Summit</h4>
+                <p class="certificate-caption">1CI Career Summit ve ödül sürecini belgeleyen çıktı; profesyonel görünürlük ve kariyer odağını güçlendiren bir dönüm noktası.</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7413902757469937664/" target="_blank" rel="noopener noreferrer" class="card-link">1CI Career Summit LinkedIn kaydı</a>
+            </article>            <article class="certificate-card" id="certificate-2">
+                <div class="certificate-image-wrapper">
+                    <img src="social-impact-project-certificate.jpg" alt="Toplumsal fayda odaklı proje sertifikası görseli" class="certificate-image" loading="lazy" decoding="async" width="1169" height="815">
+                </div>
+                <h4>Toplumsal fayda odaklı proje</h4>
+                <p class="certificate-caption">Toplumsal fayda odağındaki proje ve etkinlik katılımımı gösteren doğrulayıcı içerik.</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7404814548672929812/" target="_blank" rel="noopener noreferrer" class="card-link">Toplumsal fayda projesi LinkedIn kaydı</a>
+            </article>            <article class="certificate-card" id="certificate-3">
+                <div class="certificate-image-wrapper">
+                    <img src="entrepreneurship-certificate.jpg" alt="Girişimcilik sertifikası görseli" class="certificate-image" loading="lazy" decoding="async" width="1169" height="821">
+                </div>
+                <h4>Girişimcilik sertifikası</h4>
+                <p class="certificate-caption">Girişimcilik ve teknoloji ekseninde aldığım eğitimi ve çıktılarını özetleyen sertifika görseli.</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7353406306344435714/" target="_blank" rel="noopener noreferrer" class="card-link">Girişimcilik eğitimi LinkedIn kaydı</a>
+            </article>            <article class="certificate-card" id="certificate-4">
+                <div class="certificate-image-wrapper">
+                    <img src="innovationday.jpg" alt="Innovation Day etkinlik sertifikası görseli" class="certificate-image" loading="lazy" decoding="async" width="1169" height="785">
+                </div>
+                <h4>Innovation Day katılımı</h4>
+                <p class="certificate-caption">Innovation Day etkinliğindeki katılımımı ve öğrenim eksenimi yansıtan paylaşım.</p>
+                <a href="https://www.linkedin.com/feed/update/urn:li:share:7345179511442788352/" target="_blank" rel="noopener noreferrer" class="card-link">Innovation Day LinkedIn kaydı</a>
+            </article>            <article class="certificate-card" id="certificate-5">
+                <div class="certificate-image-wrapper">
+                    <img src="linkedin-profile-visibility.jpg" alt="LinkedIn profil görünürlüğünü yansıtan görsel" class="certificate-image" loading="lazy" decoding="async" width="1170" height="824">
+                </div>
+                <h4>LinkedIn profil görünürlüğü</h4>
+                <p class="certificate-caption">LinkedIn üzerindeki profesyonel ağımı, paylaşımlarımı ve görünürlüğümü destekleyen profil kaydı.</p>
+                <a href="https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/" target="_blank" rel="noopener noreferrer" class="card-link">LinkedIn profil görünürlüğü kaydı</a>
+            </article>
+            </div>
+            <h3 class="section-title section-title--compact">CV'deki sertifika ve eğitim kayıtları</h3>
+            <p class="section-intro">Bu kayıtlar CV'deki teknik, finansal ve dil öğrenimi zeminini tamamlayan eğitim kayıtlarıdır.</p>
+            <div class="certificates-container">
+                <article class="certificate-card">
+                    <h4>Rusça B1 - İSMEK</h4>
+                    <p class="certificate-caption">Rusça öğrenimini yalnızca ilgi alanı olarak değil, çok dilli ürün geliştirme ve içerik üretimi için sürdürülen bir yetkinlik olarak konumlandırır.</p>
+                </article>
+                <article class="certificate-card">
+                    <h4>Temel Ofis Programları - İSMEK</h4>
+                    <p class="certificate-caption">Excel ve ofis araçlarıyla operasyonel kayıt, raporlama ve iş takibi tarafındaki uygulamalı zemini destekler.</p>
+                </article>
+                <article class="certificate-card">
+                    <h4>SQL Server'da Temel Veritabanı Tasarımı - İSMEK</h4>
+                    <p class="certificate-caption">Veritabanı modelleme, SQL ve veri yönetimi odağını akademik derslerin dışında da güçlendiren teknik eğitim kaydı.</p>
+                </article>
+                <article class="certificate-card">
+                    <h4>Yazılım Geliştiriciler için Low-Code ERP Eğitimi - 1Ci</h4>
+                    <p class="certificate-caption">ERP sistemleri, iş süreçleri ve yazılım geliştirme arasındaki bağlantıyı destekleyen ürün ve operasyon odaklı eğitim.</p>
+                </article>
+                <article class="certificate-card">
+                    <h4>Finansal Okuryazarlık Eğitimi - TODER</h4>
+                    <p class="certificate-caption">Fintech, piyasa araştırması ve kişisel finans okuryazarlığı zeminini güçlendiren finans eğitimi kaydı.</p>
+                </article>
+                <article class="certificate-card">
+                    <h4>Finansal Okuryazarlık Sertifikası - 23</h4>
+                    <p class="certificate-caption">Finansal okuryazarlık odağını destekleyen ek sertifika kaydı; proje sayfalarındaki finans araştırması yönüyle birlikte okunmalı.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== PROJELER (TEK BAŞLIK) ===== -->
+        <section id="projects" class="hub-section">
+            <h2 class="section-title">Projeler</h2>
+            <p class="section-intro">Fintech, veri analizi, otomasyon ve çok dilli ürün çalışmalarını kapsayan tüm projelerim.</p>
+            <div class="projects-container projects-container--wide">
+            <article class="project-card" id="item-1">
                 <span class="icon icon-chart-pie project-icon" aria-hidden="true"></span>
                 <h3>Dış Ticaret Veri Analitiği ve Web Scraping Projesi</h3>
                 <div class="project-copy">
-                    <p>Dış ticaret verilerini toplayan, temizleyen ve görselleştiren uçtan uca analitik veri hattı.</p>
-                    <p>Ham verileri karar destek amaçlı raporlara dönüştüren tekrarlanabilir analiz akışı.</p>
+                    <p><strong>Ne:</strong> Dış ticaret verilerini toplayan, temizleyen ve görselleştiren uçtan uca analitik veri hattı.</p>
+                    <p><strong>Teknoloji:</strong> Python, SQL, Streamlit, web scraping.</p>
+                    <p><strong>Sonuç:</strong> Ham verileri karar destek amaçlı raporlara dönüştüren tekrarlanabilir analiz akışı.</p>
+                    <p><strong>Bağlam:</strong> Dağınık veri kaynaklarından stratejik içgörü üretmek ve rapor hazırlama süresini kısaltmak için tasarlandı.</p>
                 </div>
                 <div class="project-meta">
                     <span>2025</span>
-                    <a href="dis-ticaret-veri-analitigi-web-scraping-projesi.html" class="card-link">Dış ticaret veri analitiği proje sayfası</a>
+                    <div class="project-actions"><a href="dis-ticaret-veri-analitigi-web-scraping-projesi.html" class="card-link">Dış ticaret veri analitiği vaka analizi</a></div>
                 </div>
-            </article>            <article class="project-card">
+            </article>
+            <article class="project-card" id="item-2">
                 <span class="icon icon-book project-icon" aria-hidden="true"></span>
                 <h3>FinTechTerms</h3>
                 <div class="project-copy">
-                    <p>Rusça, Türkçe ve İngilizce içerik sunan çok dilli dijital finans sözlüğü ve öğrenme deneyimi.</p>
-                    <p>1000+ finans terimini öğrenme akışına bağlayan, ürünleşme odaklı bir bilgi platformu.</p>
+                    <p><strong>Ne:</strong> Rusça, Türkçe ve İngilizce içerik sunan çok dilli dijital finans sözlüğü ve öğrenme deneyimi.</p>
+                    <p><strong>Teknoloji:</strong> Next.js, Supabase, TypeScript, çok dilli bilgi mimarisi.</p>
+                    <p><strong>Sonuç:</strong> 1000+ finans terimini öğrenme akışına bağlayan, ürünleşme odaklı bir bilgi platformu.</p>
+                    <p><strong>Bağlam:</strong> Finans terimlerini statik bir liste yerine ölçeklenebilir bir öğrenme ürününe dönüştürmek için geliştirildi.</p>
                 </div>
                 <div class="project-meta">
                     <span>2025 • Devam ediyor</span>
-                    <a href="fintechterms-projesi.html" class="card-link">FinTechTerms proje sayfası</a>
+                    <div class="project-actions"><a href="fintechterms-projesi.html" class="card-link">FinTechTerms vaka analizi</a><a href="https://fintechterms.com" target="_blank" rel="noopener noreferrer" class="card-link">fintechterms.com</a></div>
                 </div>
-            </article>            <article class="project-card">
+            </article>
+            <article class="project-card" id="item-3">
                 <span class="icon icon-telegram project-icon" aria-hidden="true"></span>
                 <h3>AskViraBot Telegram Botu</h3>
                 <div class="project-copy">
-                    <p>Günlük kullanım senaryolarını tek botta toplayan otomasyon odaklı Telegram çözümü.</p>
-                    <p>Python ve Telegram Bot API ile hava durumu, PDF dönüştürme, oyunlar, not alma ve yardımcı araç akışlarını birleştiriyor.</p>
+                    <p><strong>Ne:</strong> Günlük kullanım senaryolarını tek botta toplayan otomasyon odaklı Telegram çözümü.</p>
+                    <p><strong>Teknoloji:</strong> Python, Telegram Bot API, otomasyon iş akışları.</p>
+                    <p><strong>Sonuç:</strong> @AskViraBot; hava durumu, PDF dönüştürme, oyunlar, not alma ve yardımcı araçları tek sohbet arayüzünde buluşturan bot.</p>
+                    <p><strong>Bağlam:</strong> Tekrarlayan kullanıcı ihtiyaçlarını düşük sürtünmeli sohbet tabanlı otomasyona taşımak için geliştirildi.</p>
                 </div>
                 <div class="project-meta">
                     <span>2025 • Devam ediyor</span>
-                    <a href="askvirabot-telegram-botu.html" class="card-link">AskViraBot proje sayfası</a>
+                    <div class="project-actions"><a href="askvirabot-telegram-botu.html" class="card-link">AskViraBot vaka analizi</a><a href="https://t.me/AskViraBot" target="_blank" rel="noopener noreferrer" class="card-link">@AskViraBot</a></div>
                 </div>
-            </article>            <article class="project-card">
+            </article>
+            <article class="project-card" id="item-4">
+                <span class="icon icon-chart-line project-icon" aria-hidden="true"></span>
+                <h3>BIST100 Teknik Analiz ve TradingView İndikatörü</h3>
+                <div class="project-copy">
+                    <p><strong>Ne:</strong> Piyasa yapısını daha tutarlı okumak için geliştirilen teknik analiz indikatörü ve strateji araştırma aracı.</p>
+                    <p><strong>Teknoloji:</strong> Pine Script, TradingView, teknik analiz göstergeleri.</p>
+                    <p><strong>Sonuç:</strong> MACD, RSI, ADX ve destek/direnç mantığını tek çerçevede birleştiren karar destek aracı.</p>
+                    <p><strong>Bağlam:</strong> BIST verisi üzerinde daha disiplinli sinyal okuması ve strateji denemeleri için tasarlandı.</p>
+                </div>
+                <div class="project-meta">
+                    <span>2026</span>
+                    <div class="project-actions"><a href="bist100-teknik-analiz-tradingview-indikatoru.html" class="card-link">BIST100 indikatör vaka analizi</a></div>
+                </div>
+            </article>
+            <article class="project-card" id="item-5">
                 <span class="icon icon-balance project-icon" aria-hidden="true"></span>
                 <h3>BIST ve MOEX Sektörel Karşılaştırma Analizi</h3>
                 <div class="project-copy">
-                    <p>BIST ve MOEX pazarlarında benzer sektörlerde yer alan şirketleri karşılaştıran finansal araştırma çalışması.</p>
-                    <p>Makroekonomik etkiler ile şirket metriklerini ortak analitik çerçevede birleştiren araştırma zemini.</p>
+                    <p><strong>Ne:</strong> BIST ve MOEX pazarlarında benzer sektörlerde yer alan şirketleri karşılaştıran finansal araştırma çalışması.</p>
+                    <p><strong>Teknoloji:</strong> Python, veri analizi, finansal modelleme, karşılaştırmalı araştırma.</p>
+                    <p><strong>Sonuç:</strong> Makroekonomik etkiler ile şirket metriklerini ortak analitik çerçevede birleştiren araştırma zemini.</p>
+                    <p><strong>Bağlam:</strong> Sınır ötesi piyasa farklılıklarını sistematik biçimde incelemek ve yatırım araştırmasına veri temeli sağlamak için hazırlanıyor.</p>
                 </div>
                 <div class="project-meta">
                     <span>2026 • Devam ediyor</span>
-                    <a href="bist-moex-sektorel-karsilastirma-analizi.html" class="card-link">BIST ve MOEX proje sayfası</a>
+                    <div class="project-actions"><a href="bist-moex-sektorel-karsilastirma-analizi.html" class="card-link">BIST ve MOEX araştırma analizi</a></div>
+                </div>
+            </article>
+            <article class="project-card" id="item-6">
+                <span class="icon icon-laptop project-icon" aria-hidden="true"></span>
+                <h3>DozaTech Servis Talep Web Uygulaması</h3>
+                <div class="project-copy">
+                    <p><strong>Ne:</strong> Teknik servis talep, randevu ve saha servis operasyonlarını dijitalleştiren web çözümü.</p>
+                    <p><strong>Teknoloji:</strong> HTML, CSS, JavaScript, form akışları, PDF çıktıları.</p>
+                    <p><strong>Sonuç:</strong> Yanıt süresini %30 azaltan, servis kayıtlarını standartlaştıran ve gerçek zamanlı PDF raporlama sağlayan süreç.</p>
+                    <p><strong>Bağlam:</strong> Bu fazda ayrı case-study sayfası açılmadan, hub içinde özetlenmiş operasyonel proje olarak tutuluyor.</p>
+                </div>
+                <div class="project-meta">
+                    <span>2025</span>
+                    <div class="project-actions"><span class="project-link project-link-muted">Özet kart</span></div>
+                </div>
+            </article>
+            <article class="project-card" id="item-7">
+                <span class="icon icon-globe project-icon" aria-hidden="true"></span>
+                <h3>Kişisel Portfolyo Web Sitesi</h3>
+                <div class="project-copy">
+                    <p><strong>Ne:</strong> Fintech, veri analizi ve çok dilli ürün işlerini merkezileştiren web platformu.</p>
+                    <p><strong>Teknoloji:</strong> HTML, CSS, JavaScript, çok dilli SEO mimarisi.</p>
+                    <p><strong>Sonuç:</strong> Projeleri, yetenekleri ve sertifika katmanını tek bilgi mimarisinde toplayan hızlı portfolyo deneyimi.</p>
+                    <p><strong>Bağlam:</strong> Ayrı case-study yerine doğrudan bu site içinde okunabilen, yapısal bir referans projesi olarak korunuyor.</p>
+                </div>
+                <div class="project-meta">
+                    <span>2025</span>
+                    <div class="project-actions"><a href="https://kagansametdurmus.com.tr" target="_blank" rel="noopener noreferrer" class="card-link">kagansametdurmus.com.tr</a></div>
+                </div>
+            </article>
+            <article class="project-card" id="item-8">
+                <span class="icon icon-telegram project-icon" aria-hidden="true"></span>
+                <h3>Zamanın Bugünü – Telegram Kanalı ve Threads Otomasyonu</h3>
+                <div class="project-copy">
+                    <p><strong>Ne:</strong> Tarihte bugün yaşanmış olayları yapay zekâ ile yeniden yazıp Telegram kanalı ve Threads hesabına otomatik paylaşan içerik otomasyon botu.</p>
+                    <p><strong>Teknoloji:</strong> Python, Telegram Bot API, Threads API, OpenRouter (AI), Wikipedia API, GitHub Actions.</p>
+                    <p><strong>Sonuç:</strong> Her gün Türkiye öncelikli tarihî olayları seçip, AI ile zenginleştirip görsellerle birlikte Telegram ve Threads'e otomatik yayınlayan uçtan uca pipeline.</p>
+                    <p><strong>Bağlam:</strong> Başlangıçta X (Twitter) platformuna paylaşım yapan bot, platform değişikliğiyle Telegram Kanalı ve Threads'e taşındı.</p>
+                </div>
+                <div class="project-meta">
+                    <span>2025 • Devam ediyor</span>
+                    <div class="project-actions"><span class="project-link project-link-muted">Özet kart</span></div>
                 </div>
             </article>
             </div>
         </section>
 
-        <section class="hub-section" id="home-proof">
-            <h2 class="section-title">Sertifikalar ve Güven Katmanı</h2>
-            <p class="section-intro">Sadece proje listesi değil; bu projeleri destekleyen akademik temel, yetkinlik kümeleri ve görünür başarı sinyalleri de ayrı sayfalarda güçleniyor.</p>
-            <div class="projects-container">
-            <article class="project-card proof-card">
-                <span class="icon icon-graduate project-icon" aria-hidden="true"></span>
-                <h3>Akademik ve teknik temel</h3>
-                <p>YBS ve ekonomi eksenindeki altyapım; %100 burslu İngilizce program, çift anadal, GNO 3.26/3.88 ve temsilcilik deneyimiyle veri ve iş mantığına bağlanıyor.</p>
-                <div class="project-meta">
-                    <a href="hakkinda.html" class="card-link">Akademik arka plan sayfası</a>
-                </div>
-            </article>            <article class="project-card proof-card">
-                <span class="icon icon-certificate project-icon" aria-hidden="true"></span>
-                <h3>Sertifikalar ve görünürlük</h3>
-                <p>Etkinlikler, İSMEK/1Ci/TODER eğitimleri, sertifikalar ve profesyonel görünürlük sinyalleri; portfolyodaki işlerin dış dünyadaki karşılığını destekliyor.</p>
-                <div class="project-meta">
-                    <a href="sertifikalar.html" class="card-link">Sertifikalar ve görünürlük sayfası</a>
-                </div>
-            </article>            <article class="project-card proof-card">
-                <span class="icon icon-sitemap project-icon" aria-hidden="true"></span>
-                <h3>Konu kümeleri</h3>
-                <p>Yetkinlikler, projeler ve case-study sayfaları birbirini besleyen bir silo yapısında kurgulandı; bu da hem kullanıcıyı hem arama motorunu doğru URL’ye götürüyor.</p>
-                <div class="project-meta">
-                    <a href="yetenekler.html" class="card-link">Yetenek kümelerini incele</a>
-                </div>
+        <!-- ===== YETENEKLER ===== -->
+        <section id="skills" class="hub-section">
+            <h2 class="section-title">Yetenekler</h2>
+            <p class="section-intro">Ayrı ayrı değil, birbirine bağlı çalışan yetkinlik kümeleri: veri, piyasa araştırması, otomasyon ve çok dilli ürün mimarisi.</p>
+            <div class="skills-container">
+            <article class="skill-card">
+                <span class="icon icon-chart-line skill-icon" aria-hidden="true"></span>
+                <h3>Veri Analizi ve SQL</h3>
+                <p>SQL sorguları, veri temizleme ve raporlama akışlarını karar destek sistemlerine dönüştürüyorum. <a href="dis-ticaret-veri-analitigi-web-scraping-projesi.html" class="project-link">Dış ticaret veri analitiği projesi</a>, bu yeteneğin uçtan uca karşılığı.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-coins skill-icon" aria-hidden="true"></span>
+                <h3>Fintech ve Piyasa Araştırması</h3>
+                <p>Finans teorisini teknik analiz, araştırma çerçevesi ve ürün mantığıyla birleştiriyorum. <a href="bist100-teknik-analiz-tradingview-indikatoru.html" class="project-link">BIST100 indikatörü</a> ve <a href="bist-moex-sektorel-karsilastirma-analizi.html" class="project-link">BIST-MOEX analizi</a> bu kümeyi destekliyor.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-robot skill-icon" aria-hidden="true"></span>
+                <h3>Otomasyon ve Bot Geliştirme</h3>
+                <p>Tekrarlayan iş akışlarını düşük sürtünmeli arayüzlere taşıyorum. <a href="askvirabot-telegram-botu.html" class="project-link">AskViraBot</a>, bu yaklaşımın kullanıcıya doğrudan dokunan örneği.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-language skill-icon" aria-hidden="true"></span>
+                <h3>Çok Dilli Ürün ve İletişim</h3>
+                <p>İçerik yapısı, arayüz dili ve uluslararası erişim tasarımını birlikte ele alıyorum. <a href="fintechterms-projesi.html" class="project-link">FinTechTerms</a>, bu yeteneğin en güçlü ürünleşmiş çıktısı.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-laptop skill-icon" aria-hidden="true"></span>
+                <h3>Yazılım ve veri stack'i</h3>
+                <p>Python, SQL, Pine Script, Next.js, Supabase, MS Excel ve Power BI ile veri, otomasyon ve ürün katmanlarını aynı teknik zeminde birleştiriyorum.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-cpu skill-icon" aria-hidden="true"></span>
+                <h3>Yapay zeka ve API akışları</h3>
+                <p>Prompt mühendisliği, LLM entegrasyonu ve API tabanlı araç kullanımını ürün geliştirme, araştırma ve otomasyon akışlarında uyguluyorum.</p>
+            </article>            <article class="skill-card">
+                <span class="icon icon-users skill-icon" aria-hidden="true"></span>
+                <h3>Dil ve operasyonel yetkinlikler</h3>
+                <p>Türkçe ana dil, İngilizce B2+, Rusça B1+ seviyesinde çalışıyorum; kriz yönetimi, birimler arası ekip liderliği, analitik düşünme ve veri yorumlama tarafını teknik üretimle bağlıyorum.</p>
             </article>
             </div>
         </section>
 
-        <section class="hub-section" id="home-cta">
+        <!-- ===== İLETİŞİM ===== -->
+        <section id="contact" class="hub-section">
+            <h2 class="section-title">İletişim Kurun</h2>
+            <p class="section-description contact-desc">
+                Projeleriniz, iş birliği veya akademik konular için aşağıdaki mesaj formunu doldurabilirsiniz. Dönüşler yalnızca formda bıraktığınız iletişim bilgileri üzerinden yapılır.
+            </p>
+
+            <div class="content-callout content-callout--center privacy-note">
+                <h3 class="section-title section-title--compact">KVKK ve veri gizliliği</h3>
+                <p>Bu form yalnızca dönüş yapabilmek için gerekli bilgileri ister: ad soyad, e-posta, isteğe bağlı telefon, konu ve mesaj. Gönderimler Formspree üzerinden iletilir ve yalnızca proje, iş birliği veya akademik iletişim amacıyla kullanılır.</p>
+            </div>
+
             <div class="content-callout content-callout--center">
-                <h2 class="section-title section-title--compact">Bir Sonraki Adım</h2>
-                <p>Projeleri, case-study sayfalarını ve yetkinlik kümelerini birlikte inceleyip iş birliği ya da ürün tartışması için iletişime geçebilirsin.</p>
-                <div class="callout-actions"><a href="iletisim.html" class="text-link">İletişime geç</a><a href="projeler.html" class="text-link">Tüm projeler</a></div>
+                <h3 class="section-title section-title--compact">Sosyal bağlantılar</h3>
+                <p>Güncel profil ve kısa temas için bu kanalları kullanabilirsiniz; proje detayları için aşağıdaki form ana iletişim yolu olarak kalır.</p>
+                <div class="callout-actions">
+                    <a href="https://instagram.com/kagandms" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Instagram @kagandms"><span class="icon icon-instagram" aria-hidden="true"></span>Instagram @kagandms</a>
+                    <a href="https://t.me/kagandms" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Telegram @kagandms"><span class="icon icon-telegram" aria-hidden="true"></span>Telegram @kagandms</a>
+                    <a href="https://www.linkedin.com/in/ka%C4%9Fan-samet-durmu%C5%9F-37676332b/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="LinkedIn profili"><span class="icon icon-linkedin" aria-hidden="true"></span>LinkedIn</a>
+                </div>
             </div>
+
+            <form class="contact-form" id="contact-form" action="https://formspree.io/f/xgolarwd" method="POST">
+                <div class="form-field-honeypot" aria-hidden="true">
+                    <label for="contact-company">Company website</label>
+                    <input type="text" id="contact-company" name="_gotcha" tabindex="-1" autocomplete="off">
+                </div>
+                <div class="form-section">
+                    <h3 class="form-section-title">Mesaj Bilgileri</h3>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <label>Ad Soyad:</label>
+                            <input type="text" name="name" placeholder="Örn: Kağan Samet Durmuş" maxlength="80" autocomplete="name" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label>E-posta Adresi:</label>
+                            <input type="email" name="email" placeholder="iletisim@example.com" maxlength="254" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <label>Telefon (isteğe bağlı):</label>
+                            <input type="tel" name="phone" id="phone" placeholder="05XX XXX XX XX" maxlength="20" autocomplete="tel" inputmode="tel">
+                        </div>
+                        <div class="input-wrapper">
+                            <label>Konu:</label>
+                            <input type="text" name="subject" placeholder="Proje, iş birliği veya akademik konu" maxlength="120" required>
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Mesaj:</label>
+                        <textarea name="message" placeholder="Bağlamı, beklenen çıktıyı ve dönüş için en uygun yolu yazabilirsiniz." maxlength="3000" rows="6" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn submit-btn-full">Mesaj Gönder</button>
+            </form>
         </section>
     </main>
 
