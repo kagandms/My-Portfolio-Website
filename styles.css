@@ -1067,8 +1067,8 @@ body.light-mode .certificate-card {
         top: 100%;
         left: 0;
         width: 100%;
-        height: auto;
-        background-color: var(--nav-bg);
+        height: 100vh;
+        background-color: var(--bg-color);
         justify-content: center;
         padding: 30px 0;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -1129,7 +1129,7 @@ body.light-mode nav {
         top: 100%;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
         background-color: var(--bg-color);
         padding: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
