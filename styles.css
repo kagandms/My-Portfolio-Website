@@ -1063,10 +1063,10 @@ body.light-mode .certificate-card {
     nav {
         /* Modern Mobile Menu - Animated and Centered */
         position: fixed;
-        top: 90px;
-        left: 0;
+        top: -15px;
+        left: -30px;
         width: 100vw;
-        height: calc(100vh - 90px);
+        height: 100vh;
         background-color: var(--nav-bg);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
@@ -1137,10 +1137,10 @@ body.light-mode nav {
 
     nav {
         position: fixed;
-        top: 90px;
-        left: 0;
+        top: -15px;
+        left: -30px;
         width: 100vw;
-        height: calc(100vh - 90px);
+        height: 100vh;
         background-color: var(--nav-bg);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
@@ -1207,9 +1207,9 @@ body.light-mode nav {
     }
 
     nav {
-        top: 70px;
-        left: 0;
-        height: calc(100vh - 70px);
+        top: -10px;
+        left: -20px;
+        height: 100vh;
     }
 
     .site-logo {
