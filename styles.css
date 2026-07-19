@@ -8,7 +8,7 @@
     --secondary-color: #16221f;
     --card-text: #aebdb8;
     --text-muted: #8fa39c;
-    --nav-bg: rgba(11, 18, 16, 0.95);
+    --nav-bg: rgba(11, 18, 16, 0.75);
     --shadow-color: rgba(0, 0, 0, 0.2);
     scroll-padding-top: 100px;
 }
@@ -26,7 +26,7 @@ body.light-mode {
     --secondary-color: #ffffff;
     --card-text: #636e72;
     --text-muted: #5d6f68;
-    --nav-bg: rgba(255, 255, 255, 0.95);
+    --nav-bg: rgba(255, 255, 255, 0.75);
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1061,8 +1061,7 @@ body.light-mode .certificate-card {
     }
 
     nav {
-        display: none;
-        /* JS ile açılacak */
+        /* Modern Mobile Menu - Animated and Centered */
         position: fixed;
         top: 90px;
         left: 0;
@@ -1071,12 +1070,19 @@ body.light-mode .certificate-card {
         background-color: var(--nav-bg);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         padding: 30px 0;
         margin: 0;
         overflow-y: auto;
         z-index: 999;
         border-radius: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
     nav ul {
@@ -1138,14 +1144,20 @@ body.light-mode nav {
         background-color: var(--nav-bg);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         padding: 20px;
         margin: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        display: none;
-        text-align: center;
         overflow-y: auto;
         z-index: 999;
         border-radius: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
     body.light-mode nav {
@@ -1154,7 +1166,9 @@ body.light-mode nav {
     }
 
     nav.active {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     nav ul {
