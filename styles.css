@@ -1065,7 +1065,7 @@ body.light-mode .certificate-card {
         /* JS ile açılacak */
         position: fixed;
         top: 90px;
-        left: 0;
+        left: -30px;
         width: 100vw;
         height: calc(100vh - 90px);
         background-color: var(--bg-color);
@@ -1073,6 +1073,7 @@ body.light-mode .certificate-card {
         padding: 30px 0;
         overflow-y: auto;
         z-index: 999;
+        border-radius: 0;
     }
 
     nav ul {
@@ -1128,7 +1129,7 @@ body.light-mode nav {
     nav {
         position: fixed;
         top: 90px;
-        left: 0;
+        left: -30px;
         width: 100vw;
         height: calc(100vh - 90px);
         background-color: var(--bg-color);
@@ -1138,6 +1139,7 @@ body.light-mode nav {
         text-align: center;
         overflow-y: auto;
         z-index: 999;
+        border-radius: 0;
     }
 
     body.light-mode nav {
@@ -1186,6 +1188,7 @@ body.light-mode nav {
 
     nav {
         top: 70px;
+        left: -20px;
         height: calc(100vh - 70px);
     }
 
