@@ -1022,12 +1022,12 @@ body.light-mode footer {
 }
 
 .certificate-image {
-    width: 100%;
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
     height: auto;
-    max-height: 500px;
-    object-fit: contain;
-    background-color: var(--card-bg, #1a1a1a);
     display: block;
+    margin: 0 auto;
 }
 
 .certificate-card:hover {
