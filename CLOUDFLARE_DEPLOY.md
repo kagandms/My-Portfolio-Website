@@ -1,24 +1,21 @@
 # Cloudflare Workers deployment
 
-This repository keeps its existing Vercel setup and adds an independent Cloudflare Workers deployment for the portfolio.
+The portfolio's existing Cloudflare project remains connected to this repository. Its build prepares a dedicated `dist/` directory before Wrangler deploys the Worker. The existing Vercel project and `kagansametdurmus.com.tr` domain configuration remain unchanged.
 
-## One-time GitHub setup
+## Cloudflare project settings
 
-Use a separate personal Cloudflare account for the portfolio, then add that account's credentials as repository Actions secrets under **Settings → Secrets and variables → Actions**:
+In **Workers & Pages → my-portfolio-website → Settings → Builds**, configure:
 
-- `CLOUDFLARE_API_TOKEN`: an API token with permission to edit Workers in the portfolio account.
-- `CLOUDFLARE_ACCOUNT_ID`: the portfolio Cloudflare account ID.
+- Build command: `node tools/prepare-cloudflare-assets.mjs`
+- Deploy command: `npx wrangler deploy`
+- Root directory: `/`
 
-Configure the portfolio account's Workers & Pages subdomain as `durmus`. The Worker name in `wrangler.jsonc` is `kagansamet`, which gives the portfolio this address:
+The `assets.directory` setting in `wrangler.jsonc` directs Wrangler to `./dist`; the repository root is only the command's working directory. Cloudflare's existing project token is used by its build service, so no API token or account ID belongs in this repository.
+
+The Worker name in `wrangler.jsonc` is `kagansamet`, which gives the portfolio this address:
 
 ```text
 https://kagansamet.durmus.workers.dev
 ```
 
-Cloudflare must allow the `durmus` account subdomain to be selected. Its availability can only be confirmed in the portfolio Cloudflare account's Workers & Pages settings.
-
-Then open **Actions → Deploy to Cloudflare Workers → Run workflow**. The workflow runs the existing site verification before preparing the public static files and deploying the Worker.
-
-The asset preparation step publishes the HTML pages, browser JavaScript/CSS, images, certificates, and sitemap files. It does not publish repository maintenance scripts or configuration files.
-
-The deployment does not change the repository's existing `kagansametdurmus.com.tr` or Vercel configuration.
+The asset preparation step publishes HTML pages and the static files they reference, including Open Graph images, `robots.txt`, and `sitemap.xml`. It excludes repository tools, tests, documentation, backups, and dependencies.
