@@ -52,10 +52,18 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/index.html" || url.pathname === "/index") {
-      return Response.redirect(new URL("/", url), 301);
+      const destination = new URL(url);
+      destination.pathname = "/";
+      const headers = new Headers({ Location: destination.toString() });
+      addSecurityHeaders(headers);
+      return new Response(null, { status: 301, headers });
     }
 
-    const response = await env.ASSETS.fetch(request);
+    const assetRequest =
+      url.pathname === "/"
+        ? new Request(new URL("/index.html", url), request)
+        : request;
+    const response = await env.ASSETS.fetch(assetRequest);
     const headers = new Headers(response.headers);
     addSecurityHeaders(headers);
 
