@@ -57,7 +57,7 @@ function findLocalReferences(source) {
   return references;
 }
 
-function copyReferencedAsset(reference) {
+function resolveLocalAsset(reference) {
   if (reference.includes("${")) return;
 
   let assetUrl;
@@ -67,12 +67,10 @@ function copyReferencedAsset(reference) {
     throw new Error(`Invalid local asset reference: ${reference}`);
   }
 
-  if (
-    assetUrl.origin !== "https://portfolio-assets.invalid" &&
-    assetUrl.hostname !== customDomain
-  ) {
-    return;
-  }
+  const isLocalHost =
+    assetUrl.origin === "https://portfolio-assets.invalid" ||
+    assetUrl.hostname === customDomain;
+  if (!isLocalHost) return;
 
   const assetPath = decodeURIComponent(assetUrl.pathname.replace(/^\//, ""));
   if (!assetPath || extname(assetPath) === ".html") return;
@@ -86,6 +84,14 @@ function copyReferencedAsset(reference) {
   }
   if (!allowedExtensions.has(extname(sourcePath).toLowerCase())) return;
 
+  return { assetPath, sourcePath };
+}
+
+function copyReferencedAsset(reference) {
+  const asset = resolveLocalAsset(reference);
+  if (!asset) return;
+
+  const { assetPath, sourcePath } = asset;
   const outputPath = join(output, assetPath);
   mkdirSync(join(outputPath, ".."), { recursive: true });
   cpSync(sourcePath, outputPath);

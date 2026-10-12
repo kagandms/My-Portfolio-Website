@@ -47,16 +47,41 @@ function addSecurityHeaders(headers) {
   headers.set("Cross-Origin-Resource-Policy", "same-origin");
 }
 
+function redirectToHome(url) {
+  const destination = new URL(url);
+  destination.pathname = "/";
+  const headers = new Headers({ Location: destination.toString() });
+  addSecurityHeaders(headers);
+  return new Response(null, { status: 301, headers });
+}
+
+function addResponseHeaders(response, pathname) {
+  const headers = new Headers(response.headers);
+  addSecurityHeaders(headers);
+
+  if (NOINDEX_PAGES.has(pathname)) {
+    headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    headers.set("Cache-Control", "no-store");
+  } else if (
+    IMMUTABLE_ASSETS.has(pathname) ||
+    pathname.startsWith("/assets/")
+  ) {
+    headers.set("Cache-Control", "public, max-age=31536000, immutable");
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
     if (url.pathname === "/index.html" || url.pathname === "/index") {
-      const destination = new URL(url);
-      destination.pathname = "/";
-      const headers = new Headers({ Location: destination.toString() });
-      addSecurityHeaders(headers);
-      return new Response(null, { status: 301, headers });
+      return redirectToHome(url);
     }
 
     const assetRequest =
@@ -64,23 +89,6 @@ export default {
         ? new Request(new URL("/index.html", url), request)
         : request;
     const response = await env.ASSETS.fetch(assetRequest);
-    const headers = new Headers(response.headers);
-    addSecurityHeaders(headers);
-
-    if (NOINDEX_PAGES.has(url.pathname)) {
-      headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
-      headers.set("Cache-Control", "no-store");
-    } else if (
-      IMMUTABLE_ASSETS.has(url.pathname) ||
-      url.pathname.startsWith("/assets/")
-    ) {
-      headers.set("Cache-Control", "public, max-age=31536000, immutable");
-    }
-
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers,
-    });
+    return addResponseHeaders(response, url.pathname);
   },
 };
