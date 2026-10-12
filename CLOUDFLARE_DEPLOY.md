@@ -21,6 +21,6 @@ Cloudflare assigns each Worker an address in this form:
 <worker-name>.<account-subdomain>.workers.dev
 ```
 
-This Worker is named `kagasametdurmus`. If the account subdomain is still `topkapiuni`, its address will be `kagasametdurmus.topkapiuni.workers.dev`. The bare `kagasametdurmus.workers.dev` is an account subdomain name, rather than this Worker's deploy URL. The account subdomain is managed in Cloudflare's Workers & Pages settings.
+This Worker is named `kagasametdurmus`. The account subdomain depends on the Cloudflare account used for deployment. Check the URL returned by the deployment or the Workers & Pages settings in that account.
 
 The deployment does not change the repository's existing `kagansametdurmus.com.tr` or Vercel configuration.
